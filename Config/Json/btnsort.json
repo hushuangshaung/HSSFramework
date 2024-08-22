@@ -1,0 +1,253 @@
+[
+  {
+    "id": 1,
+    "Quality": 0,
+    "Desc": "胡双双",
+    "btn": [
+      {
+        "type": 1,
+        "icon": "ArtFont_homefirstcharge",
+        "name": "首充",
+        "effect": "{\"url\":\"Prefab/Effect/fx_ui_homemenu_01.prefab\",\"Pos\":{\"x\":0.0,\"y\":0.0,\"z\":0.0},\"Scale\":{\"x\":133.39999389648438,\"y\":133.39999389648438,\"z\":133.39999389648438},\"Rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0}}",
+        "sort": 10,
+        "function": 68,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_onejyp",
+        "name": "特别礼包",
+        "effect": "",
+        "sort": 20,
+        "function": 85,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homevip",
+        "name": "特权",
+        "effect": "",
+        "sort": 30,
+        "function": 81,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homeracesummon",
+        "name": "类型招募",
+        "effect": "",
+        "sort": 40,
+        "function": 89,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homelottery",
+        "name": "心之门",
+        "effect": "",
+        "sort": 50,
+        "function": 20,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homeastrology",
+        "name": "嘉年华",
+        "effect": "",
+        "sort": 60,
+        "function": 36,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homechapel",
+        "name": "礼拜堂",
+        "effect": "",
+        "sort": 70,
+        "function": 48,
+        "isShow": 0
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "Quality": 1,
+    "Desc": "胡双双",
+    "btn": [
+      {
+        "type": 1,
+        "icon": "ArtFont_homefriend",
+        "name": "功能预告",
+        "effect": "",
+        "sort": 10,
+        "function": 90,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homefunctionteach",
+        "name": "功能说明",
+        "effect": "",
+        "sort": 20,
+        "function": 93,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homefriend",
+        "name": "好友",
+        "effect": "",
+        "sort": 30,
+        "function": 7,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homemail",
+        "name": "邮件",
+        "effect": "",
+        "sort": 40,
+        "function": 9,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_hometask",
+        "name": "任务",
+        "effect": "",
+        "sort": 50,
+        "function": 10,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homewelfare",
+        "name": "福利",
+        "effect": "",
+        "sort": 60,
+        "function": 71,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homeshop",
+        "name": "月光小铺",
+        "effect": "",
+        "sort": 70,
+        "function": 11,
+        "isShow": 0
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "Quality": 2,
+    "Desc": "胡双双",
+    "btn": [
+      {
+        "type": 2,
+        "icon": "ArtFont_homeshop",
+        "name": "Prism盛典",
+        "effect": "",
+        "sort": 10,
+        "function": 79,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_dailyrecharge",
+        "name": "每日首充",
+        "effect": "",
+        "sort": 50,
+        "function": 69,
+        "isShow": 0
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "Quality": 3,
+    "Desc": "胡双双",
+    "btn": [
+      {
+        "type": 3,
+        "icon": "",
+        "name": "",
+        "effect": "",
+        "sort": 1,
+        "function": 80,
+        "isShow": 0
+      },
+      {
+        "type": 3,
+        "icon": "",
+        "name": "",
+        "effect": "",
+        "sort": 1,
+        "function": 82,
+        "isShow": 0
+      },
+      {
+        "type": 3,
+        "icon": "",
+        "name": "",
+        "effect": "",
+        "sort": 1,
+        "function": 83,
+        "isShow": 0
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "Quality": 1,
+    "Desc": "",
+    "btn": [
+      {
+        "type": 3,
+        "icon": "ArtFont_hometiggergift",
+        "name": "限时礼包",
+        "effect": "{\"url\":\"Prefab/Effect/fx_ui_homemenu_02.prefab\",\"Pos\":{\"x\":0.0,\"y\":0.0,\"z\":0.0},\"Scale\":{\"x\":133.39999389648438,\"y\":133.39999389648438,\"z\":133.39999389648438},\"Rot\":{\"x\":0.0,\"y\":0.0,\"z\":0.0,\"w\":1.0}}",
+        "sort": 10,
+        "function": 70,
+        "isShow": 0
+      },
+      {
+        "type": 3,
+        "icon": "ArtFont_homeaigift",
+        "name": "限定礼包",
+        "effect": "",
+        "sort": 20,
+        "function": 96,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homeeight",
+        "name": "8日充值",
+        "effect": "",
+        "sort": 30,
+        "function": 86,
+        "isShow": 0
+      },
+      {
+        "type": 1,
+        "icon": "ArtFont_homediamondshop",
+        "name": "星钻商城",
+        "effect": "",
+        "sort": 40,
+        "function": 8,
+        "isShow": 0
+      },
+      {
+        "type": 2,
+        "icon": "ArtFont_homejumpchallenge",
+        "name": "jump大挑战",
+        "effect": "",
+        "sort": 50,
+        "function": 95,
+        "isShow": 0
+      }
+    ]
+  }
+]

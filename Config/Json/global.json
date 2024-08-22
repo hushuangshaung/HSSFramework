@@ -1,0 +1,4739 @@
+[
+  {
+    "id": 400001,
+    "type": "juese_jiangzhang_xiaohao",
+    "values": [
+      [
+        "1",
+        "3116"
+      ]
+    ]
+  },
+  {
+    "id": 400002,
+    "type": "juese_jiangzhang_xiaoguo",
+    "values": [
+      [
+        "300",
+        "0.01"
+      ]
+    ]
+  },
+  {
+    "id": 400003,
+    "type": "juese_dingzhi",
+    "values": [
+      [
+        "1",
+        "3137"
+      ]
+    ]
+  },
+  {
+    "id": 400004,
+    "type": "juese_jineng_xiaohao",
+    "values": [
+      [
+        "5",
+        "1",
+        "3117"
+      ]
+    ]
+  },
+  {
+    "id": 400005,
+    "type": "juese_jineng_shangxian",
+    "values": [
+      [
+        "600"
+      ]
+    ]
+  },
+  {
+    "id": 400006,
+    "type": "juese_tuozhan_xiaohao",
+    "values": [
+      [
+        "10",
+        "5",
+        "3115"
+      ]
+    ]
+  },
+  {
+    "id": 400007,
+    "type": "juese_putong_xiaohao",
+    "values": [
+      [
+        "20000",
+        "1.1",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400008,
+    "type": "juese_putong_xiaoguo",
+    "values": [
+      [
+        "0.05",
+        "0.18"
+      ]
+    ]
+  },
+  {
+    "id": 400010,
+    "type": "juese_shengjie_gaizao",
+    "values": [
+      [
+        "0.18",
+        "0.3"
+      ],
+      [
+        "0.18",
+        "0.35"
+      ]
+    ]
+  },
+  {
+    "id": 400011,
+    "type": "juese_zizhi_shangxian",
+    "values": [
+      [
+        "1000"
+      ]
+    ]
+  },
+  {
+    "id": 400012,
+    "type": "jijia_xunzhang_xiaohao",
+    "values": [
+      [
+        "1000",
+        "10"
+      ],
+      [
+        "3118",
+        "3119",
+        "3120"
+      ]
+    ]
+  },
+  {
+    "id": 400013,
+    "type": "jijia_xunzhang_xiaoguo",
+    "values": [
+      [
+        "600",
+        "0.01"
+      ]
+    ]
+  },
+  {
+    "id": 400014,
+    "type": "jijia_xunzhang_jiban",
+    "values": [
+      [
+        "150",
+        "100"
+      ],
+      [
+        "300",
+        "100"
+      ],
+      [
+        "450",
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400015,
+    "type": "juese_jicheng_xiaohao",
+    "values": [
+      [
+        "2000"
+      ]
+    ]
+  },
+  {
+    "id": 400016,
+    "type": "fangjian_shengji",
+    "values": [
+      [
+        "3002"
+      ]
+    ]
+  },
+  {
+    "id": 400017,
+    "type": "fangjian_zhaopin",
+    "values": [
+      [
+        "3003"
+      ]
+    ]
+  },
+  {
+    "id": 400018,
+    "type": "jianqiao_shengji",
+    "values": [
+      [
+        "3001"
+      ]
+    ]
+  },
+  {
+    "id": 400019,
+    "type": "xingyun_jijia",
+    "values": [
+      [
+        "3",
+        "10",
+        "5"
+      ]
+    ]
+  },
+  {
+    "id": 400020,
+    "type": "xunfangshuaxin",
+    "values": [
+      [
+        "3",
+        "1",
+        "3136"
+      ]
+    ]
+  },
+  {
+    "id": 400021,
+    "type": "jinxiutuozhan",
+    "values": [
+      [
+        "5",
+        "300"
+      ]
+    ]
+  },
+  {
+    "id": 400022,
+    "type": "jinxiuchanchu",
+    "values": [
+      [
+        "110",
+        "10"
+      ],
+      [
+        "38",
+        "2"
+      ],
+      [
+        "58",
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400023,
+    "type": "yinzhangid",
+    "values": [
+      [
+        "1",
+        "3149"
+      ],
+      [
+        "2",
+        "3150"
+      ],
+      [
+        "3",
+        "3151"
+      ],
+      [
+        "4",
+        "3152"
+      ],
+      [
+        "5",
+        "3153"
+      ]
+    ]
+  },
+  {
+    "id": 400024,
+    "type": "jinxiuchuliang",
+    "values": [
+      [
+        "500"
+      ]
+    ]
+  },
+  {
+    "id": 400025,
+    "type": "jinxiushichang",
+    "values": [
+      [
+        "3",
+        "60"
+      ]
+    ]
+  },
+  {
+    "id": 400026,
+    "type": "touzibodong",
+    "values": [
+      [
+        "0.8",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400027,
+    "type": "jinxiukengwei",
+    "values": [
+      [
+        "1",
+        "4"
+      ]
+    ]
+  },
+  {
+    "id": 400028,
+    "type": "lianshengtili",
+    "values": [
+      [
+        "2",
+        "30",
+        "6"
+      ]
+    ]
+  },
+  {
+    "id": 400029,
+    "type": "monizhanjijia",
+    "values": [
+      [
+        "5",
+        "60",
+        "15"
+      ]
+    ]
+  },
+  {
+    "id": 400030,
+    "type": "monizhanfanji",
+    "values": [
+      [
+        "2",
+        "2",
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400031,
+    "type": "monizhandihui",
+    "values": [
+      [
+        "3135",
+        "0.01",
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400032,
+    "type": "xunfangshijian",
+    "values": [
+      [
+        "60"
+      ]
+    ]
+  },
+  {
+    "id": 400033,
+    "type": "monizhanxiaohao",
+    "values": [
+      [
+        "3125",
+        "1",
+        "1",
+        "1"
+      ],
+      [
+        "3126",
+        "4",
+        "5",
+        "5"
+      ],
+      [
+        "3127",
+        "18",
+        "25",
+        "25"
+      ]
+    ]
+  },
+  {
+    "id": 400034,
+    "type": "yijingputong",
+    "values": [
+      [
+        "8",
+        "3100"
+      ],
+      [
+        "3138",
+        "3"
+      ]
+    ]
+  },
+  {
+    "id": 400035,
+    "type": "yixingBOSS",
+    "values": [
+      [
+        "8",
+        "6100"
+      ],
+      [
+        "3140",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400036,
+    "type": "yixingpaiming",
+    "values": [
+      [
+        "3140",
+        "11"
+      ]
+    ]
+  },
+  {
+    "id": 400037,
+    "type": "yixingfuhuo",
+    "values": [
+      [
+        "1",
+        "2",
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400038,
+    "type": "lianmeng",
+    "values": [
+      [
+        "1000",
+        "2000"
+      ]
+    ]
+  },
+  {
+    "id": 400039,
+    "type": "lmjuanxian",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400040,
+    "type": "lmzhekou",
+    "values": [
+      [
+        "0.95",
+        "0.01"
+      ]
+    ]
+  },
+  {
+    "id": 400041,
+    "type": "lmjiangjin",
+    "values": [
+      [
+        "0.5",
+        "0.3",
+        "0.05",
+        "0.1"
+      ]
+    ]
+  },
+  {
+    "id": 400042,
+    "type": "lmyanhui",
+    "values": [
+      [
+        "11",
+        "0"
+      ],
+      [
+        "11",
+        "0"
+      ],
+      [
+        "11",
+        "0"
+      ]
+    ]
+  },
+  {
+    "id": 400043,
+    "type": "lmfuben",
+    "values": [
+      [
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400044,
+    "type": "lmfubenshangzhen",
+    "values": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "3",
+        "2"
+      ],
+      [
+        "5",
+        "3"
+      ],
+      [
+        "7",
+        "4"
+      ]
+    ]
+  },
+  {
+    "id": 400045,
+    "type": "lmliansheng",
+    "values": [
+      [
+        "0.1"
+      ],
+      [
+        "0.2"
+      ],
+      [
+        "0.3"
+      ],
+      [
+        "0.4"
+      ],
+      [
+        "0.5"
+      ]
+    ]
+  },
+  {
+    "id": 400046,
+    "type": "lmjifen",
+    "values": [
+      [
+        "20",
+        "4"
+      ]
+    ]
+  },
+  {
+    "id": 400047,
+    "type": "lmzhansheng",
+    "values": [
+      [
+        "9",
+        "3600"
+      ],
+      [
+        "11",
+        "3600"
+      ],
+      [
+        "14",
+        "4320"
+      ]
+    ]
+  },
+  {
+    "id": 400048,
+    "type": "lmzhanfu",
+    "values": [
+      [
+        "9",
+        "600"
+      ],
+      [
+        "11",
+        "600"
+      ],
+      [
+        "14",
+        "600"
+      ]
+    ]
+  },
+  {
+    "id": 400049,
+    "type": "lmyanhuijiangli",
+    "values": [
+      [
+        "10",
+        "0"
+      ],
+      [
+        "100",
+        "20"
+      ],
+      [
+        "150",
+        "30"
+      ]
+    ]
+  },
+  {
+    "id": 400050,
+    "type": "lmzhanshengbuff",
+    "values": [
+      [
+        "0.1"
+      ]
+    ]
+  },
+  {
+    "id": 400051,
+    "type": "lmyanhuishichang",
+    "values": [
+      [
+        "180",
+        "1000"
+      ]
+    ]
+  },
+  {
+    "id": 400052,
+    "type": "zuanshixiao",
+    "values": [
+      [
+        "0.01",
+        "1000",
+        "1000"
+      ],
+      [
+        "0.39",
+        "300",
+        "600"
+      ],
+      [
+        "0.6",
+        "200",
+        "200"
+      ]
+    ]
+  },
+  {
+    "id": 400053,
+    "type": "zuanshizhong",
+    "values": [
+      [
+        "0.01",
+        "10000",
+        "10000"
+      ],
+      [
+        "0.39",
+        "4500",
+        "7000"
+      ],
+      [
+        "0.6",
+        "4000",
+        "4000"
+      ]
+    ]
+  },
+  {
+    "id": 400054,
+    "type": "zuanshida",
+    "values": [
+      [
+        "0.01",
+        "100000",
+        "100000"
+      ],
+      [
+        "0.39",
+        "32000",
+        "40000"
+      ],
+      [
+        "0.6",
+        "30000",
+        "30000"
+      ]
+    ]
+  },
+  {
+    "id": 400055,
+    "type": "juese_putong_xiaoguo",
+    "values": [
+      [
+        "0.05",
+        "1000000"
+      ],
+      [
+        "0.06",
+        "700000"
+      ],
+      [
+        "0.07",
+        "490000"
+      ],
+      [
+        "0.08",
+        "318500"
+      ],
+      [
+        "0.09",
+        "191100"
+      ],
+      [
+        "0.1",
+        "133770"
+      ],
+      [
+        "0.11",
+        "107016"
+      ],
+      [
+        "0.12",
+        "85612"
+      ],
+      [
+        "0.13",
+        "68490"
+      ],
+      [
+        "0.14",
+        "54792"
+      ],
+      [
+        "0.15",
+        "32875"
+      ],
+      [
+        "0.16",
+        "19725"
+      ],
+      [
+        "0.17",
+        "11835"
+      ],
+      [
+        "0.18",
+        "7101"
+      ],
+      [
+        "0.19",
+        "4260"
+      ],
+      [
+        "0.2",
+        "2556"
+      ],
+      [
+        "0.21",
+        "1022"
+      ],
+      [
+        "0.22",
+        "409"
+      ],
+      [
+        "0.23",
+        "163"
+      ],
+      [
+        "0.24",
+        "65"
+      ],
+      [
+        "0.25",
+        "26"
+      ]
+    ]
+  },
+  {
+    "id": 400056,
+    "type": "juese_dingzhi_xiaoguo",
+    "values": [
+      [
+        "0.15",
+        "8000"
+      ],
+      [
+        "0.16",
+        "9000"
+      ],
+      [
+        "0.17",
+        "8000"
+      ],
+      [
+        "0.18",
+        "6000"
+      ],
+      [
+        "0.19",
+        "4000"
+      ],
+      [
+        "0.2",
+        "2000"
+      ],
+      [
+        "0.21",
+        "1000"
+      ],
+      [
+        "0.22",
+        "900"
+      ],
+      [
+        "0.23",
+        "850"
+      ],
+      [
+        "0.24",
+        "800"
+      ],
+      [
+        "0.25",
+        "750"
+      ]
+    ]
+  },
+  {
+    "id": 400057,
+    "type": "lottery",
+    "values": [
+      [
+        "500",
+        "3195",
+        "1",
+        "10",
+        "3195",
+        "1"
+      ],
+      [
+        "3195",
+        "1001",
+        "1002"
+      ]
+    ]
+  },
+  {
+    "id": 400058,
+    "type": "userInit",
+    "values": [
+      [
+        "1000",
+        "0",
+        "0",
+        "0",
+        "8001",
+        "0",
+        "8501",
+        "13001",
+        "16061",
+        "1081",
+        "188"
+      ]
+    ]
+  },
+  {
+    "id": 400059,
+    "type": "confDefault",
+    "values": [
+      [
+        "0",
+        "3130",
+        "3006",
+        "3007",
+        "3159",
+        "10",
+        "10",
+        "10",
+        "3600",
+        "4145"
+      ]
+    ]
+  },
+  {
+    "id": 400060,
+    "type": "xingyun_look",
+    "values": [
+      [
+        "400059"
+      ]
+    ]
+  },
+  {
+    "id": 400061,
+    "type": "jianpaoAttackMinTime",
+    "values": [
+      [
+        "0.085"
+      ]
+    ]
+  },
+  {
+    "id": 400062,
+    "type": "stageMonsterDrop",
+    "values": [
+      [
+        "201"
+      ]
+    ]
+  },
+  {
+    "id": 400063,
+    "type": "stageBossDrop",
+    "values": [
+      [
+        "202"
+      ]
+    ]
+  },
+  {
+    "id": 400064,
+    "type": "buildRecruitStartCost",
+    "values": [
+      [
+        "12167.877501336"
+      ]
+    ]
+  },
+  {
+    "id": 400065,
+    "type": "specialSkillCost",
+    "values": [
+      [
+        "95301"
+      ],
+      [
+        "95403",
+        "95404",
+        "95405",
+        "95406",
+        "95407"
+      ]
+    ]
+  },
+  {
+    "id": 400066,
+    "type": "heroexchangemechacost",
+    "values": [
+      [
+        "100",
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400067,
+    "type": "drunkMedalSkill",
+    "values": [
+      [
+        "95101"
+      ],
+      [
+        "95102"
+      ],
+      [
+        "95103"
+      ],
+      [
+        "95104"
+      ]
+    ]
+  },
+  {
+    "id": 400068,
+    "type": "heroexchangemechamax",
+    "values": [
+      [
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400069,
+    "type": "randomCostParam",
+    "values": [
+      [
+        "1.07"
+      ]
+    ]
+  },
+  {
+    "id": 400070,
+    "type": "lmexchangeCD",
+    "values": [
+      [
+        "600"
+      ]
+    ]
+  },
+  {
+    "id": 400071,
+    "type": "shouchongjingyan",
+    "values": [
+      [
+        "12"
+      ]
+    ]
+  },
+  {
+    "id": 400072,
+    "type": "prismStarLevelLimit",
+    "values": [
+      [
+        "150"
+      ]
+    ]
+  },
+  {
+    "id": 400073,
+    "type": "newServerToGeneralServer",
+    "values": [
+      [
+        "13"
+      ]
+    ]
+  },
+  {
+    "id": 400074,
+    "type": "groupDay",
+    "values": [
+      [
+        "10"
+      ],
+      [
+        "10"
+      ],
+      [
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400075,
+    "type": "thumbupreward",
+    "values": [
+      [
+        "6"
+      ],
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400076,
+    "type": "drawcurrencymax",
+    "values": [
+      [
+        "10000"
+      ]
+    ]
+  },
+  {
+    "id": 400077,
+    "type": "drawonceneed",
+    "values": [
+      [
+        "200"
+      ]
+    ]
+  },
+  {
+    "id": 400078,
+    "type": "producetime",
+    "values": [
+      [
+        "1200"
+      ]
+    ]
+  },
+  {
+    "id": 400079,
+    "type": "preferenceFreeGift",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400080,
+    "type": "eventMaxLimit",
+    "values": [
+      [
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400081,
+    "type": "adventurefightspeed",
+    "values": [
+      [
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400082,
+    "type": "trainfightspeedinitial",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400083,
+    "type": "trainfightspeedadd",
+    "values": [
+      [
+        "3"
+      ]
+    ]
+  },
+  {
+    "id": 400084,
+    "type": "buildDrop",
+    "values": [
+      [
+        "4"
+      ]
+    ]
+  },
+  {
+    "id": 400085,
+    "type": "clothesShop",
+    "values": [
+      [
+        "6",
+        "0",
+        "2"
+      ],
+      [
+        "7",
+        "0",
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400086,
+    "type": "mechatenlevelupunlock",
+    "values": [
+      [
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400087,
+    "type": "secondBridgeunlock",
+    "values": [
+      [
+        "10",
+        "915"
+      ]
+    ]
+  },
+  {
+    "id": 400088,
+    "type": "secondBridgequickunlock",
+    "values": [
+      [
+        "5"
+      ]
+    ]
+  },
+  {
+    "id": 400089,
+    "type": "secondBridgedraw",
+    "values": [
+      [
+        "0.35",
+        "0.30",
+        "0.30",
+        "0.05"
+      ]
+    ]
+  },
+  {
+    "id": 400090,
+    "type": "secondBridgedrawnum",
+    "values": [
+      [
+        "600",
+        "1200",
+        "1800",
+        "3600"
+      ]
+    ]
+  },
+  {
+    "id": 400091,
+    "type": "onceUselimit",
+    "values": [
+      [
+        "9999"
+      ]
+    ]
+  },
+  {
+    "id": 400092,
+    "type": "recycleHint",
+    "values": [
+      [
+        "4"
+      ]
+    ]
+  },
+  {
+    "id": 400093,
+    "type": "celebritySupportReception",
+    "values": [
+      [
+        "909"
+      ]
+    ]
+  },
+  {
+    "id": 400094,
+    "type": "monizhancount",
+    "values": [
+      [
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400095,
+    "type": "roomEmployeeCap",
+    "values": [
+      [
+        "40000"
+      ]
+    ]
+  },
+  {
+    "id": 400096,
+    "type": "newserveractivity",
+    "values": [
+      [
+        "17"
+      ]
+    ]
+  },
+  {
+    "id": 400097,
+    "type": "shopGiftFreeReward",
+    "values": [
+      [
+        "2000"
+      ]
+    ]
+  },
+  {
+    "id": 400098,
+    "type": "eventExpansionCapacity",
+    "values": [
+      [
+        "35",
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400099,
+    "type": "sciamachyspeed",
+    "values": [
+      [
+        "8"
+      ]
+    ]
+  },
+  {
+    "id": 400100,
+    "type": "yixingzhaohuan",
+    "values": [
+      [
+        "5033"
+      ]
+    ]
+  },
+  {
+    "id": 400101,
+    "type": "yixingcailiao",
+    "values": [
+      [
+        "26"
+      ]
+    ]
+  },
+  {
+    "id": 400102,
+    "type": "collaborativelyDevelopRobot",
+    "values": [
+      [
+        "1100",
+        "1300"
+      ]
+    ]
+  },
+  {
+    "id": 400103,
+    "type": "sciamachyintegralbuff",
+    "values": [
+      [
+        "11",
+        "800"
+      ],
+      [
+        "21",
+        "1500"
+      ],
+      [
+        "51",
+        "2000"
+      ]
+    ]
+  },
+  {
+    "id": 400104,
+    "type": "skillID",
+    "values": [
+      [
+        "97027"
+      ]
+    ]
+  },
+  {
+    "id": 400105,
+    "type": "addskillID",
+    "values": [
+      [
+        "97039"
+      ]
+    ]
+  },
+  {
+    "id": 400106,
+    "type": "yixingLimit",
+    "values": [
+      [
+        "2",
+        "5",
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400107,
+    "type": "sciamachyreddot",
+    "values": [
+      [
+        "80"
+      ]
+    ]
+  },
+  {
+    "id": 400108,
+    "type": "yixingAutoVip",
+    "values": [
+      [
+        "3"
+      ]
+    ]
+  },
+  {
+    "id": 400109,
+    "type": "sciamachychallenge",
+    "values": [
+      [
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400110,
+    "type": "nameLimit",
+    "values": [
+      [
+        "20",
+        "14"
+      ]
+    ]
+  },
+  {
+    "id": 400111,
+    "type": "autoBootTouxian",
+    "values": [
+      [
+        "904"
+      ]
+    ]
+  },
+  {
+    "id": 400112,
+    "type": "sciamachylimit",
+    "values": [
+      [
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400113,
+    "type": "sciamachyheadline",
+    "values": [
+      [
+        "15"
+      ]
+    ]
+  },
+  {
+    "id": 400114,
+    "type": "heroquickupgrade",
+    "values": [
+      [
+        "1",
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400115,
+    "type": "firstGiftChickLevel",
+    "values": [
+      [
+        "902"
+      ]
+    ]
+  },
+  {
+    "id": 400116,
+    "type": "skinItemID",
+    "values": [
+      [
+        "3202",
+        "3203",
+        "3204",
+        "3205",
+        "3206",
+        "3207",
+        "3208",
+        "3209",
+        "3210",
+        "3211",
+        "3701",
+        "3702",
+        "3703",
+        "3704",
+        "3705",
+        "3706",
+        "3707",
+        "3708",
+        "3709",
+        "3710",
+        "3711",
+        "3712",
+        "3713",
+        "3714",
+        "4128",
+        "4129",
+        "4130",
+        "4131",
+        "4132",
+        "4133",
+        "4134",
+        "4135",
+        "4136",
+        "4137",
+        "4138"
+      ]
+    ]
+  },
+  {
+    "id": 400117,
+    "type": "oldServer",
+    "values": [
+      [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    ]
+  },
+  {
+    "id": 400118,
+    "type": "newServer",
+    "values": [
+      [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ]
+    ]
+  },
+  {
+    "id": 400119,
+    "type": "UnionListShowAllLevel",
+    "values": [
+      [
+        "920"
+      ]
+    ]
+  },
+  {
+    "id": 400120,
+    "type": "mailDay",
+    "values": [
+      [
+        "7"
+      ]
+    ]
+  },
+  {
+    "id": 400121,
+    "type": "xingqiutansuohongdian",
+    "values": [
+      [
+        "6"
+      ]
+    ]
+  },
+  {
+    "id": 400122,
+    "type": "UnionPromotionAccessIDs",
+    "values": [
+      [
+        "313",
+        "313"
+      ]
+    ]
+  },
+  {
+    "id": 400123,
+    "type": "sciamachyinitialspeed",
+    "values": [
+      [
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400124,
+    "type": "clickbesttimes",
+    "values": [
+      [
+        "200"
+      ]
+    ]
+  },
+  {
+    "id": 400125,
+    "type": "UnionYanhuiCost",
+    "values": [
+      [
+        "1000"
+      ]
+    ]
+  },
+  {
+    "id": 400126,
+    "type": "serverRecommend",
+    "values": []
+  },
+  {
+    "id": 400127,
+    "type": "upvote",
+    "values": [
+      [
+        "10",
+        "4235",
+        "1",
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400128,
+    "type": "rumor",
+    "values": [
+      [
+        "3007",
+        "1",
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400129,
+    "type": "earnigs",
+    "values": [
+      [
+        "1000",
+        "1000"
+      ]
+    ]
+  },
+  {
+    "id": 400130,
+    "type": "recordlimit",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400131,
+    "type": "payGm",
+    "values": [
+      [
+        "10010100041",
+        "20011106425",
+        "20010200012",
+        "10010100030",
+        "10010100005",
+        "40011317176",
+        "10010106265",
+        "50011400045",
+        "20010200005",
+        "40011337401",
+        "400113027",
+        "100101041",
+        "10010100026",
+        "80010800002",
+        "40011300012",
+        "50011404979",
+        "10010100008",
+        "40011300005",
+        "20010200005",
+        "10010100027",
+        "100101040",
+        "70010720497",
+        "20010200018",
+        "20010208399",
+        "10011900012",
+        "10011900016",
+        "10011900055",
+        "10011905324",
+        "10011905374",
+        "10011900028",
+        "10011900055"
+      ]
+    ]
+  },
+  {
+    "id": 400132,
+    "type": "feastrecord",
+    "values": [
+      [
+        "30"
+      ]
+    ]
+  },
+  {
+    "id": 400133,
+    "type": "lmgiftRecordlimit",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400134,
+    "type": "lmgiftTimelimit",
+    "values": [
+      [
+        "7"
+      ]
+    ]
+  },
+  {
+    "id": 400135,
+    "type": "damping",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400136,
+    "type": "UnionSeat",
+    "values": [
+      [
+        "8"
+      ]
+    ]
+  },
+  {
+    "id": 400137,
+    "type": "UnionFactor",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400138,
+    "type": "SeverGroupChatFreeTime",
+    "values": [
+      [
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400139,
+    "type": "redpacketMaxtimes",
+    "values": [
+      [
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400140,
+    "type": "maxfriend",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400141,
+    "type": "YamatoRareScore",
+    "values": [
+      [
+        "100"
+      ],
+      [
+        "200"
+      ],
+      [
+        "600"
+      ],
+      [
+        "4000"
+      ],
+      [
+        "100000"
+      ]
+    ]
+  },
+  {
+    "id": 400142,
+    "type": "YamatoQualityScore",
+    "values": [
+      [
+        "100"
+      ],
+      [
+        "200"
+      ],
+      [
+        "500"
+      ],
+      [
+        "1000"
+      ],
+      [
+        "2000"
+      ],
+      [
+        "4000"
+      ],
+      [
+        "8000"
+      ],
+      [
+        "16000"
+      ],
+      [
+        "40000"
+      ],
+      [
+        "100000"
+      ],
+      [
+        "200000"
+      ],
+      [
+        "400000"
+      ]
+    ]
+  },
+  {
+    "id": 400143,
+    "type": "YamatoIntimacyScore",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400144,
+    "type": "YamatoTalentScore",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400145,
+    "type": "YamatoSkinSkillScore1",
+    "values": [
+      [
+        "200"
+      ]
+    ]
+  },
+  {
+    "id": 400146,
+    "type": "YamatoSkinSkillScore2",
+    "values": [
+      [
+        "500"
+      ]
+    ]
+  },
+  {
+    "id": 400147,
+    "type": "YamatoRoomSkillScore",
+    "values": [
+      [
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400148,
+    "type": "YamatoHeroSkillScore1",
+    "values": [
+      [
+        "15"
+      ]
+    ]
+  },
+  {
+    "id": 400149,
+    "type": "YamatoHeroSkillScore2",
+    "values": [
+      [
+        "30"
+      ]
+    ]
+  },
+  {
+    "id": 400150,
+    "type": "oldTaskServer",
+    "values": [
+      [
+        "17"
+      ]
+    ]
+  },
+  {
+    "id": 400151,
+    "type": "yamatoID",
+    "values": [
+      [
+        "16001"
+      ]
+    ]
+  },
+  {
+    "id": 400152,
+    "type": "gunBaseDamage",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400154,
+    "type": "oldadventure",
+    "values": []
+  },
+  {
+    "id": 400155,
+    "type": "intervalBattleship",
+    "values": [
+      [
+        "400"
+      ]
+    ]
+  },
+  {
+    "id": 400156,
+    "type": "battleshipMaxTime",
+    "values": [
+      [
+        "10000"
+      ]
+    ]
+  },
+  {
+    "id": 400157,
+    "type": "scaleMax",
+    "values": [
+      [
+        "0.4"
+      ]
+    ]
+  },
+  {
+    "id": 400158,
+    "type": "bulletsFiredTotalNumber",
+    "values": [
+      [
+        "5"
+      ]
+    ]
+  },
+  {
+    "id": 400159,
+    "type": "intervalBullets",
+    "values": [
+      [
+        "4"
+      ]
+    ]
+  },
+  {
+    "id": 400160,
+    "type": "missileLaunchesTotalNumber",
+    "values": [
+      [
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400161,
+    "type": "intervalMissile",
+    "values": [
+      [
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400162,
+    "type": "clickInterval",
+    "values": [
+      [
+        "300"
+      ],
+      [
+        "400"
+      ]
+    ]
+  },
+  {
+    "id": 400163,
+    "type": "serverLog",
+    "values": []
+  },
+  {
+    "id": 400164,
+    "type": "autoBulletsFiredTotalNumber",
+    "values": [
+      [
+        "3"
+      ]
+    ]
+  },
+  {
+    "id": 400165,
+    "type": "battleshipMinTime",
+    "values": [
+      [
+        "200"
+      ]
+    ]
+  },
+  {
+    "id": 400166,
+    "type": "scaleMin",
+    "values": [
+      [
+        "0.2"
+      ]
+    ]
+  },
+  {
+    "id": 400167,
+    "type": "enemyMaxNumber",
+    "values": [
+      [
+        "6"
+      ]
+    ]
+  },
+  {
+    "id": 400168,
+    "type": "UnionBotDay",
+    "values": [
+      [
+        "9999"
+      ]
+    ]
+  },
+  {
+    "id": 400169,
+    "type": "UnionBotVipPoint",
+    "values": [
+      [
+        "25"
+      ]
+    ]
+  },
+  {
+    "id": 400170,
+    "type": "UnionBotLevel",
+    "values": [
+      [
+        "916"
+      ]
+    ]
+  },
+  {
+    "id": 400171,
+    "type": "teamHuaben",
+    "values": [
+      [
+        "100",
+        "86400",
+        "4319"
+      ]
+    ]
+  },
+  {
+    "id": 400172,
+    "type": "itemHeroShow",
+    "values": [
+      [
+        "3188",
+        "3102",
+        "3103",
+        "3104",
+        "3105",
+        "3106",
+        "3189"
+      ]
+    ]
+  },
+  {
+    "id": 400173,
+    "type": "activityGetChampagne",
+    "values": [
+      [
+        "6",
+        "4299",
+        "1",
+        "60"
+      ],
+      [
+        "6",
+        "4345",
+        "1",
+        "60"
+      ]
+    ]
+  },
+  {
+    "id": 400174,
+    "type": "speed",
+    "values": [
+      [
+        "1000"
+      ]
+    ]
+  },
+  {
+    "id": 400175,
+    "type": "minspeed",
+    "values": [
+      [
+        "500"
+      ]
+    ]
+  },
+  {
+    "id": 400176,
+    "type": "anim_time",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400177,
+    "type": "anim_single_time",
+    "values": [
+      [
+        "0.5"
+      ]
+    ]
+  },
+  {
+    "id": 400178,
+    "type": "delta",
+    "values": [
+      [
+        "0.02"
+      ]
+    ]
+  },
+  {
+    "id": 400179,
+    "type": "delay_time",
+    "values": [
+      [
+        "7"
+      ]
+    ]
+  },
+  {
+    "id": 400180,
+    "type": "pos_offset",
+    "values": [
+      [
+        "-2"
+      ]
+    ]
+  },
+  {
+    "id": 400181,
+    "type": "repeat_role_reward",
+    "values": [
+      [
+        "320127"
+      ]
+    ]
+  },
+  {
+    "id": 400182,
+    "type": "autoAssist",
+    "values": [
+      [
+        "25"
+      ],
+      [
+        "30"
+      ]
+    ]
+  },
+  {
+    "id": 400183,
+    "type": "duplicatePermanentCard",
+    "values": [
+      [
+        "2",
+        "720"
+      ]
+    ]
+  },
+  {
+    "id": 400184,
+    "type": "lossValue",
+    "values": [
+      [
+        "12000"
+      ]
+    ]
+  },
+  {
+    "id": 400185,
+    "type": "adventureloss",
+    "values": [
+      [
+        "8000"
+      ],
+      [
+        "12000"
+      ]
+    ]
+  },
+  {
+    "id": 400186,
+    "type": "noonBossReward",
+    "values": [
+      [
+        "1998"
+      ]
+    ]
+  },
+  {
+    "id": 400187,
+    "type": "afternoonBossReward",
+    "values": [
+      [
+        "1999"
+      ]
+    ]
+  },
+  {
+    "id": 400188,
+    "type": "zillionairemovespeed",
+    "values": [
+      [
+        "1.8"
+      ]
+    ]
+  },
+  {
+    "id": 400189,
+    "type": "zillionaireautospeed",
+    "values": [
+      [
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400190,
+    "type": "addPackageopenlevel",
+    "values": [
+      [
+        "1",
+        "904"
+      ]
+    ]
+  },
+  {
+    "id": 400191,
+    "type": "energyTimeConsume",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400192,
+    "type": "energyReplaceConsume",
+    "values": [
+      [
+        "4008",
+        "3"
+      ]
+    ]
+  },
+  {
+    "id": 400193,
+    "type": "friendSkillReplaceConsume",
+    "values": [
+      [
+        "4010",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400194,
+    "type": "friendPlayConsume",
+    "values": [
+      [
+        "100",
+        "200",
+        "300",
+        "400",
+        "500",
+        "600",
+        "700",
+        "800",
+        "900",
+        "1000",
+        "1100",
+        "1200",
+        "1300",
+        "1400",
+        "1500",
+        "1600",
+        "1700",
+        "1800",
+        "1900",
+        "2000"
+      ]
+    ]
+  },
+  {
+    "id": 400195,
+    "type": "friendPlayResProduct",
+    "values": [
+      [
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400196,
+    "type": "friendPlayReplaceConsume",
+    "values": [
+      [
+        "3948",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400197,
+    "type": "friendPlayItemProduct",
+    "values": [
+      [
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400198,
+    "type": "friendSkillProb1",
+    "values": [
+      [
+        "0.01",
+        "10000"
+      ],
+      [
+        "0.02",
+        "15000"
+      ],
+      [
+        "0.03",
+        "18000"
+      ],
+      [
+        "0.04",
+        "21600"
+      ],
+      [
+        "0.05",
+        "17280"
+      ],
+      [
+        "0.06",
+        "10368"
+      ],
+      [
+        "0.07",
+        "7257"
+      ],
+      [
+        "0.08",
+        "5080"
+      ],
+      [
+        "0.09",
+        "3556"
+      ],
+      [
+        "0.1",
+        "2489"
+      ],
+      [
+        "0.11",
+        "1493"
+      ],
+      [
+        "0.12",
+        "1194"
+      ],
+      [
+        "0.13",
+        "955"
+      ],
+      [
+        "0.14",
+        "764"
+      ],
+      [
+        "0.15",
+        "611"
+      ],
+      [
+        "0.16",
+        "489"
+      ],
+      [
+        "0.17",
+        "391"
+      ],
+      [
+        "0.18",
+        "313"
+      ],
+      [
+        "0.19",
+        "250"
+      ],
+      [
+        "0.2",
+        "200"
+      ],
+      [
+        "0.21",
+        "160"
+      ],
+      [
+        "0.22",
+        "128"
+      ],
+      [
+        "0.23",
+        "102"
+      ],
+      [
+        "0.24",
+        "82"
+      ],
+      [
+        "0.25",
+        "65"
+      ],
+      [
+        "0.26",
+        "52"
+      ],
+      [
+        "0.27",
+        "42"
+      ],
+      [
+        "0.28",
+        "33"
+      ],
+      [
+        "0.29",
+        "26"
+      ],
+      [
+        "0.3",
+        "21"
+      ]
+    ]
+  },
+  {
+    "id": 400199,
+    "type": "friendSkillProb2",
+    "values": [
+      [
+        "0.2",
+        "18000"
+      ],
+      [
+        "0.21",
+        "12000"
+      ],
+      [
+        "0.22",
+        "8000"
+      ],
+      [
+        "0.23",
+        "5000"
+      ],
+      [
+        "0.24",
+        "3000"
+      ],
+      [
+        "0.25",
+        "1500"
+      ],
+      [
+        "0.26",
+        "500"
+      ],
+      [
+        "0.27",
+        "450"
+      ],
+      [
+        "0.28",
+        "400"
+      ],
+      [
+        "0.29",
+        "300"
+      ],
+      [
+        "0.3",
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400200,
+    "type": "blueprintPoints",
+    "values": [
+      [
+        "60"
+      ]
+    ]
+  },
+  {
+    "id": 400201,
+    "type": "blueprintPointsItem",
+    "values": [
+      [
+        "4009",
+        "5"
+      ]
+    ]
+  },
+  {
+    "id": 400202,
+    "type": "blueprintRate",
+    "values": [
+      [
+        "10000"
+      ]
+    ]
+  },
+  {
+    "id": 400203,
+    "type": "blueprintPanelPoint",
+    "values": [
+      [
+        "1000"
+      ]
+    ]
+  },
+  {
+    "id": 400204,
+    "type": "blueprintPointsConsume",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400205,
+    "type": "blueprintWarehouseCapacity",
+    "values": [
+      [
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400206,
+    "type": "exploreResumeTime",
+    "values": [
+      [
+        "1800"
+      ]
+    ]
+  },
+  {
+    "id": 400207,
+    "type": "exploreReplaceConsume",
+    "values": [
+      [
+        "4007",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400208,
+    "type": "ruiyiLevel",
+    "values": [
+      [
+        "1",
+        "40"
+      ],
+      [
+        "5",
+        "20"
+      ],
+      [
+        "10",
+        "20"
+      ],
+      [
+        "20",
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400209,
+    "type": "jingqiaoLevel",
+    "values": [
+      [
+        "3",
+        "4"
+      ],
+      [
+        "7",
+        "2"
+      ],
+      [
+        "11",
+        "2"
+      ],
+      [
+        "15",
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400210,
+    "type": "planetExplorationTop8Events",
+    "values": [
+      [
+        "10003"
+      ],
+      [
+        "2009"
+      ],
+      [
+        "3004"
+      ],
+      [
+        "9004"
+      ],
+      [
+        "2009"
+      ],
+      [
+        "4004"
+      ],
+      [
+        "5004"
+      ],
+      [
+        "2009"
+      ]
+    ]
+  },
+  {
+    "id": 400211,
+    "type": "seniorGift10Unlock",
+    "values": [
+      [
+        "100",
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400212,
+    "type": "seniorGift100Unlock",
+    "values": [
+      [
+        "1000",
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400213,
+    "type": "accessHead",
+    "values": [
+      [
+        "icon_head_5728"
+      ]
+    ]
+  },
+  {
+    "id": 400214,
+    "type": "defaultHomePara",
+    "values": [
+      [
+        "1"
+      ],
+      [
+        "21001"
+      ],
+      [
+        "1"
+      ],
+      [
+        "1001"
+      ],
+      [
+        "16001"
+      ]
+    ]
+  },
+  {
+    "id": 400215,
+    "type": "CollegeDuel",
+    "values": [
+      [
+        "3939"
+      ]
+    ]
+  },
+  {
+    "id": 400216,
+    "type": "rankNum",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400217,
+    "type": "friedLevelLimit",
+    "values": [
+      [
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400218,
+    "type": "maxLevel",
+    "values": [
+      [
+        "7"
+      ]
+    ]
+  },
+  {
+    "id": 400219,
+    "type": "beforeFriendMessageNum",
+    "values": [
+      [
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400220,
+    "type": "contactDaysForAdd",
+    "values": [
+      [
+        "7"
+      ]
+    ]
+  },
+  {
+    "id": 400221,
+    "type": "contactDaysForLoad",
+    "values": [
+      [
+        "7"
+      ]
+    ]
+  },
+  {
+    "id": 400222,
+    "type": "messageNum",
+    "values": [
+      [
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400223,
+    "type": "seniorAddForLike",
+    "values": [
+      [
+        "25"
+      ]
+    ]
+  },
+  {
+    "id": 400224,
+    "type": "seniorAddForBanquet",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400225,
+    "type": "seniorAddForTravel",
+    "values": [
+      [
+        "25"
+      ]
+    ]
+  },
+  {
+    "id": 400226,
+    "type": "seniorAddForCooperate",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400227,
+    "type": "seniorMax",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400228,
+    "type": "areaChatGoodsId",
+    "values": [
+      [
+        "3124"
+      ]
+    ]
+  },
+  {
+    "id": 400229,
+    "type": "doubleJunior",
+    "values": [
+      [
+        "2000"
+      ]
+    ]
+  },
+  {
+    "id": 400230,
+    "type": "inspireTime",
+    "values": [
+      [
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400231,
+    "type": "shopID",
+    "values": [
+      [
+        "1006"
+      ]
+    ]
+  },
+  {
+    "id": 400232,
+    "type": "battlefieldReport",
+    "values": [
+      [
+        "100"
+      ],
+      [
+        "30"
+      ]
+    ]
+  },
+  {
+    "id": 400233,
+    "type": "rankId",
+    "values": [
+      [
+        "1017"
+      ],
+      [
+        "1018"
+      ]
+    ]
+  },
+  {
+    "id": 400234,
+    "type": "initialScore",
+    "values": [
+      [
+        "1000"
+      ]
+    ]
+  },
+  {
+    "id": 400235,
+    "type": "freeTimes",
+    "values": [
+      [
+        "5"
+      ]
+    ]
+  },
+  {
+    "id": 400236,
+    "type": "matchingInterval",
+    "values": [
+      [
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400237,
+    "type": "upvoteReward",
+    "values": [
+      [
+        "40000"
+      ]
+    ]
+  },
+  {
+    "id": 400238,
+    "type": "lowestMark",
+    "values": [
+      [
+        "0"
+      ]
+    ]
+  },
+  {
+    "id": 400239,
+    "type": "lotteryShop",
+    "values": [
+      [
+        "1006"
+      ],
+      [
+        "1007"
+      ]
+    ]
+  },
+  {
+    "id": 400240,
+    "type": "PeakSeasonQualifyMatch",
+    "values": [
+      [
+        "256"
+      ]
+    ]
+  },
+  {
+    "id": 400241,
+    "type": "PeakSeasonKnockoutMatch",
+    "values": [
+      [
+        "64"
+      ]
+    ]
+  },
+  {
+    "id": 400242,
+    "type": "QualifyMatchHreoNum",
+    "values": [
+      [
+        "5"
+      ]
+    ]
+  },
+  {
+    "id": 400243,
+    "type": "KnockoutMatchHreoNum",
+    "values": [
+      [
+        "5"
+      ],
+      [
+        "7"
+      ],
+      [
+        "9"
+      ],
+      [
+        "11"
+      ],
+      [
+        "15"
+      ],
+      [
+        "21"
+      ]
+    ]
+  },
+  {
+    "id": 400244,
+    "type": "GuessPoints",
+    "values": [
+      [
+        "4369"
+      ],
+      [
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400245,
+    "type": "WinRate",
+    "values": [
+      [
+        "15000"
+      ]
+    ]
+  },
+  {
+    "id": 400246,
+    "type": "LossRate",
+    "values": [
+      [
+        "5000"
+      ]
+    ]
+  },
+  {
+    "id": 400247,
+    "type": "PeakSeasonCurrency",
+    "values": [
+      [
+        "4370"
+      ]
+    ]
+  },
+  {
+    "id": 400248,
+    "type": "PeakSeasonRank",
+    "values": [
+      [
+        "107"
+      ]
+    ]
+  },
+  {
+    "id": 400249,
+    "type": "PeakSeasonUpvoteReward",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400250,
+    "type": "PeakSeasonShop",
+    "values": [
+      [
+        "1007"
+      ]
+    ]
+  },
+  {
+    "id": 400251,
+    "type": "PeakSeasonMinBlood",
+    "values": [
+      [
+        "1500"
+      ]
+    ]
+  },
+  {
+    "id": 400252,
+    "type": "TravelGift",
+    "values": [
+      [
+        "4007",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400253,
+    "type": "AbattoirFreeTimes",
+    "values": [
+      [
+        "3"
+      ]
+    ]
+  },
+  {
+    "id": 400254,
+    "type": "ToolId",
+    "values": [
+      [
+        "4360"
+      ]
+    ]
+  },
+  {
+    "id": 400255,
+    "type": "rankday",
+    "values": [
+      [
+        "1015"
+      ]
+    ]
+  },
+  {
+    "id": 400256,
+    "type": "rankweek",
+    "values": [
+      [
+        "1016"
+      ]
+    ]
+  },
+  {
+    "id": 400257,
+    "type": "winbasegrade",
+    "values": [
+      [
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400258,
+    "type": "lossbasegrade",
+    "values": [
+      [
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400259,
+    "type": "fightreward",
+    "values": [
+      [
+        "17"
+      ]
+    ]
+  },
+  {
+    "id": 400260,
+    "type": "creditsicon",
+    "values": [
+      [
+        "icon_prism"
+      ]
+    ]
+  },
+  {
+    "id": 400261,
+    "type": "initialscoe",
+    "values": [
+      [
+        "1000"
+      ]
+    ]
+  },
+  {
+    "id": 400262,
+    "type": "rankinterval",
+    "values": [
+      [
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400263,
+    "type": "abattoirupvote",
+    "values": [
+      [
+        "30601"
+      ]
+    ]
+  },
+  {
+    "id": 400264,
+    "type": "palaceScector",
+    "values": [
+      [
+        "25"
+      ]
+    ]
+  },
+  {
+    "id": 400265,
+    "type": "palaceSpecial",
+    "values": [
+      [
+        "15"
+      ]
+    ]
+  },
+  {
+    "id": 400266,
+    "type": "palaceReport",
+    "values": [
+      [
+        "30",
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400267,
+    "type": "palaceShop",
+    "values": [
+      [
+        "1008"
+      ]
+    ]
+  },
+  {
+    "id": 400268,
+    "type": "teamGold",
+    "values": [
+      [
+        "3001"
+      ]
+    ]
+  },
+  {
+    "id": 400269,
+    "type": "peakSeasonGold",
+    "values": [
+      [
+        "4370"
+      ]
+    ]
+  },
+  {
+    "id": 400270,
+    "type": "longestTrainingTime",
+    "values": [
+      [
+        "28800"
+      ]
+    ]
+  },
+  {
+    "id": 400271,
+    "type": "trainRewardPercentage",
+    "values": [
+      [
+        "25"
+      ]
+    ]
+  },
+  {
+    "id": 400272,
+    "type": "negotiationRange",
+    "values": [
+      [
+        "10",
+        "40"
+      ]
+    ]
+  },
+  {
+    "id": 400273,
+    "type": "freeNegotiation",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400274,
+    "type": "buyNegotiation",
+    "values": [
+      [
+        "7"
+      ]
+    ]
+  },
+  {
+    "id": 400275,
+    "type": "negotiationPrice",
+    "values": [
+      [
+        "100"
+      ],
+      [
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400276,
+    "type": "protectionTime",
+    "values": [
+      [
+        "3600"
+      ]
+    ]
+  },
+  {
+    "id": 400277,
+    "type": "classSizeLimit",
+    "values": [
+      [
+        "350"
+      ],
+      [
+        "200"
+      ]
+    ]
+  },
+  {
+    "id": 400278,
+    "type": "classroom",
+    "values": [
+      [
+        "30"
+      ]
+    ]
+  },
+  {
+    "id": 400279,
+    "type": "changeClass",
+    "values": [
+      [
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400280,
+    "type": "changeClassPrice",
+    "values": [
+      [
+        "500"
+      ]
+    ]
+  },
+  {
+    "id": 400281,
+    "type": "deskDisplay",
+    "values": [
+      [
+        "9",
+        "9",
+        "9"
+      ],
+      [
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400282,
+    "type": "trainRank",
+    "values": [
+      [
+        "1019"
+      ],
+      [
+        "1020"
+      ]
+    ]
+  },
+  {
+    "id": 400283,
+    "type": "trainReward",
+    "values": [
+      [
+        "3003"
+      ],
+      [
+        "3004"
+      ]
+    ]
+  },
+  {
+    "id": 400284,
+    "type": "trainlLottery",
+    "values": [
+      [
+        "2000"
+      ],
+      [
+        "2000"
+      ]
+    ]
+  },
+  {
+    "id": 400285,
+    "type": "unionwishwalltimes",
+    "values": [
+      [
+        "7"
+      ],
+      [
+        "33900"
+      ],
+      [
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400286,
+    "type": "prismShowIdleHarvestMax",
+    "values": [
+      [
+        "12"
+      ]
+    ]
+  },
+  {
+    "id": 400287,
+    "type": "prismShowIdleHarvestMore",
+    "values": [
+      [
+        "30"
+      ],
+      [
+        "60"
+      ]
+    ]
+  },
+  {
+    "id": 400288,
+    "type": "delegatedUnscheduledTaskMax",
+    "values": [
+      [
+        "6"
+      ]
+    ]
+  },
+  {
+    "id": 400289,
+    "type": "commissionRefresh",
+    "values": [
+      [
+        "3"
+      ]
+    ]
+  },
+  {
+    "id": 400290,
+    "type": "delegateReset",
+    "values": [
+      [
+        "3133"
+      ]
+    ]
+  },
+  {
+    "id": 400291,
+    "type": "delegatedRefreshConsumesDiamond",
+    "values": [
+      [
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400292,
+    "type": "entrustJunior",
+    "values": [
+      [
+        "50",
+        "5"
+      ]
+    ]
+  },
+  {
+    "id": 400293,
+    "type": "commissionPrivilegePrice",
+    "values": [
+      [
+        "980"
+      ],
+      [
+        "1",
+        "3"
+      ],
+      [
+        "3",
+        "4"
+      ]
+    ]
+  },
+  {
+    "id": 400294,
+    "type": "delegateAutomaticDispatch",
+    "values": [
+      [
+        "3"
+      ],
+      [
+        "3"
+      ]
+    ]
+  },
+  {
+    "id": 400295,
+    "type": "partTimeNoteProps",
+    "values": [
+      [
+        "3005"
+      ]
+    ]
+  },
+  {
+    "id": 400296,
+    "type": "schoolFestivalScore",
+    "values": [
+      [
+        "3008"
+      ]
+    ]
+  },
+  {
+    "id": 400297,
+    "type": "schoolFestivalRobot",
+    "values": [
+      [
+        "6",
+        "30",
+        "1",
+        "100",
+        "3600",
+        "901"
+      ]
+    ]
+  },
+  {
+    "id": 400298,
+    "type": "juniorRefresh",
+    "values": [
+      [
+        "10",
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400299,
+    "type": "fightShow",
+    "values": [
+      [
+        "10"
+      ],
+      [
+        "5",
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400300,
+    "type": "thepalacefree",
+    "values": [
+      [
+        "3"
+      ]
+    ]
+  },
+  {
+    "id": 400301,
+    "type": "thepalaceAD",
+    "values": [
+      [
+        "5",
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400302,
+    "type": "divineCall",
+    "values": [
+      [
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400303,
+    "type": "trainActivity",
+    "values": [
+      [
+        "1",
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400304,
+    "type": "schoolFestival",
+    "values": [
+      [
+        "3"
+      ]
+    ]
+  },
+  {
+    "id": 400305,
+    "type": "schoolFestivalShop",
+    "values": [
+      [
+        "1003"
+      ]
+    ]
+  },
+  {
+    "id": 400306,
+    "type": "thepalacetimes",
+    "values": [
+      [
+        "100",
+        "10",
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400307,
+    "type": "thepalaceprotect",
+    "values": [
+      [
+        "28800"
+      ]
+    ]
+  },
+  {
+    "id": 400308,
+    "type": "chatCd",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400309,
+    "type": "chatRecord",
+    "values": [
+      [
+        "7",
+        "500"
+      ]
+    ]
+  },
+  {
+    "id": 400310,
+    "type": "chatWordLimit",
+    "values": [
+      [
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400311,
+    "type": "chatLevel",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400312,
+    "type": "UnionBattleBaseReward",
+    "values": [
+      [
+        "1",
+        "50000"
+      ],
+      [
+        "3023",
+        "150"
+      ]
+    ]
+  },
+  {
+    "id": 400313,
+    "type": "UnionBattleTimes",
+    "values": [
+      [
+        "2"
+      ],
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400314,
+    "type": "UnionBattleSweepReward",
+    "values": [
+      [
+        "5"
+      ],
+      [
+        "5"
+      ],
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400315,
+    "type": "UnionBattleBox",
+    "values": [
+      [
+        "13"
+      ],
+      [
+        "14"
+      ]
+    ]
+  },
+  {
+    "id": 400316,
+    "type": "UnionBattleFort",
+    "values": [
+      [
+        "3"
+      ]
+    ]
+  },
+  {
+    "id": 400317,
+    "type": "UnionBattleSolo",
+    "values": [
+      [
+        "0"
+      ],
+      [
+        "17280000"
+      ]
+    ]
+  },
+  {
+    "id": 400318,
+    "type": "UnionBattleGroup",
+    "values": [
+      [
+        "0"
+      ],
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400319,
+    "type": "UnionBattlePlayerPow",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400320,
+    "type": "UnionBattleCompetitor",
+    "values": [
+      [
+        "60",
+        "15"
+      ],
+      [
+        "20",
+        "40"
+      ],
+      [
+        "10",
+        "60"
+      ],
+      [
+        "10",
+        "-1"
+      ]
+    ]
+  },
+  {
+    "id": 400321,
+    "type": "UnionBattlePlayer",
+    "values": [
+      [
+        "90"
+      ],
+      [
+        "100"
+      ],
+      [
+        "110"
+      ]
+    ]
+  },
+  {
+    "id": 400322,
+    "type": "UnionBattlePass",
+    "values": [
+      [
+        "2",
+        "100"
+      ],
+      [
+        "3130",
+        "2"
+      ]
+    ]
+  },
+  {
+    "id": 400323,
+    "type": "UnionClose",
+    "values": [
+      [
+        "86400",
+        "3600"
+      ]
+    ]
+  },
+  {
+    "id": 400324,
+    "type": "UnionSkill",
+    "values": [
+      [
+        "20"
+      ],
+      [
+        "40"
+      ],
+      [
+        "60"
+      ]
+    ]
+  },
+  {
+    "id": 400325,
+    "type": "UnionSkillReset",
+    "values": [
+      [
+        "0"
+      ],
+      [
+        "1000"
+      ]
+    ]
+  },
+  {
+    "id": 400326,
+    "type": "UnionSkillLevelUp",
+    "values": [
+      [
+        "5"
+      ],
+      [
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400327,
+    "type": "UnionSkillLimit",
+    "values": [
+      [
+        "20"
+      ],
+      [
+        "40"
+      ],
+      [
+        "60"
+      ]
+    ]
+  },
+  {
+    "id": 400328,
+    "type": "UnionCurrency",
+    "values": [
+      [
+        "3023"
+      ]
+    ]
+  },
+  {
+    "id": 400329,
+    "type": "UnionBossFreeChallenge",
+    "values": [
+      [
+        "2"
+      ],
+      [
+        "4"
+      ]
+    ]
+  },
+  {
+    "id": 400330,
+    "type": "AssemblyOrderCd",
+    "values": [
+      [
+        "60"
+      ]
+    ]
+  },
+  {
+    "id": 400331,
+    "type": "UnionBossPaidChallenge",
+    "values": [
+      [
+        "50"
+      ],
+      [
+        "50"
+      ],
+      [
+        "50"
+      ],
+      [
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400332,
+    "type": "ShrineAttr",
+    "values": [
+      [
+        "1"
+      ],
+      [
+        "4"
+      ],
+      [
+        "5"
+      ],
+      [
+        "128"
+      ]
+    ]
+  },
+  {
+    "id": 400333,
+    "type": "ShrineGoods",
+    "values": [
+      [
+        "4362"
+      ]
+    ]
+  },
+  {
+    "id": 400334,
+    "type": "ShrineGoodsAttr",
+    "values": [
+      [
+        "1",
+        "1"
+      ],
+      [
+        "4",
+        "2000"
+      ]
+    ]
+  },
+  {
+    "id": 400335,
+    "type": "DiamondSecret1",
+    "values": [
+      [
+        "112",
+        "1600"
+      ],
+      [
+        "113",
+        "1500"
+      ],
+      [
+        "114",
+        "1400"
+      ],
+      [
+        "115",
+        "1300"
+      ],
+      [
+        "116",
+        "1200"
+      ],
+      [
+        "117",
+        "1100"
+      ],
+      [
+        "118",
+        "1000"
+      ],
+      [
+        "119",
+        "900"
+      ],
+      [
+        "120",
+        "800"
+      ],
+      [
+        "121",
+        "700"
+      ],
+      [
+        "122",
+        "600"
+      ],
+      [
+        "123",
+        "500"
+      ],
+      [
+        "124",
+        "400"
+      ],
+      [
+        "125",
+        "300"
+      ],
+      [
+        "126",
+        "200"
+      ],
+      [
+        "127",
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400336,
+    "type": "DiamondSecret2",
+    "values": [
+      [
+        "112",
+        "1600"
+      ],
+      [
+        "113",
+        "1500"
+      ],
+      [
+        "114",
+        "1400"
+      ],
+      [
+        "115",
+        "1300"
+      ],
+      [
+        "116",
+        "1200"
+      ],
+      [
+        "117",
+        "1100"
+      ],
+      [
+        "118",
+        "1000"
+      ],
+      [
+        "119",
+        "900"
+      ],
+      [
+        "120",
+        "800"
+      ],
+      [
+        "121",
+        "700"
+      ],
+      [
+        "122",
+        "600"
+      ],
+      [
+        "123",
+        "500"
+      ],
+      [
+        "124",
+        "400"
+      ],
+      [
+        "125",
+        "300"
+      ],
+      [
+        "126",
+        "200"
+      ],
+      [
+        "127",
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400337,
+    "type": "DiamondSecret3",
+    "values": [
+      [
+        "1",
+        "10000"
+      ],
+      [
+        "2",
+        "5000"
+      ],
+      [
+        "3",
+        "2500"
+      ],
+      [
+        "5",
+        "1000"
+      ]
+    ]
+  },
+  {
+    "id": 400338,
+    "type": "DiamondSecret4",
+    "values": [
+      [
+        "112",
+        "1600"
+      ],
+      [
+        "113",
+        "1500"
+      ],
+      [
+        "114",
+        "1400"
+      ],
+      [
+        "115",
+        "1300"
+      ],
+      [
+        "116",
+        "1200"
+      ],
+      [
+        "117",
+        "1100"
+      ],
+      [
+        "118",
+        "1000"
+      ],
+      [
+        "119",
+        "900"
+      ],
+      [
+        "120",
+        "800"
+      ],
+      [
+        "121",
+        "700"
+      ],
+      [
+        "122",
+        "600"
+      ],
+      [
+        "123",
+        "500"
+      ],
+      [
+        "124",
+        "400"
+      ],
+      [
+        "125",
+        "300"
+      ],
+      [
+        "126",
+        "200"
+      ],
+      [
+        "127",
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400339,
+    "type": "TypicalHeadIcon",
+    "values": [
+      [
+        "icon_rolehead_1001"
+      ],
+      [
+        "icon_rolehead_1003"
+      ]
+    ]
+  },
+  {
+    "id": 400340,
+    "type": "ShrineQuality",
+    "values": [
+      [
+        "4"
+      ]
+    ]
+  },
+  {
+    "id": 400341,
+    "type": "ShrineQualityNum",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400342,
+    "type": "ShrineLvUpGoods",
+    "values": [
+      [
+        "4361"
+      ]
+    ]
+  },
+  {
+    "id": 400343,
+    "type": "WelfareDrawCard",
+    "values": [
+      [
+        "3130"
+      ]
+    ]
+  },
+  {
+    "id": 400344,
+    "type": "RechargeSigninMonth",
+    "values": [
+      [
+        "1280"
+      ],
+      [
+        "3280"
+      ]
+    ]
+  },
+  {
+    "id": 400345,
+    "type": "WelfareWeekend",
+    "values": [
+      [
+        "233"
+      ],
+      [
+        "234"
+      ],
+      [
+        "235"
+      ]
+    ]
+  },
+  {
+    "id": 400346,
+    "type": "WelfareFashionShop",
+    "values": [
+      [
+        "236"
+      ],
+      [
+        "10045"
+      ]
+    ]
+  },
+  {
+    "id": 400347,
+    "type": "AbattoirShop",
+    "values": [
+      [
+        "1005"
+      ]
+    ]
+  },
+  {
+    "id": 400348,
+    "type": "ParttimeNote",
+    "values": [
+      [
+        "20000"
+      ]
+    ]
+  },
+  {
+    "id": 400349,
+    "type": "starpathStageSkipBegin",
+    "values": [
+      [
+        "100"
+      ]
+    ]
+  },
+  {
+    "id": 400350,
+    "type": "starpathStageSkipCoefficient",
+    "values": [
+      [
+        "13000"
+      ]
+    ]
+  },
+  {
+    "id": 400351,
+    "type": "UnionJoinLevel",
+    "values": [
+      [
+        "1"
+      ],
+      [
+        "2"
+      ],
+      [
+        "3"
+      ],
+      [
+        "4"
+      ],
+      [
+        "5"
+      ],
+      [
+        "6"
+      ]
+    ]
+  },
+  {
+    "id": 400352,
+    "type": "CollegeDuelCurrency",
+    "values": [
+      [
+        "4363"
+      ]
+    ]
+  },
+  {
+    "id": 400353,
+    "type": "CollegeDuelItem",
+    "values": [
+      [
+        "4364"
+      ]
+    ]
+  },
+  {
+    "id": 400354,
+    "type": "UnionWarNumber",
+    "values": [
+      [
+        "20"
+      ]
+    ]
+  },
+  {
+    "id": 400355,
+    "type": "UnionWarOdds",
+    "values": [
+      [
+        "50"
+      ],
+      [
+        "100"
+      ],
+      [
+        "150"
+      ]
+    ]
+  },
+  {
+    "id": 400356,
+    "type": "UnionWarFailReturn",
+    "values": [
+      [
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400357,
+    "type": "UnionWarMax",
+    "values": [
+      [
+        "1000"
+      ]
+    ]
+  },
+  {
+    "id": 400366,
+    "type": "oneJpyGift",
+    "values": [
+      [
+        "10611"
+      ],
+      [
+        "1"
+      ],
+      [
+        "17"
+      ]
+    ]
+  },
+  {
+    "id": 400376,
+    "type": "UnionShopId",
+    "values": [
+      [
+        "1004"
+      ]
+    ]
+  },
+  {
+    "id": 400377,
+    "type": "CrystalSummonReward",
+    "values": [
+      [
+        "189"
+      ]
+    ]
+  },
+  {
+    "id": 400378,
+    "type": "CrystalSummonCost",
+    "values": [
+      [
+        "3132",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400379,
+    "type": "CrystalSummonBadge",
+    "values": [
+      [
+        "4371"
+      ]
+    ]
+  },
+  {
+    "id": 400380,
+    "type": "SpecialRecruitment",
+    "values": [
+      [
+        "3"
+      ],
+      [
+        "200"
+      ]
+    ]
+  },
+  {
+    "id": 400381,
+    "type": "rushShop",
+    "values": [
+      [
+        "1015"
+      ]
+    ]
+  },
+  {
+    "id": 400382,
+    "type": "WelfareFashionShopId",
+    "values": [
+      [
+        "1010"
+      ],
+      [
+        "1014"
+      ]
+    ]
+  },
+  {
+    "id": 400383,
+    "type": "raceShop",
+    "values": [
+      [
+        "1009"
+      ]
+    ]
+  },
+  {
+    "id": 400384,
+    "type": "crystalEnergy",
+    "values": [
+      [
+        "4377"
+      ]
+    ]
+  },
+  {
+    "id": 400385,
+    "type": "bgm",
+    "values": [
+      [
+        "0.6"
+      ]
+    ]
+  },
+  {
+    "id": 400386,
+    "type": "audio",
+    "values": [
+      [
+        "0.5"
+      ]
+    ]
+  },
+  {
+    "id": 400387,
+    "type": "speed",
+    "values": [
+      [
+        "8"
+      ]
+    ]
+  },
+  {
+    "id": 400388,
+    "type": "LimitedSchoolFestivalcost",
+    "values": [
+      [
+        "2",
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400389,
+    "type": "LimitedSchoolFestivalnum",
+    "values": [
+      [
+        "10"
+      ]
+    ]
+  },
+  {
+    "id": 400390,
+    "type": "lotteryTen",
+    "values": [
+      [
+        "1004",
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400391,
+    "type": "socialMediaGuideURLja",
+    "values": [
+      [
+        "https://s.g123.jp/7g1q6rs0"
+      ]
+    ]
+  },
+  {
+    "id": 400392,
+    "type": "socialMediaGuideReward",
+    "values": [
+      [
+        "401"
+      ]
+    ]
+  },
+  {
+    "id": 400393,
+    "type": "Disconnectandreconnect",
+    "values": [
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400394,
+    "type": "oneJpyGift17",
+    "values": [
+      [
+        "111111"
+      ]
+    ]
+  },
+  {
+    "id": 400395,
+    "type": "PrismStarReward",
+    "values": [
+      [
+        "2",
+        "50"
+      ]
+    ]
+  },
+  {
+    "id": 400396,
+    "type": "socialMediaGuideURLen",
+    "values": [
+      [
+        "https://s.g123.jp/2c6oboak"
+      ]
+    ]
+  },
+  {
+    "id": 400397,
+    "type": "socialMediaGuideURLtw",
+    "values": [
+      [
+        "https://s.g123.jp/7dtisefp"
+      ]
+    ]
+  },
+  {
+    "id": 400398,
+    "type": "socialMediaGuideURLko",
+    "values": [
+      [
+        "https://s.g123.jp/q0ba0frr"
+      ]
+    ]
+  },
+  {
+    "id": 400399,
+    "type": "typeRecruitment",
+    "values": [
+      [
+        "1060",
+        "1069"
+      ],
+      [
+        "1070",
+        "1065"
+      ],
+      [
+        "1071",
+        "1010"
+      ],
+      [
+        "1054",
+        "1011"
+      ],
+      [
+        "1051",
+        "1012"
+      ]
+    ]
+  },
+  {
+    "id": 400400,
+    "type": "firstJunior",
+    "values": [
+      [
+        "20"
+      ],
+      [
+        "10000"
+      ]
+    ]
+  },
+  {
+    "id": 400401,
+    "type": "tagTime",
+    "values": [
+      [
+        "10"
+      ],
+      [
+        "1"
+      ]
+    ]
+  },
+  {
+    "id": 400402,
+    "type": "unionbattle_time",
+    "values": [
+      [
+        "3"
+      ],
+      [
+        "7"
+      ]
+    ]
+  },
+  {
+    "id": 400403,
+    "type": "union_war_time",
+    "values": [
+      [
+        "7"
+      ]
+    ]
+  },
+  {
+    "id": 400404,
+    "type": "pinnaclerace_time",
+    "values": [
+      [
+        "8"
+      ]
+    ]
+  },
+  {
+    "id": 400405,
+    "type": "tdsdk_up",
+    "values": [
+      [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ]
+    ]
+  }
+]
