@@ -1,0 +1,96 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBHole";
+import "bean.proto";
+
+//福地洞天
+
+//洞天信息
+message HoleInfoReq{
+	int32 id=1;
+}
+message HoleInfoResp{
+	HolePb hole=1;
+}
+
+
+//手动刷新
+message HoleRefreshReq{
+	int32 cost=1; //道具消耗
+	int32 adtimes=2; //广告刷新次数
+}
+message HoleRefreshResp{
+	HolePb hole=1;
+	int32 adResRTimes=2;  //广告刷新次数
+	int32 itemResRCost=3; //道具刷新资源消耗
+	map<int32,int32> changeItem=4; //改变的道具，直接用kv覆盖道具列表即可,<1001,10>说明经过一系列改动后，1001这个道具还剩10个
+}
+
+
+//自动刷新
+message HoleRefreshAutoReq{
+	
+}
+message HoleRefreshAutoResp{
+	HoleResPb res=1; //新刷出来的资源
+}
+
+
+//资源采集 (p0版本只采自己家)
+message ResGatherReq{
+	int32 pos=1; //资源位置
+	repeated int32 childid=2; //仙童id --如果为空代表取消采集
+}
+message ResGatherResp{
+	int32 gatherTime=1; //采集结束时间 --如果=0代表资源回到空闲状态
+}
+
+
+//资源采集结束
+message ResGatherEndReq{
+	int32 pos=1; //资源位置
+}
+message ResGatherEndResp{
+	int32 pos=1;
+	int32 itemid=2;
+	int32 num=3;
+}
+
+
+//抢夺列表 （p1暂时不做）
+message SnatchReq{
+	
+}
+message SnatchResp{
+	repeated HolePb joinHole=1; //相邻的洞天
+	repeated HolePb enemyHole=2; //仇人的洞天
+}
+
+
+//洞天日志列表
+message HoleLogListReq{
+	
+}
+message HoleLogListResp{
+	repeated HoleLogPb log=1;
+}
+
+
+//仙童详情
+message ChildDetailReq{
+	
+}
+message ChildDetailResp{
+	ChildDetailPb detail=1;
+}
+
+
+//仙童购买
+message ChildBuyReq{
+	
+}
+message ChildBuyResp{
+	ChildDetailPb detail=1;
+	ItemPb item=2; //当前所有道具
+}
+

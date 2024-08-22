@@ -1,0 +1,26 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBShop";
+
+message ShopBuyTimesRep{
+	
+}
+//商品购买次数
+message ShopBuyTimesResp{
+	map<int32,int32> times =1; //商品购买次数 k 商品id ; v 当日购买次数
+}
+
+
+//商品购买
+message ShopBuyReq{
+	int32 goodid=1;
+	int32 num=2;
+}
+
+message ShopBuyResp{
+	int32 goodid=1;
+	int32 goodnum=2;
+	map<int32, int32> changeItem=3;
+}
+
+

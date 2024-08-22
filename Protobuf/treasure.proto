@@ -1,0 +1,151 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBTreasure";
+
+import "bean.proto";
+
+
+//原石列表 --req nil
+message RoughListResp{
+	repeated RoughPb rough=1; 
+}
+
+
+//原石进货
+message  RoughRefreshReq{
+	int32 type=1; //1-普通进货 2-特殊进货 3-免费进货
+}
+
+message RoughRefreshResp{
+	repeated RoughPb rough=1;
+	int32 roughFreeTimes=2;
+	int32 roughNormalTimes=3;
+	int32 roughSpecialTimes=4;
+	ItemPb item=5;
+}
+
+
+//原石敲击
+message  RoughHitReq{
+	//int32 times=1; //敲击次数 1 5 10
+	int32 srl=2; //序号
+}
+
+message RoughHitResp{
+	RoughPb rough=1; //当前原石最新数据
+	TreasurePb treasure=2; //获得的法宝
+	map<int32,int32> changeItem=3; //改变的道具
+
+	//map<int32,int32> item=3; //当前所有道具
+	//repeated int32 subLayer = 4; //敲击过程中的子层数 [8,5,3,2,0] 代表每次敲击后的剩余层数，碰到0终止
+}
+
+
+
+
+//法宝列表
+message  TreasureListReq{
+	
+}
+
+message TreasureListResp{
+	repeated TreasurePb treasure=1; //获得的法宝
+}
+
+
+//法宝升级
+message  TreasureUpReq{
+	int32 srl=1;
+}
+
+message TreasureUpResp{
+	TreasurePb treasure=1; 
+	map<int32,int32> changeItem=2; //改变的道具
+}
+
+
+//图鉴列表
+message  TreasureBookListReq{
+	
+}
+
+message TreasureBookListResp{
+	repeated int32 treasureid=1;
+}
+
+
+
+//法宝分解
+message  TreasureDecomposeReq{
+	int32 srl=1;
+}
+
+message TreasureDecomposeResp{
+	int32 srl=1;
+	map<int32,int64> addItem=2; //增加的道具
+}
+
+
+
+//法宝装备
+message  TreasureEquipReq{
+	int32 srl=1;
+}
+
+message TreasureEquipResp{
+	int32 srl=1;
+}
+
+
+//法宝升阶
+message  TreasureStepReq{
+	int32 srl=1;
+	map<int32,int32> costItem=2; //消耗的道具 itemid,num
+	repeated int32 costTreasureSrl=3; //消耗的法宝srl ,不重复的
+}
+
+message TreasureStepResp{
+	TreasurePb treasure=1; //升阶后的法宝
+	ItemPb item=2; //当前所有道具
+	repeated TreasurePb treasureList=3; //当前所有法宝
+}
+
+
+
+//矿脉列表 --req nil
+message MineListResp{
+	MinePb mine=1;
+}
+
+
+//矿脉奖励领取 --req nil
+message MineRewardGetResp{
+	//ItemPb reward=1; 
+	map<int32,int32> changeItem=1; //改变的道具
+}
+
+//矿脉放置法宝
+message  MinePutTreasureReq{
+	int32 pos=1; // 1,2,3,4
+	int32 srl=2; //法宝srl
+}
+
+message MinePutTreasureResp{
+	int32 pos=1; // 1,2,3,4
+	int32 srl=2; //法宝srl
+}
+
+
+//矿脉原石敲击
+message  MineRoughHitReq{
+	//int32 times=1; //敲击次数 1 5 10
+	int32 srl=2; //序号
+}
+
+message MineRoughHitResp{
+	RoughPb rough=1; //当前原石最新数据
+	TreasurePb treasure=2; //获得的法宝
+	map<int32,int32> changeItem=3; //改变的道具
+	//map<int32,int32> item=3; //当前所有道具
+	//repeated int32 subLayer = 4; //敲击过程中的子层数 [8,5,3,2,0] 代表每次敲击后的剩余层数，碰到0终止
+}

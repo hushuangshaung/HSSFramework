@@ -1,0 +1,75 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBRecharge";
+
+import "sdkapi.proto";
+import "bean.proto";
+
+/**
+	统一购买入口
+ */
+message RechargeBuyReq
+{
+	int32 rechargeId=1;
+}
+
+message RechargeBuyResp
+{
+		int32 rechargeId = 1;
+		PaymentCreateOrderResp orderInfo = 2;
+}
+/**统一购买入口**/
+
+/**
+	首充
+ */
+message FirstRechargeInfoReq
+{
+
+}
+
+message FirstRechargeInfoResp
+{
+	repeated FirstRechargePb infos = 1;		//首充信息   k：rechargeId  v：该档首充的其他信息
+}
+
+message FirstRechargeRewardReq
+{
+		int32 rechargeId = 1;		//首充档位rechargeId
+		int32 dayId = 2;				//领取的天数  配置表ID
+}
+
+message FirstRechargeRewardResp
+{
+	repeated FirstRechargePb infos = 1;		//首充信息   k：rechargeId  v：该档首充的其他信息
+	map<int32,int32> changeItem=2; //固定改变道具，客户端直接用k,v进行道具覆盖
+}
+/**首充**/
+
+
+/**金币充值**/
+message GoldRechargeInfoReq
+{
+
+}
+message GoldRechargeInfoResp
+{
+	map<int32,int32> buyNum = 1;		//购买次数 k：rechargeId v:购买次数
+}
+/**金币充值End**/
+
+
+/**特权卡**/
+message PrivilegeInfoReq
+{
+
+}
+message PrivilegeInfoResp
+{
+	map<int32,PrivilegeCardInfo> cardInfos = 1;			//k 特权卡ID		v:特权卡信息
+}
+/**特权卡End**/
+
+
+
+

@@ -1,0 +1,64 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBMount";
+
+import "bean.proto";
+
+//坐骑信息（当前）
+message  MountInfoReq{
+	
+}
+
+message MountInfoResp{
+	MountsPb mounts=1;
+}
+
+
+
+//更换
+message  ReMountReq{
+	int32 id=1; //id
+}
+
+
+message ReMountResp{
+	MountsPb mounts=1;
+}
+
+
+
+//升级 
+message  UpMountReq{
+	int32 id=1; //id
+}
+
+
+message UpMountResp{
+	MountsPb mounts=1;
+	map<int32,int32> changeItem=2; //固定改变道具，客户端直接用k,v进行道具覆盖
+}
+
+
+//购买
+message  BuyMountReq{
+	int32 id=1; //坐骑id
+}
+
+
+message BuyMountResp{
+	MountsPb mounts=1; //购买成功后的坐骑
+	map<int32,int32> changeItem=2; //固定改变道具，客户端直接用k,v进行道具覆盖
+}
+
+
+//升阶
+message  StepMountReq{
+	
+}
+
+
+message StepMountResp{
+	MountsPb mounts=1;
+	map<int32,int32> changeItem=2; //固定改变道具，客户端直接用k,v进行道具覆盖
+}
+

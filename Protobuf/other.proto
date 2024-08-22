@@ -1,0 +1,22 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBOther";
+
+import "bean.proto";
+
+//开箱设置-保存
+message BoxSettingSaveReq{
+	BoxSettingPb boxSetting=1;
+}
+
+
+//开箱设置-获取
+message BoxSettingGetReq{
+	
+}
+
+message BoxSettingGetResp{
+	BoxSettingPb boxSetting=1;
+}
+
+

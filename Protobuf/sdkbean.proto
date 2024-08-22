@@ -1,0 +1,31 @@
+syntax = "proto3";
+option java_package="com.cb.msg.bean.sdkbean";
+option java_multiple_files = true;
+
+message PaymentOrderItemPb
+{
+	string code = 1;			//商品代码  即ID
+	string name = 2;			//商品名称
+	double amt = 3;				//商品价格
+	string currency = 4;	//币种
+	string desc = 5;			//商品简介
+	int32 qty = 6;				//商品数量（虚拟电子产品必须为 1）
+	int32 taxamt = 7;			//税额（可以把税额含入 amt 之中，并把此值赋 0）
+	string url = 8;				//商品 URL
+}
+
+message PaymentCustomPb
+{
+	string game_server_id = 1;						//	游戏服务器
+	string item_type = 2;									//道具类型(pass/fund/item/gift)
+	string role_id = 3;										//	角色 ID
+	string role_level = 4;								//	角色等级
+	string role_vip_level = 5;						//	角色 VIP 等级
+	string reason = 6;										//	充值原因,活动等
+	string virtual_currency_amount = 7;		//	获得虚拟币数量
+	string notify_url = 8;								//	订单通知的回调地址
+	string ctwid = 9;											//	G123 ID
+}
+
+
+

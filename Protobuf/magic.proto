@@ -1,0 +1,116 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBMagic";
+
+import "bean.proto";
+
+
+//法阵信息
+message ArreyInfoResp{
+	 PArreyPb parrey=1;
+	 PFunePb pfune=2;
+}
+
+
+
+//购买法阵
+message BuyArreyReq{
+	 int32 id=1; //法阵id
+}
+
+message BuyArreyResp{
+	 int32 id=1; //法阵id
+	 ItemPb item=2; //当前道具
+}
+
+//更换法阵
+message ChangeArreyReq{
+	 int32 id=1; //目标法阵id
+}
+
+message ChangeArreyResp{
+	 int32 id=1; //目标法阵id, 法阵属性清空，法阵加成清空，玩家所有符文全部下阵(bindArrey=0)
+}
+
+
+//上阵符文
+message PutFuneReq{
+	 int32 srl=1; //符文序号
+	 int32 grid=2; //法阵格子，符文最顶点的那个格子
+}
+
+message PutFuneResp{
+	 ArreyPb arrey=1; //法阵
+}
+
+//下阵符文
+message DownFuneReq{
+	 int32 grid=1; //法阵格子，符文最顶点的那个格子
+}
+
+message DownFuneResp{
+	 ArreyPb arrey=1; //法阵
+}
+
+
+
+//购买符文
+message BuyFuneReq{
+	 int32 goodid=1; //商品id  符文商店配置表
+	 int32 num= 2;//数量
+}
+
+message BuyFuneResp{
+	 ItemPb item=1; //当前道具
+	 repeated FunePb fune=2; //获得的符文
+}
+
+
+//符文一键合成 --req nil
+message FuneOneKeyCombineResp{
+	repeated FunePb getFune=1; //合成获得的符文
+	repeated FunePb allFune=2; //所有的符文数据
+}
+
+
+
+//符文合成 
+message FuneCombineReq{
+	repeated int32 srl=1; 
+}
+
+message FuneCombineResp{
+	repeated int32 srl=1; 
+	int32 result=2; //0-失败 1-成功
+	FunePb getFune=3; //合成成功获得的符文,失败不返回
+	PArreyPb parrey=4;
+
+}
+
+
+//符文移动 --resp nil
+message FuneMoveReq{
+	int32 srl=1;
+	int32 oldGrid=2; //旧位置
+	int32 newGrid=3; //新位置
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

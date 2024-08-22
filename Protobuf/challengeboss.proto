@@ -1,0 +1,55 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBChallenge";
+
+import "bean.proto";
+
+message ChallengeInfoReq {
+}
+message ChallengeInfoResp{
+	ChallengeInfoPb challengeInfo = 1;
+}
+
+
+//挑战开始
+message ChallengeBattleStartReq {
+	int32 bossType = 1; // 1 野外boss；2悬赏boss
+	int32 bossId = 2; 
+}
+message ChallengeBattleStartResp {
+	int32 bossType = 1; // 1 野外boss；2悬赏boss
+	int32 bossId = 2; 
+	int32 seed = 3; // 后端随机种子
+}
+
+
+//挑战结果
+message ChallengeResultReq {
+	int32 bossType = 1; // 1 野外boss；2悬赏boss
+	int32 bossId = 2; 
+	int32 result = 3; //0-失败 1-胜利  
+	int32 bossHpParams = 4; // 悬赏boss打掉的HP
+	int32 seed = 5; // 后端随机种子
+	int32 damage = 6; // 伤害
+}
+message ChallengeResultResp {
+	map<int32,int32> changeItem = 1; //增加的道具
+	ChallengeInfoPb challengeInfo = 2;
+}
+
+
+
+//速通 --Boss关卡
+message ChallengeSweepBossReq{
+	int32 bossType = 1; // 1 野外boss；2悬赏boss
+	int32 bossId = 2; 
+}
+message ChallengeSweepBossResp{
+	map<int32,int32> changeItem = 1; //增加的道具
+	ChallengeInfoPb challengeInfo = 2; // 
+}
+
+
+
+
+

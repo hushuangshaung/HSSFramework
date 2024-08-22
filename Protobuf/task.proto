@@ -1,0 +1,27 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBTask";
+
+import "bean.proto";
+
+message FinishMainTaskReq
+{
+	int32 id = 1;
+}
+
+message FinishMainTaskResp
+{
+	MainTaskPb newTask = 1;//新的任务pb，如果没有返回空
+	map<int32, int32> changeItems = 2; // 道具变化
+}
+
+
+
+
+
+
+
+
+
+
+

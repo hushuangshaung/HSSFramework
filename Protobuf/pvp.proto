@@ -1,0 +1,102 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBPvp";
+
+import "bean.proto";
+
+//挑战列表
+message PvpListReq{
+	int32 isRefresh = 1;//1-刷新  0-不刷新
+	
+}
+message PvpListResp {
+	repeated PlayerRankInfoPb pvpPlayer=1; //挑战玩家
+	map<int32,int32> changeItem = 2; //changeItem-改变量 item-全量
+	int64 freshTime = 3; // 刷新时间
+}
+
+
+//发起挑战,
+message  PvpBattleStartReq{
+	int32 opponent=1; //对手pid
+}
+//发起挑战resp, 是否可以开始战斗，以这个resp为准
+message PvpBattleStartResp{
+	int32 pvpid=1; //这场对决的id
+	int32 launcher=2; //发起者 
+	int32 opponent=3; //对手pid
+	map<int32,int32> changeItem=4;
+	int32 pvpTimes=5; // 废弃
+	int32 seed = 6;
+	PvpPlayerPb pvpPlayer = 7;
+}
+
+
+//挑战结果 -- 胜利 and 失败 都需要发送
+message  PvpBattleEndReq{
+	int32 seed = 1;
+	int32 result=2; //1-胜利 0-失败
+	int32 opponent=3; //对手id
+}
+message PvpBattleEndResp{
+	int32 result=1; //1-胜利 0-失败
+	map<int32,int32> changeItem = 2; //changeItem 结果值
+	int32 rank=3; //当前排名
+	int32 chRank=4; //改变的排名(可正可负)
+	int32 integral=5; //当前最新积分
+	int32 chIntegral=6; //改变的积分
+
+	int32 op_rank=7; //对手当前排名
+	int32 op_chRank=8; //对手改变的排名(可正可负)
+	int32 op_integral=9; //对手当前积分
+	int32 op_chIntegral=10; //对手改变的积分
+
+	int32 opponentId=11; //对手id
+}
+
+
+
+//复仇结果 -- 收到resp后不再调用 PvpListReq  
+message  PvpRevengeReq{
+	int32 opponentId = 1; // 对手id
+	int32 result=2; //1-胜利 0-失败 ？？
+	int32 index=3; //复仇列表下标，0开始
+}
+message PvpRevengeResp{
+	int32 result=1; //1-胜利 0-失败 ？？
+	map<int32,int32> changeItem = 2; 
+	int32 index=3; //复仇列表下标，0开始
+
+	int32 rank=13; //当前排名
+	int32 chRank=14; //改变的排名(可正可负)
+	int32 integral=15; //当前最新积分
+	int32 chIntegral=16; //改变的积分
+
+	int32 op_rank=17; //对手当前排名
+	int32 op_chRank=18; //对手改变的排名(可正可负)
+	int32 op_integral=19; //对手当前积分
+	int32 op_chIntegral=20; //对手改变的积分
+}
+
+
+
+// 排行榜
+message RankInfoReq {
+	int32 page=1; //分页页数，从0开始，每次加1	
+	int32 type=2; // 排行榜类型。 看表: ranking
+}
+message RankInfoResp{
+	repeated PlayerRankInfoPb rank=1;
+	PlayerRankInfoPb self=2; //自己排名数据
+	int32 self_rank=3; //自己排行名次
+	int32 rankDelta=4; //排名增量，
+	int32 type=5; // 排行榜类型。 1竞技场；2悬赏boss；3爬塔
+}
+
+
+//pvp记录
+message PvpLogRep{	
+}
+message PvpLogResp{
+	repeated PvpLogPb log=1;
+}

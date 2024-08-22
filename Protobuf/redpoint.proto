@@ -1,0 +1,45 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBRedPoint";
+
+import "bean.proto";
+
+//不单单是红点系统，所有的推送也放这里
+message RedPointPb{
+	int32 point=1; 
+	MainTaskPb mainTask=2;
+	int32 allyId=3;
+	AttrPb attr=4;
+	string serverMsg=5; //对应point=4
+	int64 advanceTime=6; //孵化池晋级结束时间 s
+	map<int32,int32> ttg=7; //对应point=6 talent to grade
+	int64 combat=8;// 战力
+	DailyRefreshPb dailyRefresh = 9;// 每日刷新数据
+	PlayerStageTaskInfo stageTaskInfo = 10; // 玩家进阶任务
+	repeated int32 openFriendIds = 11; // 解锁密友ID
+	MailPb mail=12;
+	GmInfoPb gmInfo = 13;			//GmResponse
+}
+
+
+/**
+	point:
+	1-主线任务改变  2-加入仙盟 3-属性改变 4-服务器字符串消息（客户端原样显示）5-孵化池晋级结束时间 6-天赋与宠物品质对应 
+	7-被剔出仙盟 
+	8-战力变化
+	9-每日刷新数据
+	10-玩家升阶任务
+	11-解锁密友
+	12-发送邮件
+	13-GM推送
+	14-公会任务
+*/
+
+
+
+
+
+
+
+
+

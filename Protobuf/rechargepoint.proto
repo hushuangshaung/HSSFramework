@@ -1,0 +1,38 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBRechargePoint";
+
+import "bean.proto";
+
+/**
+	goodsType:
+	1:金币充值（基础）
+	2：首充
+
+*/
+message RechargePointInfoPb
+{
+	/**
+		公共结构  所有充值都有
+	 */
+
+	int32 goodsType = 1;
+	int32 rechargeId = 2;
+	string orderNo = 3;
+	string errorMsg = 4;                //错误消息
+	map<int32, int32> items = 5;            //道具列表
+
+
+	/**以下根据不同的goodsType**/
+	repeated FirstRechargePb infos = 6;  //首充信息   k：rechargeId  v：该档首充的其他信息
+
+}
+
+
+
+
+
+
+
+
+

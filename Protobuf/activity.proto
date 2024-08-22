@@ -1,0 +1,203 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBActivity";
+
+import "bean.proto";
+
+// 7日签到 --req nil
+message SignInfoResp{
+	SignPb sign=1;
+}
+
+
+// 7日签到 --req nil
+message SignResp{
+	SignPb sign=1;
+	ItemPb item=2; //可能为nil 为nil的时候不要做处理
+	TreasurePb treasure=3; //第7天给法宝
+}
+
+
+// 新人福利购买 --s3方式传输
+message WelfareReq{
+	int32 id=1; //payItem id,只能购买一次，逐个增进
+	string orderid=2; //sdk服务器充值成功后 返回 的唯一订单id，开发测试阶段取值"test"
+}
+
+message WelfareResp{
+	map<int32,int32> addItem=1; //获得道具,客户端显示用
+	map<int32,int32> changeItem=2; //改变的道具，客户端维护道具
+	EquipV2Pb equip=3; //获得的宠物,客户端自己维护到宠物列表
+	TalentPb newTalent=4;
+	int32 welfareId=5; //新人福利礼包购买过的最新id
+}
+
+
+
+// 仙玉礼包信息 --req nil
+message XyGiftBagResp{
+	repeated int32 xyBuyIds=1; //仙玉礼包购买id,购买过的无首充双倍奖励
+	map<int32,int32> xyGitBagFreeTimes=2; //仙玉礼包免费领取次数,key:id val:每日领取次数
+	int32 xyCd=3; //仙玉礼包免费领取cd 
+}
+
+
+
+
+// 仙玉礼包购买 --s3方式传输
+message XyGiftBagBuyReq{
+	int32 id=1; //礼包id
+	string orderid=2; //sdk服务器充值成功后 返回 的唯一订单id，开发测试阶段取值"test"
+}
+
+
+// 仙玉礼包购买 
+message XyGiftBagBuyResp{
+	int32 id=1; 
+	map<int32,int32> addItem=2; //获得的道具
+	map<int32,int32> changeItem=3; //改变的道具
+	int32 xyCd=4; //仙玉礼包免费领取cd 
+	map<int32,int32> xyGitBagFreeTimes=5; //免费领取次数
+}
+
+
+
+// 每日礼包购买 --s3的方式传输
+message EveryDayGiftBuyReq{
+	int32 id=1; // id=1的商品 第一次免费 第二次看广告  特殊处理
+	string orderid=2; //sdk服务器充值成功后 返回 的唯一订单id，开发测试阶段取值"test"
+}
+
+message EveryDayGiftBuyResp{
+	int32 id=1; 
+	int32 times=2; //当日购买次数
+	map<int32,int32> changeItem=3; //改变的道具
+}
+
+
+
+// 每日累充领奖
+message DayRechargeRewardReq{
+	int32 id=1; // EverydayRecharge id
+}
+
+message DayRechargeRewardResp{
+	int32 id=1; 
+	map<int32,int32> changeItem=2; //改变的道具
+}
+
+
+// 基金解锁 --s3方式传输
+message FundUnlockReq{
+	int32 fundUnlockId=1; //基金解锁id
+	string orderid=2; //sdk服务器充值成功后 返回 的唯一订单id，开发测试阶段取值"test"
+}
+message FundUnlockResp{
+	int32 fundUnlockId=1; //基金解锁id
+	map<int32,int32> changeItem=2; //改变的道具 {2001:100}
+}
+
+// 基金列表 --req nil
+message FundListResp{
+	repeated int32 fundUnlockId = 1; //基金解锁id
+	map<int32,int32> fund=2; //只有已领取过的数据  key: id value: 1/2  --1代表领取了免费 2代表免费跟解锁都领取 ，这里是所有已经领取过的基金id
+}
+
+
+// 基金奖励领取
+message FundRewardReq{
+	int32 id=1; //基金id
+}
+message FundRewardResp{
+	map<int32,int32> fund=1; //返回示例{1,1} 只有当前奖励的id 跟 对应value ，不是所有数据，客户端需要自己put 到 列表
+	map<int32,int32> addItem=2; //获得的道具
+	map<int32,int32> changeItem=3; //改变的道具
+}
+
+
+// 月卡列表 --req nil
+message MonthCardListResp{
+	map<int32,int32> getIds=1; //已购买的月卡ids key: 月卡id value:购买的时间,单位s
+	map<int32,int32> rewardDay=2; //月卡领奖天 key: 月卡id value:20230722 （年月日格式的天数）
+	int32 serverDay=3; //服务器下发的天数 20230722 （年月日格式的天数）
+}
+
+// 月卡领奖
+message MonthCardRewardReq{
+	int32 cardid=1; //月卡id
+}
+message MonthCardRewardResp{
+	int32 cardid=1; //月卡id
+	int32 rewardDay=2; //领奖天
+	map<int32,int32> changeItem=3; //改变的道具
+}
+
+// 月卡充值 --s3方式传输
+message MonthCardChargeReq{
+	int32 cardid=1; //月卡id
+	string orderid=2; //sdk服务器充值成功后 返回 的唯一订单id，开发测试阶段取值"test"
+}
+message MonthCardChargeResp{
+	int32 cardid=1; //月卡id
+	map<int32,int32> addItem=2; //获得的道具
+	map<int32,int32> changeItem=3; //改变的道具
+	int32 rewardDay=4;
+}
+
+
+// 每周礼包数据 --req nil
+message WeekGiftDataResp{
+	map<int32,int32> weekGiftBuy=1; //周礼包购买次数 key: id,value:次数(每周清空)
+}
+
+// 每周礼包购买 --s3方式传输
+message WeekGiftBuyReq{
+	int32 id=1;
+	string orderid=2; //sdk服务器充值成功后 返回 的唯一订单id，开发测试阶段取值"test"
+}
+
+message WeekGiftBuyResp{
+	int32 id=1;
+	int32 buyTimes=2;
+	map<int32,int32> changeItem=3; //改变的道具
+}
+
+
+// 限时礼包购买
+message LimitTimeGiftBuyReq{
+	int32 id=1;
+}
+
+message LimitTimeGiftBuyResp{
+	int32 id=1; //对应cd重置为-1
+	map<int32,int32> changeItem=2; //改变的道具
+}
+
+
+// 云游礼包购买
+message CloudGiftBuyReq{
+	int32 id=1;
+	string orderid=2; //sdk服务器充值成功后 返回 的唯一订单id，开发测试阶段取值"test"
+}
+message CloudGiftBuyResp{
+	int32 id=1; 
+	map<int32,int32> changeItem=2; 
+	map<int32,int32> funeNum=3; //改变的云游符文 id->num
+}
+
+
+// 云游特权礼包购买 
+message CloudPrivilegeGiftBuyReq{
+	string orderid=2; //sdk服务器充值成功后 返回 的唯一订单id，开发测试阶段取值"test"
+}
+message CloudPrivilegeGiftBuyResp{
+	map<int32,int32> changeItem=1; 
+}
+
+// 云游特权礼包体验 --req nil
+message CloudPrivilegeGiftTestResp{
+	int32 testEndTime=1; //体验结束时间,单位秒
+	int32 testNum=2; //体验次数
+}
+
+

@@ -1,0 +1,80 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBEquipV2";
+
+import "bean.proto";
+
+//抽卡 
+message DrawReq{
+	int32 rate=1; //倍率 取值 1,2,3
+}
+
+message DrawResp{
+	repeated EquipV2Pb equips=1; 
+	repeated TalentPb newTalent=2; //如果有新天赋 ，客户端自己加入所有天赋列表中
+	map<int32,int32> addItem=3; //可能出道具
+	map<int32,int32> changeItem=4; //改变的道具,客户端直接k,v覆盖掉道具原有的k,v
+}
+
+
+//出售
+message SaleReq{
+	int32 srl=1;
+}
+
+message SaleResp{
+	int32 srl=1; 
+	map<int32,int32> addItem = 2; //获得道具  addItem-增量  changeItem-改变量 item-全量
+	int32 level=3;//玩家等级
+	int32 exp = 4;//当前玩家经验
+	int32 getExp = 5; //获得经验 
+}
+
+//收复
+message RecoverReq{
+	int32 srl=1;
+}
+
+message RecoverResp{
+	int32 id=1;
+	int32 srl=2; //宠物列表中的序号
+	AttrPb attr=3; //变化的属性  客户端用key去比对，改变量，直接覆盖
+	int32 noHandleSrl=4;//未处理宠物序号 ，这里可能为nil ,第一次收复的时候
+}
+
+
+//出战
+message PutBattleReq{
+	int32 pos=1;
+	int32 oldType=2;
+	int32 newType=3;
+}
+
+message PutBattleResp{
+	int32 pos=1;
+	int32 oldType=2;
+	int32 newType=3;
+}
+
+//升级天赋
+message UpTalentReq{
+	int32 id=1; //天赋id
+}
+
+message UpTalentResp{
+	TalentPb talent=1;
+}
+
+
+//更换天赋
+message ChangeTalentReq{
+	int32 type=1; //宠物类型 1-9
+	int32 id=2; //天赋id
+}
+
+message ChangeTalentResp{
+	int32 type=1; //宠物类型 1-9
+	TalentPb talent=2; //天赋
+}
+
+

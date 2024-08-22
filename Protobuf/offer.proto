@@ -1,0 +1,51 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBOffer";
+
+import "bean.proto";
+
+
+
+//秘境悬赏信息
+message OfferInfoResp{
+	OfferPb offer=1;
+	int32 offerBuyTimes=2; //每日悬赏购买次数 --花钱购买才计算
+}
+
+
+//秘境悬赏购买次数
+message OfferTimesBuyReq{
+	int32 type=1;  //0-花钱购买 1-cd时间到
+}
+
+message OfferTimesBuyResp{
+	map<int32,int32> changeItem=1; //可能会为nil, cd时间购买的情况
+	int32 catchTimes=2;
+	int32 catchCd =3; //抓捕cd,倒计时秒  如果等于0代表可以免费购买次数
+	int32 offerBuyTimes=4; //每日悬赏购买次数 --花钱购买才计算
+}
+
+//刷新榜单
+message OfferRefreshReq{
+	int32 type=1;  //0-花钱刷新 1-cd时间到
+}
+
+message OfferRefreshResp{
+	repeated OfferNpcPb npc=1;
+	int32 refreshCd =2; //刷新cd 
+	map<int32,int32> changeItem=3; //改变道具,可能会为nil, cd时间购买的情况
+}
+
+
+//秘境悬赏 抓捕成功后发送，失败不发送
+message OfferCatchReq{
+	int32 pos=1; 
+}
+
+
+message OfferCatchResp{
+	int32 pos=1; 
+	repeated EquipPb equip=2; //掉落的装备
+	int32 catchTimes=3;
+	int32 catchCd =4; 
+}

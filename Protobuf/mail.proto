@@ -1,0 +1,78 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBMail";
+
+import "bean.proto";
+
+//邮件列表 --req 
+message MailListReq{
+	
+}
+
+message MailListResp{
+	repeated MailPb mail=1;
+}
+
+
+
+
+//邮件查看
+message MailLookReq{
+	int32 id=1;
+}
+
+
+message MailLookResp{
+	MailPb mail=1;
+}
+
+
+
+
+
+//邮件奖励领取
+message MailRewardReq{
+	int32 id=1; 
+}
+
+
+message MailRewardResp{
+	int32 id=1;
+	map<int32,int32> changeItem=2; //固定改变道具，客户端直接用k,v进行道具覆盖
+}
+
+
+//邮件奖励一键领取  --req 
+message MailRewardOneKeyReq{
+	
+}
+
+message MailRewardOneKeyResp{
+	repeated int32 id=1; 
+	map<int32,int32> changeItem=2; //固定改变道具，客户端直接用k,v进行道具覆盖
+}
+
+
+//邮件删除
+message MailDelReq{
+	int32 id=1; 
+}
+
+
+message MailDelResp{
+	int32 id=1;
+}
+
+
+//邮件一键删除  --req
+message MailDelOneKeyReq{
+	int32 type=1;		//删除邮件类型 0-系统邮件 1-个人邮件
+}
+message MailDelOneKeyResp{
+	repeated int32 id=1; //删除了的邮件id 
+}
+
+
+
+
+

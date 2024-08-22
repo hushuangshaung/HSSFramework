@@ -1,0 +1,29 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBGm";
+
+message GMReq
+{
+	int32 gmCmd = 1; // gm 命令（1 增加道具）
+	string parma1 = 2;
+	string parma2 = 3;
+	string parma3 = 4;
+	string parma4 = 5;
+}
+
+message GMResp
+{
+	int32 result = 1; // gm结果，1成功，0失败
+	map<int32,int32> changeItemMap = 2;// 变化的item对象，数量是最终的操作结果
+}
+
+
+
+
+
+
+
+
+
+
+

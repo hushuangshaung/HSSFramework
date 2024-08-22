@@ -1,0 +1,49 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBServer";
+
+import "bean.proto";
+
+//获取导流服务器
+message GetServerReq{
+	string code = 1;
+}
+
+message GetServerResp{
+	ServerPb server = 1;
+	PlatformUserPb platUser = 2;
+}
+
+
+//服务器列表
+message ServerListReq{
+	
+}
+
+message ServerListResp{
+	repeated ServerPb serverList = 1;	//服务器列表
+	repeated ServerPb myList = 2;		//我的服务器列表
+}
+
+//上报创角打点
+message ServerCreateRoleReq
+{
+	
+}
+message ServerCreateRoleResp
+{
+	
+}
+
+
+//切换服务器
+message ChangeServerReq{
+	int32 sid = 1;
+}
+
+
+message ChangeServerResp
+{
+	string res = 1;
+}
+

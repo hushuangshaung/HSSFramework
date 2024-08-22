@@ -1,0 +1,68 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBTower";
+
+import "bean.proto";
+
+//塔信息 
+message TowerInfoRep{
+}
+message TowerInfoResp{
+	TowerPb tower = 1; //塔信息
+}
+
+
+// 战斗开始
+message TowerBattleStartReq{
+	int32 id = 1;
+}
+message TowerBattleStartResp{
+	int32 id = 1;
+	int32 seed = 2;
+}
+
+
+
+// 战斗结束
+message TowerBattleEndReq{
+	int32 id = 1;
+	int32 seed = 2;
+	int32 result = 3; // 0失败； 1胜利
+}
+message TowerBattleEndResp{
+	map<int32,int32> changeItem = 1; //改变的道具
+	int32 id = 2; // Id
+	int32 maxId = 3; // 最大bossId
+}
+
+
+// 随机buff
+message TowerRandomBuffReq{
+	int32 pot = 1;//1随机2取消；
+}
+message TowerRandomBuffResp{
+	repeated int32 id = 1;// buffId, 3个
+	int32 randomBuffMax = 2; // 随机技能最大次数
+}
+
+// 选择buff
+message TowerChoseBuffReq{
+	int32 id = 1;
+	int32 pos = 2;
+}
+message TowerChoseBuffResp{
+	TowerBuffPb buff = 1;
+	int32 pos = 2;
+}
+
+
+// 速通
+message TowerQuickPassReq{
+}
+ 
+message RemovTowerQuickPassResp {
+	int32 id = 1; // 速通节点（bossId）id
+	int32 quickPassRewardId = 2; // 速通奖励id
+	map<int32,int32> changeItem = 3;
+}
+

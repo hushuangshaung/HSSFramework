@@ -1,0 +1,30 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBChat";
+
+import "bean.proto";
+
+message ChatMsgReq
+{
+	int32 channel = 1;			//聊天频道
+	string msg = 2;				//消息内容
+
+}
+
+message ChatMsgResp
+{
+	ChatPb msg = 1;
+}
+
+message ChatRecordListReq
+{
+	int32 firstId = 1; 			//最早的一条消息ID  即列表内最上面的一条  用做分页游标（暂定）
+	int32 channel = 2;			//聊天频道
+}
+
+
+message ChatRecordListResp
+{
+	ChatRecordPb list =1;       //消息列表
+}
+

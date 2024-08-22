@@ -1,0 +1,59 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBPve";
+
+//挑战结果 --默认主线
+message PveResultReq{
+	int32 id=1; //主线关卡id
+	int32 result=2; //0-失败 1-胜利  
+}
+
+
+message PveResultResp{
+	int32 id=1; //主线关卡id
+	map<int32,int32> changeItem =2; //增加的道具
+}
+
+
+
+//挑战结果 --Boss关卡
+message PveResultBossReq{
+	int32 id=1; //当前boss关卡id
+	int32 result=2; //0-失败 1-胜利
+	int32 chapter=3; //章节  0-人界 1-仙界
+}
+
+
+message PveResultBossResp{
+	map<int32,int32> addItem=2; //增加的道具
+	int32 id=3; //当前boss关卡id
+	int32 chapter=4; //章节  0-人界 1-仙界
+}
+
+
+message OperationReq{
+	int32 id=1;
+	int32 type=2; //0人界 1仙界
+	map<int32,int32> cost=3; 
+}
+
+message OperationResp{
+	int32 id=1;
+	int32 type=2; 
+	int32 times=3; //扫荡次数  
+	map<int32,int32> item=4; //当前所有道具 --客户端item 先清空后覆盖   
+	map<int32,int32> addItem=5; //增加的道具,客户端显示用
+}
+
+
+//领取章节奖励 
+message ChapterRewardReq{
+	int32 chapter=1; //章节id
+}
+
+message ChapterRewardResp{
+	int32 chapter=1;
+	map<int32,int32> addItem=2;
+}
+
+

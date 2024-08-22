@@ -1,0 +1,67 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBPool";
+
+import "bean.proto";
+
+//孵化池
+
+//升级 --req nil
+/**message UpPoolReq{
+	
+}*/
+
+
+message UpPoolResp{
+	int32 level=1; //当前等级
+	int32 exp=2; //当前格子
+	map<int32,int32> changeItem=3;
+}
+
+
+//晋级 --req nil
+/**message AdvanceReq{
+	
+}*/
+
+
+message AdvanceResp{
+	int64 advanceTime=1; //晋级结束时间 毫秒
+}
+
+
+//晋级加速
+message AdvanceSpeedReq{
+	int32 type=1 ;//1-求助  2-使用加速卷 3-广告
+	int32 param=2; //使用加速卷的数量
+}
+
+
+message AdvanceSpeedResp{
+	int32 type=1; //必给字段 1-求助  2-使用加速卷 3-广告
+	int64 advanceTime=2; //必给字段 晋级结束时间 毫秒
+
+	int32 help=3; //当日求助次数 (type=1时给值)
+	map<int32,int32> changeItem=4; //改变的道具 (type=2时给值)
+	int32 cdTime=5; //广告冷却时间 （type=3时给值）
+}
+
+
+
+//晋级结束, 当前时间>=advanceTime  发送
+message AdvanceEndReq{
+	
+}
+
+
+message AdvanceEndResp{
+	int32 level=1; 
+	int32 exp=2;
+}
+
+
+
+//孵化池信息查看 --req nil
+message HatchPoolInfoResp{
+	HatchPool pool=1;
+}

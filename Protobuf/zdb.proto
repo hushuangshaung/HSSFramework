@@ -1,0 +1,33 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBZdb";
+
+message ZAccountPb{
+	map<int32,int32> id=1; //sid->pid
+}
+
+
+message ZTowerShopPb{
+	map<int32,int32> shop=1;
+}
+
+
+//废弃
+message ZPvpPb{
+	repeated int32 pid=1; 
+	int32 refreshCd=2; 
+}
+
+
+
+message ZOnlinePb{
+	map<string,int32> online=1; //HHmmss->num
+}
+
+
+message ZConnDataPb{
+	int64 s0=1;
+	int64 time=2;
+	int32 s0Err=3; //s0错误次数，每天给5次
+	int32 timeErr=4; //每天给5次
+}

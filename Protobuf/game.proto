@@ -1,0 +1,656 @@
+syntax = "proto3";
+option java_package = "com.cb.msg";
+option java_outer_classname = "PBGame";
+
+
+
+
+enum ReqId {
+  Zero_Req_id = 0;
+
+  //系统
+  PingReq_id = 1;
+
+
+  //Player 1000开始
+  LoginReq_id = 1000001;
+  UpStageReq_id = 1000002; // 升阶、突破
+  SyncReq_id = 1000003;
+  AccountPlayerDataReq_id = 1000004;
+  AccountTransferReq_id = 1000005;
+  UpdateNameReq_id = 1000006;
+  MiniPlayerInfoReq_id = 1000007;
+
+  //悬赏秘境
+  OfferInfoReq_id = 1019;
+  OfferTimesBuyReq_id = 1020;
+  OfferRefreshReq_id = 1021;
+  OfferCatchReq_id = 1022;
+
+
+  //坐骑 1001开始
+  MountInfoReq_id = 1001001;    //坐骑信息
+  ReMountReq_id = 1001002;      //坐骑更换
+  UpMountReq_id = 1001003;      //坐骑升级
+  BuyMountReq_id = 1001004;      //购买（解锁坐骑）
+  StepMountReq_id = 1001005;    //坐骑升阶
+
+
+
+  //福地洞天 1002 开始
+  HoleInfoReq_id = 1002001;
+  HoleRefreshReq_id = 1002002;
+  ResGatherReq_id = 1002003;
+  SnatchReq_id = 1002004;
+  HoleLogListReq_id = 1002005;
+  ResGatherEndReq_id = 1002006;
+  ChildDetailReq_id = 1002007;
+  HoleRefreshAutoReq_id = 1002008;
+  ChildBuyReq_id = 1002009;
+
+
+  //法宝 1003开始
+  RoughRefreshReq_id = 1003001;
+  RoughHitReq_id = 1003002;
+  TreasureListReq_id = 1003003;
+  TreasureUpReq_id = 1003004;
+  RoughListReq_id = 1003005;
+  TreasureBookListReq_id = 1003006;
+  TreasureDecomposeReq_id = 1003007;
+  TreasureEquipReq_id = 1003008;
+  TreasureStepReq_id = 1003009;
+  MineListReq_id = 1003010;
+  MineRewardGetReq_id = 1003011;
+  MinePutTreasureReq_id = 1003012;
+  MineRoughHitReq_id = 1003013;
+
+
+  //pve 1004开始
+  PveResultBossReq_id = 1004001;
+  PveResultReq_id = 1004002;
+  ChapterRewardReq_id = 1004003;
+  OperationReq_id = 1004004;
+
+  //装备 equip 1005开始 --- 变宠物
+  EquipInfoReq_id = 1005001;
+  EquipListReq_id = 1005002;
+  EquipChangeReq_id = 1005003;
+  EquipDecomposeReq_id = 1005004;
+  EquipBatchDecomposeReq_id = 1005005;
+  EquipForgeReq_id = 1005006;
+
+  //主线任务 1006开始
+  FinishMainTaskReq_id = 1006001;
+
+  //孵化池 1007开始
+  UpPoolReq_id = 1007001;
+  AdvanceReq_id = 1007002;
+  AdvanceSpeedReq_id = 1007003;
+  AdvanceEndReq_id = 1007004;
+  HatchPoolInfoReq_id = 1007005;
+
+  //法阵系统 1008开始
+  ArreyInfoReq_id = 1008001;
+  BuyArreyReq_id = 1008002;
+  ChangeArreyReq_id = 1008003;
+  PutFuneReq_id = 1008004;
+  DownFuneReq_id = 1008005;
+  BuyFuneReq_id = 1008006;
+  FuneOneKeyCombineReq_id = 1008007;
+  FuneCombineReq_id = 1008008;
+  FuneMoveReq_id = 1008009;
+
+
+
+  //公会系统 1009开始
+  GuildInfoReq_id = 1009001;
+  GuildSearchListReq_id = 1009002;
+  GuildFuzzySearchListReq_id = 1009003;
+  GuildCreateReq_id = 1009004;
+  GuildJoinReq_id = 1009005;
+  GuildRandomJoinReq_id = 1009006;
+  GuildDissolutionReq_id = 1009007;
+  GuildLeaveReq_id = 1009008;
+  GuildKickOutReq_id = 1009009;
+  GuildJoinListReq_id = 1009010;
+  GuildApplyRefuseReq_id = 1009011;
+  GuildApplyAcceptReq_id = 1009012;
+  GuildSettingReq_id = 1009013;
+  GuildChangeDutiesReq_id = 1009014;
+  GuildRankReq_id = 1009015;
+  GuildAssistanceStartReq_id = 1009016;
+  GuildAssistListReq_id = 1009017;
+  GuildAssistReq_id = 1009018;
+  GuildBossBattleStartReq_id = 1009019;
+  GuildBossBattleEndReq_id = 1009020;
+  GuildMembersReq_id = 1009021;
+  GuildGetApplyInfoReq_id = 1009022;
+  GuildRenameReq_id = 1009023;
+  GuildNoticeReq_id = 1009024;
+  GuildBossInitializeReq_id = 1009025;
+  GuildBossAccumulatedDamageRewardListReq_id = 1009026;
+  GuildBossAccumulatedDamageRewardReceiveReq_id = 1009027;
+  GuildBossCrusadeRewardListReq_id = 1009028;
+  GuildBossCrusadeRewardReceiveReq_id = 1009029;
+  GuildBadgeReq_id = 1009030;
+
+  //坊市系统 1010开始
+  ShopBuyTimesReq_id = 1010001;
+  ShopBuyReq_id = 1010002;
+
+
+  //活动 1011开始
+  SignInfoReq_id = 1011001;
+  SignReq_id = 1011002;
+  WelfareReq_id = 1011003;
+  XyGiftBagReq_id = 1011004;
+  XyGiftBagBuyReq_id = 1011005;
+  EveryDayGiftBuyReq_id = 1011006;
+  DayRechargeRewardReq_id = 1011007;
+  FundListReq_id = 1011008;
+  FundUnlockReq_id = 1011009;
+  FundRewardReq_id = 1011010;
+  MonthCardListReq_id = 1011011;
+  MonthCardRewardReq_id = 1011012;
+  MonthCardChargeReq_id = 1011013;
+  WeekGiftDataReq_id = 1011014;
+  WeekGiftBuyReq_id = 1011015;
+  LimitTimeGiftBuyReq_id = 1011016;
+  CloudGiftBuyReq_id = 1011017;
+  CloudPrivilegeGiftBuyReq_id = 1011018;
+  CloudPrivilegeGiftTestReq_id = 1011019;
+
+
+  //邮件 1012开始
+  MailListReq_id = 1012001;        //邮件列表请求
+  MailLookReq_id = 1012002;        //查看邮件请求
+  MailRewardReq_id = 1012003;      //领取奖励请求
+  MailRewardOneKeyReq_id = 1012004;    //一键领取奖励请求
+  MailDelOneKeyReq_id = 1012005;    //一键删除请求
+  MailDelReq_id = 1012006;        //单个邮件删除请求
+
+
+
+  //充值相关 1013开始
+  GiftBagBuyReq_id = 1013001;
+
+
+  //领奖系统 1014开始
+  SurpriseBoxReq_id = 1014001;
+  AdRewardReq_id = 1014002;
+
+
+  //通天塔 1015开始
+  TowerInfoRep_id = 1015001;
+  TowerQuickPassReq_id = 1015002;
+  TowerBattleStartReq_id = 1015003;
+  TowerBattleEndReq_id = 1015004;
+  TowerRandomBuffReq_id = 1015005;
+  TowerChoseBuffReq_id = 1015006;
+
+
+
+  //装备1016开始
+  DrawReq_id = 1016001;
+  SaleReq_id = 1016002;
+  RecoverReq_id = 1016003;
+  PutBattleReq_id = 1016004;
+  UpTalentReq_id = 1016005;
+  ChangeTalentReq_id = 1016006;
+
+  //pvp 1017开始
+  PvpListReq_id = 1017001;
+  PvpBattleStartReq_id = 1017002;
+  PvpBattleEndReq_id = 1017003;
+  PvpRevengeReq_id = 1017004;
+  RankInfoReq_id = 1017005;
+  PvpLogRep_id = 1017006;
+
+
+  //宝箱设置 1018开始
+  BoxSettingSaveReq_id = 1018001;
+  BoxSettingGetReq_id = 1018002;
+
+  //云游系统 1019开始
+  MaterialListReq_id = 1019001;
+  TreasurePavilionReq_id = 1019002;
+  BeginReq_id = 1019003;
+  MaterialSaleReq_id = 1019004;
+  MaterialCollectReq_id = 1019005;
+  BagMaterialSaleReq_id = 1019006;
+  CloudTravelDataReq_id = 1019007;
+  CloudRecoverReq_id = 1019008;
+  SuccinctOrReplaceReq_id = 1019009;
+  ToolUpReq_id = 1019010;
+  SubmitTaskMaterialReq_id = 1019011;
+  RefreshTaskReq_id = 1019012;
+  RewardTaskReq_id = 1019013;
+  LookToolReq_id = 1019014;
+  LookMapReq_id = 1019015;
+  BuyCtFuneReq_id = 1019016;
+  ListCtFuneReq_id = 1019017;
+  PavUpGridReq_id = 1019018;
+  PavUpLevelReq_id = 1019019;
+  LookPavilionReq_id = 1019020;
+  PavAddSpeedReq_id = 1019021;
+  ResetTaskReq_id = 1019022;
+
+  // 伙伴系统 1020开始
+  GetPartnerInfoReq_id = 1020001;
+  DrawPartnerReq_id = 1020002;
+  PartnerLevelUpReq_id = 1020003;
+  PartnerTrammelsOptReq_id = 1020004;
+  PartnerOnPosReq_id = 1020005;
+  PartnerOnPosBatchReq_id = 1020006;
+
+  // 圣器1021开始
+  GetSacredVesselsInfoReq_id = 1021001;
+  DrawSacredVesselsReq_id = 1021002;
+  SacredVesselsLevelUpReq_id = 1021003;
+  SacredVesselsPutOnReq_id = 1021004;
+  SacredVesselsRecordsReq_id = 1021005;
+
+  // 宠物 1022 开始
+  PetInfoReq_id = 1022001;
+  GetShopPetReq_id = 1022002;
+  PetLevelUpReq_id = 1022003;
+  PetSwallowReq_id = 1022004;
+  PetOperatorReq_id = 1022005;
+  PetOnBattleReq_id = 1022006;
+  PetCheerReq_id = 1022007;
+  PetRefreshPassiveSkillReq_id = 1022008;
+  BuyShopPetReq_id = 1022009;
+  PetBloodReq_id = 1022010;
+  PetBagBuyGridReq_id = 1022011;
+
+  // 密友
+  GetFriendsInfoReq_id = 1023001;
+  BattleFriendStartReq_id = 1023002;
+  TravelFriendReq_id = 1023003;
+  FeedFriendReq_id = 1023004;
+  UnlockFriendReq_id = 1023005;
+  BattleFriendEndReq_id = 1023006;
+
+
+  // 背包  1024开始
+  ItemListReq_id = 1024001;
+  ItemUseReq_id = 1024002;
+
+
+  //服务器  1025开始
+  ServerListReq_id = 1025001;
+  ChangeServerReq_id = 1025002;
+  ServerCreateRoleReq_id = 1025003;
+
+
+  //聊天
+  ChatRecordListReq_id = 1026001;    //聊天记录
+  ChatMsgReq_id = 1026002;    //发送消息
+
+  //野外boss、悬赏boss
+  ChallengeInfoReq_id = 1027001;
+  ChallengeBattleStartRep_id = 1027002;
+  ChallengeResultReq_id = 1027003;
+  ChallengeSweepBossReq_id = 1027004;
+
+
+  //充值
+  RechargeBuyReq_id = 1028001;           //充值入口
+  FirstRechargeInfoReq_id = 1028002;     //首充信息
+  FirstRechargeRewardReq_id = 1028003;   //首充领取奖励
+  GoldRechargeInfoReq_id = 1028004;      //基础金币充值
+  PrivilegeInfoReq_id = 1028005;         //特权卡信息协议
+  PrivilegeDayRewardReq_id = 1028006;    //特权卡领取每日奖励协议
+
+  //  排行榜
+  //	RankReq_id = 1019001;
+
+  // 邮件
+  //	MailOperReq_id=1020001;
+
+  // push 1800001 占用
+
+  // gm
+  GMReq_id = 1900001;
+}
+
+
+
+
+enum RespId{
+  Zero_Resp_id = 0;
+
+  //系统
+  PingResp_id = 1;
+  Error_Resp_id = 2;
+  RedPoint_Resp_id = 3;
+  RechargePoint_Resp_id = 4;
+
+
+  //Player 1000开始
+  LoginResp_id = 2000001;
+  UpStageResp_id = 2000002;
+  SyncResp_id = 2000003;
+  AccountPlayerDataResp_id = 2000004;
+  AccountTransferResp_id = 2000005;
+  UpdateNameResp_id = 2000006;
+  MiniPlayerInfoResp_id = 2000007;
+
+  //悬赏秘境
+  OfferInfoResp_id = 2019;
+  OfferTimesBuyResp_id = 2020;
+  OfferRefreshResp_id = 2021;
+  OfferCatchResp_id = 2022;
+
+  //坐骑 1001开始
+  MountInfoResp_id = 2001001;
+  ReMountResp_id = 2001002;
+  UpMountResp_id = 2001003;
+  BuyMountResp_id = 2001004;
+  StepMountResp_id = 2001005;
+
+
+  //福地洞天 1002 开始
+  HoleInfoResp_id = 2002001;
+  HoleRefreshResp_id = 2002002;
+  ResGatherResp_id = 2002003;
+  SnatchResp_id = 2002004;
+  HoleLogListResp_id = 2002005;
+  ResGatherEndResp_id = 2002006;
+  ChildDetailResp_id = 2002007;
+  HoleRefreshAutoResp_id = 2002008;
+  ChildBuyResp_id = 2002009;
+
+
+  //法宝 1003开始
+  RoughRefreshResp_id = 2003001;
+  RoughHitResp_id = 2003002;
+  TreasureListResp_id = 2003003;
+  TreasureUpResp_id = 2003004;
+  RoughListResp_id = 2003005;
+  TreasureBookListResp_id = 2003006;
+  TreasureDecomposeResp_id = 2003007;
+  TreasureEquipResp_id = 2003008;
+  TreasureStepResp_id = 2003009;
+  MineListResp_id = 2003010;
+  MineRewardGetResp_id = 2003011;
+  MinePutTreasureResp_id = 2003012;
+  MineRoughHitResp_id = 2003013;
+
+
+
+  //pve 1004开始
+  PveResultBossResp_id = 2004001;
+  PveResultResp_id = 2004002;
+  ChapterRewardResp_id = 2004003;
+  OperationResp_id = 2004004;
+
+
+
+  //装备 equip 1005开始
+  EquipInfoResp_id = 2005001;
+  EquipListResp_id = 2005002;
+  EquipChangeResp_id = 2005003;
+  EquipDecomposeResp_id = 2005004;
+  EquipBatchDecomposeResp_id = 2005005;
+  EquipForgeResp_id = 2005006;
+
+
+  //主线任务 2006开始
+  FinishMainTaskResp_id = 2006001;
+
+
+  //孵化池 1007开始
+  UpPoolResp_id = 2007001;
+  AdvanceResp_id = 2007002;
+  AdvanceSpeedResp_id = 2007003;
+  AdvanceEndResp_id = 2007004;
+  HatchPoolInfoResp_id = 2007005;
+
+
+  //法阵系统 1008开始
+  ArreyInfoResp_id = 2008001;
+  BuyArreyResp_id = 2008002;
+  ChangeArreyResp_id = 2008003;
+  PutFuneResp_id = 2008004;
+  DownFuneResp_id = 2008005;
+  BuyFuneResp_id = 2008006;
+  FuneOneKeyCombineResp_id = 2008007;
+  FuneCombineResp_id = 2008008;
+  FuneMoveResp_id = 2008009;
+
+
+  //公会系统 2009开始
+  GuildInfoResp_id = 2009001;
+  GuildSearchListResp_id = 2009002;
+  GuildFuzzySearchListResp_id = 2009003;
+  GuildCreateResp_id = 2009004;
+  GuildJoinResp_id = 2009005;
+  GuildRandomJoinResp_id = 2009006;
+  GuildDissolutionResp_id = 2009007;
+  GuildLeaveResp_id = 2009008;
+  GuildKickOutResp_id = 2009009;
+  GuildJoinListResp_id = 2009010;
+  GuildApplyRefuseResp_id = 2009011;
+  GuildApplyAcceptResp_id = 2009012;
+  GuildSettingResp_id = 2009013;
+  GuildChangeDutiesResp_id = 2009014;
+  GuildRankResp_id = 2009015;
+  GuildAssistanceStartResp_id = 2009016;
+  GuildAssistListResp_id = 2009017;
+  GuildAssistResp_id = 2009018;
+  GuildBossBattleStartResp_id = 2009019;
+  GuildBossBattleEndResp_id = 2009020;
+  GuildMembersResp_id = 2009021;
+  GuildGetApplyInfoResp_id = 2009022;
+  GuildRenameResp_id = 2009023;
+  GuildNoticeResp_id = 2009024;
+  GuildBossInitializeResp_id = 2009025;
+  GuildBossAccumulatedDamageRewardListResp_id = 2009026;
+  GuildBossAccumulatedDamageRewardReceiveResp_id = 2009027;
+  GuildBossCrusadeRewardListResp_id = 2009028;
+  GuildBossCrusadeRewardReceiveResp_id = 2009029;
+  GuildBadgeResp_id = 2009030;
+
+  //坊市系统 1010开始
+  ShopBuyTimesResp_id = 2010001;
+  ShopBuyResp_id = 2010002;
+
+
+  //活动 1011开始
+  SignInfoResp_id = 2011001;
+  SignResp_id = 2011002;
+  WelfareResp_id = 2011003;
+  XyGiftBagResp_id = 2011004;
+  XyGiftBagBuyResp_id = 2011005;
+  EveryDayGiftBuyResp_id = 2011006;
+  DayRechargeRewardResp_id = 2011007;
+  FundListResp_id = 2011008;
+  FundUnlockResp_id = 2011009;
+  FundRewardResp_id = 2011010;
+  MonthCardListResp_id = 2011011;
+  MonthCardRewardResp_id = 2011012;
+  MonthCardChargeResp_id = 2011013;
+  WeekGiftDataResp_id = 2011014;
+  WeekGiftBuyResp_id = 2011015;
+  LimitTimeGiftBuyResp_id = 2011016;
+  CloudGiftBuyResp_id = 2011017;
+  CloudPrivilegeGiftBuyResp_id = 2011018;
+  CloudPrivilegeGiftTestResp_id = 2011019;
+
+
+
+  //邮件 1012开始
+  MailListResp_id = 2012001;      //邮件列表响应
+  MailLookResp_id = 2012002;      //查看邮件响应
+  MailRewardResp_id = 2012003;      //领取奖励响应
+  MailRewardOneKeyResp_id = 2012004;  //一键领取奖励响应
+  MailDelOneKeyResp_id = 2012005;    //一键删除响应
+  MailDelResp_id = 2012006;        //单个邮件删除响应
+
+
+  //充值相关 1013开始
+  GiftBagBuyResp_id = 2013001;
+
+
+  //领奖系统 1014开始
+  SurpriseBoxResp_id = 2014001;
+  AdRewardResp_id = 2014002;
+
+
+  //通天塔 1015开始
+  TowerInfoResp_id = 2015001;
+  TowerQuickPassRewardResp_id = 2015002;
+  TowerBattleStartResp_id = 2015003;
+  TowerBattleEndResp_id = 2015004;
+  TowerRandomBuffResp_id = 2015005;
+  TowerChoseBuffResp_id = 2015006;
+  TowerQuickPassResp_id = 2015007;
+
+
+  //宠物 1016开始
+  DrawResp_id = 2016001;
+  SaleResp_id = 2016002;
+  RecoverResp_id = 2016003;
+  PutBattleResp_id = 2016004;
+  UpTalentResp_id = 2016005;
+  ChangeTalentResp_id = 2016006;
+
+
+  //pvp 1017开始
+  PvpListResp_id = 2017001;
+  PvpBattleStartResp_id = 2017002;
+  PvpBattleEndResp_id = 2017003;
+  PvpRevengeResp_id = 2017004;
+  RankInfoResp_id = 2017005;
+  PvpLogResp_id = 2017006;
+
+
+  //宝箱设置 1018开始
+  BoxSettingGetResp_id = 2018002;
+
+  //云游系统 1019开始
+  MaterialListResp_id = 2019001;
+  TreasurePavilionResp_id = 2019002;
+  BeginResp_id = 2019003;
+  MaterialSaleResp_id = 2019004;
+  MaterialCollectResp_id = 2019005;
+  BagMaterialSaleResp_id = 2019006;
+  CloudTravelDataResp_id = 2019007;
+  CloudRecoverResp_id = 2019008;
+  SuccinctOrReplaceResp_id = 2019009;
+  ToolUpResp_id = 2019010;
+  SubmitTaskMaterialResp_id = 2019011;
+  RefreshTaskResp_id = 2019012;
+  RewardTaskResp_id = 2019013;
+  LookToolResp_id = 2019014;
+  LookMapResp_id = 2019015;
+  BuyCtFuneResp_id = 2019016;
+  ListCtFuneResp_id = 2019017;
+  PavUpGridResp_id = 2019018;
+  PavUpLevelResp_id = 2019019;
+  LookPavilionResp_id = 2019020;
+  PavAddSpeedResp_id = 2019021;
+  ResetTaskResp_id = 2019022;
+
+  // 伙伴
+  GetPartnerInfoResp_id = 2020001;
+  DrawPartnerResp_id = 2020002;
+  PartnerLevelUpResp_id = 2020003;
+  PartnerTrammelsOptResp_id = 2020004;
+  PartnerOnPosResp_id = 2020005;
+  PartnerOnPosBatchResp_id = 2020006;
+
+
+  // 圣器2021开始
+  GetSacredVesselsInfoResp_id = 2021001;
+  DrawSacredVesselsResp_id = 2021002;
+  SacredVesselsLevelUpResp_id = 2021003;
+  SacredVesselsPutOnResp_id = 2021004;
+  SacredVesselsRecordsResp_id = 2021005;
+
+  // 宠物 1022 开始
+  PetInfoResp_id = 2022001;
+  GetShopPetResp_id = 2022002;
+  PetLevelUpResp_id = 2022003;
+  PetSwallowResp_id = 2022004;
+  PetOperatorResp_id = 2022005;
+  PetOnBattleResp_id = 2022006;
+  PetCheerResp_id = 2022007;
+  PetRefreshPassiveSkillResp_id = 2022008;
+  BuyShopPetResp_id = 2022009;
+  PetBloodResp_id = 2022010;
+  PetBagBuyGridResp_id = 2022011;
+
+  // 密友
+  GetFriendsInfoResp_id = 2023001;
+  BattleFriendStartResp_id = 2023002;
+  TravelFriendResp_id = 2023003;
+  FeedFriendResp_id = 2023004;
+  UnlockFriendResp_id = 2023005;
+  BattleFriendEndResp_id = 2023006;
+
+  // 背包  2024开始
+  ItemListResp_id = 2024001;
+  ItemUseResp_id = 2024002;
+
+  //服务器  1025开始
+  ServerListResp_id = 2025001;
+  ChangeServerResp_id = 2025002;
+  ServerCreateRoleResp_id = 2025003;
+
+  //聊天
+  ChatRecordListResp_id = 2026001;    //聊天记录
+  ChatMsgResp_id = 2026002;    //发送消息
+
+  //野外boss、悬赏boss
+  ChallengeInfoResp_id = 2027001;
+  ChallengeBattleStartResp_id = 2027002;
+  ChallengeResultResp_id = 2027003;
+  ChallengeSweepBossResp_id = 2027004;
+
+
+
+  RechargeBuyResp_id = 2028001;           //充值入口
+  FirstRechargeInfoResp_id = 2028002;     //首充信息
+  FirstRechargeRewardResp_id = 2028003;   //首充领取奖励
+  GoldRechargeInfoResp_id = 2028004;      //基础金币充值
+  PrivilegeInfoResp_id = 2028005;         //特权卡信息协议
+  PrivilegeDayRewardResp_id = 2028006;    //特权卡领取每日奖励协议
+
+
+  // push  2800001
+  PushGuildBossRewardPb_id = 2800001;
+  PushGuildPb_id = 2800002;
+
+  // gm
+  GMResp_id = 2900001;
+}
+
+
+
+
+
+enum Code {
+  ok = 0; //成功
+  fail = 1; //失败
+  relogin = 2; //重新登录(连接有效，但是要重新登录)
+  closeconn = 3; //永久关闭连接 （连接无效了，不要重连,例如非法连接，黑名单，被顶号....）
+  fail_order = 4; //失败订单 (1. 重复orderid请求  2.逻辑或者配置表错误 ，3.无效orderid等, 4.非法请求... 客户端需要取消补单逻辑)
+  server_err = 5; // 服务器异常
+}
+
+//战斗类型
+enum battleType {
+  normal = 0;//主线
+  boss = 1;//boss
+}
+
+
+
+
+
+
+
+
+

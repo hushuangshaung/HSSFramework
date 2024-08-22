@@ -1,0 +1,150 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71b02dfa7aa9d4545b3417a18477fbee, type: 3}
+  m_Name: BuildinFileManifest
+  m_EditorClassIdentifier: 
+  BuildinFiles:
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_hotupdatedll_aot.bundle
+    FileCRC32: fbdbf893
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_hotupdatedll_dll_google_protobuf_dll.bundle
+    FileCRC32: 7628be3b
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_hotupdatedll_dll_hotupdatemain.bundle
+    FileCRC32: 116e2483
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_hotupdatedll_dll_hotupdate_dll.bundle
+    FileCRC32: 08b92df8
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_hotupdateresources_config_bytes.bundle
+    FileCRC32: ae42f28c
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_hotupdateresources_config_language_languagetable_zh_cn.bundle
+    FileCRC32: a5a03e09
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_hotupdateresources_font_zekton_free.bundle
+    FileCRC32: 0e3058ad
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_yiui_common_prefabs_yiuiroot.bundle
+    FileCRC32: ce70e8af
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_yiui_common_source_commonpanelsource.bundle
+    FileCRC32: f667c026
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_yiui_login_prefabs_loginpanel.bundle
+    FileCRC32: f2a13227
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_yiui_login_prefabs_title.bundle
+    FileCRC32: a0e4c6a5
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_yiui_login_source_loginpanelsource.bundle
+    FileCRC32: 0f57abe0
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_audio.bundle
+    FileCRC32: 61a424aa
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_effect_engines.bundle
+    FileCRC32: 7cb7c2d3
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_effect_explosions.bundle
+    FileCRC32: 8a47792b
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_entity.bundle
+    FileCRC32: 66fd5a06
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_scene_scene_battle.bundle
+    FileCRC32: ea87853b
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_scene_scene_battlesettings.bundle
+    FileCRC32: 49c1929a
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_scene_scene_home.bundle
+    FileCRC32: ff13f5ff
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_scene_scene_homesettings.bundle
+    FileCRC32: cf6d5ac1
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_uiimage.bundle
+    FileCRC32: 0083a203
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_uipanel_uibattle.bundle
+    FileCRC32: 3c260a10
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_uipanel_uihome.bundle
+    FileCRC32: e055412a
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_uipanel_uiloading.bundle
+    FileCRC32: 88bd6680
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_gameres_gui_pro_kit_-_casual_game_resourcesdata_fonts.bundle
+    FileCRC32: e6d61911
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_gameres_gui_pro_kit_-_casual_game_resourcesdata_sprite_component_button.bundle
+    FileCRC32: ec932364
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_gameres_gui_pro_kit_-_casual_game_resourcesdata_sprite_demo_demo_background.bundle
+    FileCRC32: 82798a18
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_gameres_gui_pro_kit_-_casual_game_resourcesdata_sprite_demo_demo_icon.bundle
+    FileCRC32: 3688bbab
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_gameres_gui_pro_kit_-_casual_game_resourcesdata_sprite_demo_demo_image.bundle
+    FileCRC32: 994c240a
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_effect.bundle
+    FileCRC32: e7b33cf6
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_entity_asteroid_prop_asteroid_01.bundle
+    FileCRC32: f0747c69
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_entity_asteroid_prop_asteroid_01_materials.bundle
+    FileCRC32: da98a2d6
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_entity_asteroid_prop_asteroid_02.bundle
+    FileCRC32: 52d5b381
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_entity_asteroid_prop_asteroid_02_materials.bundle
+    FileCRC32: 6ce602d5
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_entity_asteroid_prop_asteroid_03.bundle
+    FileCRC32: 200b7284
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_entity_asteroid_prop_asteroid_03_materials.bundle
+    FileCRC32: 20f36e04
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_entity_vehicle_vehicle_enemyship.bundle
+    FileCRC32: ac133518
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_entity_vehicle_vehicle_enemyship_materials.bundle
+    FileCRC32: 3c9a1946
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_entity_vehicle_vehicle_playership.bundle
+    FileCRC32: f00c6aee
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_entity_vehicle_vehicle_playership_materials.bundle
+    FileCRC32: 093ec7ae
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_scene.bundle
+    FileCRC32: ac66df29
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameart_uianim.bundle
+    FileCRC32: 207bc6e6
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_assets_thirdparty_yooasset_samples_space_shooter_gameres_uiatlas_common.bundle
+    FileCRC32: fe4c76e0
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_share_packages_com_unity_textmeshpro_editor_resources_gizmos.bundle
+    FileCRC32: 251e86ce
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_unityshaders.bundle
+    FileCRC32: 26c48766

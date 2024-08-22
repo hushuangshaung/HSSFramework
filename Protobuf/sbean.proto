@@ -1,0 +1,39 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBSbean";
+
+//玩家邮件
+message PMailPb{
+	map<int32,int32> mail=1; //id,state 系统邮件
+}
+
+
+
+//特殊处理数据
+message SpecialHandlePb{
+	bool firstTreasure=1; //首个法宝
+	bool firstNpc=2; //首批悬赏npc
+	bool firstNpcDrop=3; //首批悬赏npc掉落
+	bool firstPvp=4; //首批pvp
+}
+
+
+message PubMessagePb{
+	string field=1;
+	string ac=2;
+	int32 id=3;
+	string param=4;
+	string param2=5;
+	repeated string ex=6; //扩展字段，几乎用不到
+}
+
+
+
+
+
+
+
+
+
+
+

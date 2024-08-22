@@ -1,0 +1,1123 @@
+syntax = "proto3";
+//option java_package="com.cb.msg";
+//option java_outer_classname="PBBean";
+
+//option optimize_for = CODE_SIZE;
+
+option java_package="com.cb.msg.bean";
+option java_multiple_files = true;
+
+
+message ErrorPb{
+	//成功：0  
+	//失败：1 
+	//重新登录(连接有效，但是要重新登录)：2  
+	//永久关闭连接 （连接无效了，不要重连,例如非法连接，黑名单，被顶号....）3  
+	//失败订单 (1. 重复orderid请求  2.逻辑或者配置表错误 ，3.无效orderid等, 4.非法请求... 客户端需要取消补单逻辑)
+	int32 code=1; 
+	int32 redId=2; 
+	int32 errorCode=3; 
+	string errorMsg=4; 
+}
+
+
+//基本数据类型 
+message MapIIPb{
+	map<int32,int32> data=1;
+}
+
+//基本数据类型 
+message ListIPb{
+	repeated int32 data=1;
+}
+
+message PlayerPb{
+	int32 pid = 1; 
+	string account = 2; 
+	int64 combat = 3;// 战力
+	int32 eggByWeek = 4; //冗余，方便仙盟成员查询
+	int32 vipLevel = 5; 
+	int32 level=6; 
+	int32 exp=7; 
+		
+	string name=11;
+	string head=12; 
+
+	string guildName = 15;
+	int32 guildId = 16;
+	int64 guildLeaveTime = 17;
+
+	int32 integral=18; //冗余，方便排行榜查询，伐魔积分
+	int32 stage=19;
+	int32 sid=20;			//服务器ID
+	int64 loginTime = 21;
+}
+
+
+message PlayerExtraPb{
+	int32 operationTimes=1; //扫荡次数
+	int32 loginTime=2; 
+	int32 createTime=3; 
+	int32 resAutoRtime=4; //资源自动刷新时间
+	int32 level5Time=5; //升第5级的时间，7日签到活动从这个time开始倒计时
+	int32 resetDay=6; //重置day 
+	int32 joinAllyCd=7; //重新进入仙盟的cd 退出后2h
+	bool updateName=8;//是否改过名
+}
+
+//当前天赋
+message CurTalent{
+	map<int32,int32> curTalent=24; 
+}
+
+
+message NoHandleEquip{
+	map<int32, EquipV2Pb> equipMap=1;
+}
+
+
+message PlayerEquipsV2{
+	map<int32,EquipV2Pb> equipMap=1; //宠物 (key:type,value:pet)
+	int32 drawTimes=2; //服务器用
+	repeated int32 appearType=3; //服务器用
+	map<int32,int32> battle=4; //(key:battlepos,value:type)
+}
+
+message ItemPb{
+	map<int32,int32> items=1;
+}
+
+message GuidePb{
+	repeated int32 guide=1;
+}
+
+message PlayerTalents{
+	map<int32,TalentPb> talents=1; //key:talentId
+}
+
+message PTreasurePb{
+	int32 srl=1; //当前序号
+	map<int32,TreasurePb> treasures=2; //所有法宝 srl,pb
+}
+
+
+//玩家装备
+message PEquipPb{
+	map<int32,int32> curEquip=1; //pos,srl 
+	map<int32,EquipPb> equip=2; // srl,pb
+}
+
+//玩家法宝图鉴
+message PTreasureBookPb{
+	repeated int32 bookid=1;
+	repeated int32 treasureid=2;
+}
+
+//玩家原石
+message PRoughPb{
+	map<int32,RoughPb> rough=1; //所有原石 srl,pb
+}
+
+//章节奖励
+message ChapterRewardPb{
+	int32	gettedId=1; //已领章节id
+	int32 	unlockId=2; //已解锁章节id
+}
+//野外boss
+message BossPb{
+	int32	bossId=1; //当前可扫荡id
+	int32 	times=2; //扫荡次数
+}
+
+//天赋
+message TalentPb{
+	int32 id=1;
+	int32 lv=2;
+	int32 isCanUp=4; //0-不能升级 1-可以升级
+}
+
+//属性
+message AttrPb{
+	map<int32,int64> data=1; //属性id 属性值
+}
+
+// 宠物逻辑改为装备
+message EquipV2Pb{
+	int32 id=1;
+	int32 battlePos=2; //出战位置 (1,2,3)
+	AttrPb attr=3; 
+	int32 level=4;
+	int32 grade=5;
+	int32 srl=6; //序号
+}
+
+
+//孵化池
+message HatchPool{
+	int32 level=1;
+	int32 exp=2;
+	int64 advanceTime=3; //晋级结束时间 >0代表晋级中 =0不在晋级
+	int32 adsCdEnd = 4;//广告cd结束时间,单位秒
+	int32 times=5;
+}
+
+//账号
+message AccountPb{
+	map<int32,int32> pids=1;//sid,pid
+}
+
+//开箱设置
+message BoxSettingPb
+{
+	int32 quality = 1;
+	int32 option1Att1 = 2;
+	int32 option1Att2 = 3;
+	int32 option2Att1 = 4;
+	int32 option2Att2 = 5;
+	int32 openTimes = 6;
+	int32 rewardNotSat = 7;
+	int32 ifTicketFull = 8;
+	int32 keepIfQuality = 9;
+	int32 allAttrValueLarge = 10; 
+}
+
+//悬赏秘境
+message OfferPb{
+	repeated OfferNpcPb npc=1; //悬赏npc 
+	int32 catchTimes =2; //剩余抓捕次数
+	int32 catchCd =3; //抓捕cd 
+	int32 refreshCd =4; //刷新cd 
+	int32 refreshTimes=5;
+	int32 catchTimesMax = 6; //fuck，恶心玩意 购买月卡后=6 ，否则=5
+}
+
+//悬赏NPC
+message OfferNpcPb{
+	int32 npcid=1; 
+	int32 stage=2; 
+	int32 star=3; //星级 (品质跟星级一样)
+	map<int32,int32> attr=4; 
+	int32 pos=5; //悬赏位 取值 1,2,3
+	bool isCatch=6; 
+	int32 qualityTabId=7; //ArrestQuality表 id 用于构建宠物
+	//repeated PetPb pet=7;
+}
+
+//坐骑集合 -- 
+message MountsPb{
+	repeated int32 mounts=1; //已拥有的坐骑列表
+	int32 curMount=2; //当前坐骑id
+	int32 level=3; 
+	int32 exp=4; 
+	int32 step=5; 
+	int32 levelId=6;
+}
+
+
+//洞天资源
+message HoleResPb{
+	int32 resid=1;
+	int32 level=2;
+	int32 gatherTime=3; //采集结束时间
+	repeated int32 gatherChild=4; //采集仙童 （可以是自己，可以是别人）
+	int32 gatherPlayer=5; //采集玩家， （可以是自己，可以是别人）
+	int32 state=6; // 状态 0-空闲状态 1-自己采集 2-被别人偷取
+	int32 pos=7; //资源位置(1-5)
+}
+
+
+
+//洞天
+message HolePb{
+	int32 id=1; //玩家id
+	string name=2;//名字
+	string head=3; //头像
+	map<int32,HoleResPb> holeRes=4; //资源pos,资源pb
+}
+
+
+//洞天记录
+message HoleLogPb{
+	int32 id=1; //玩家id
+	int32 time=2; 
+	int32 type=3; //1-出现资源 2-抢夺(暂时不做)
+
+	int32 resid=4;
+	int32 resLevel=5;
+
+	//string enemyName=4; //敌人名字  --p0暂时不做
+	//string helperName=5; //帮手名字 --p0暂时不做
+	//int32 iswin=6; //0-失败 1-胜利  --p0暂时不做
+}
+
+
+//仙童
+message ChildPb{
+	int32 id=1; 
+	int32 state=2; // 状态 0-空闲状态 1-自己采集 2-偷取别人
+	int32 bindPlayer=3; //当前正在绑定的玩家 id
+	int32 bindResPos=4; //当前正在绑定的资源 pos
+	ClientChildPb clientChild=5; //客户端仙童显示数据 
+}
+
+//仙童详情
+message ChildDetailPb{
+	int32 tired=1; //疲劳
+	map<int32,ChildPb> childs=2;
+}
+
+
+//客户端仙童显示用数据
+message ClientChildPb{
+	int32 resId=1;
+	int32 resLv=2;
+	int32 gathertime=3; //采集结束时间
+
+
+	//其他玩家p0版本先不做,
+}
+
+//每日刷新 (0点重置)
+message DailyRefreshPb {
+	int64 time = 1;// 服务器刷新时间
+	map<int32,int32> dailyNums = 2; // 配置数据;key:id, value: config num
+
+	int32 adResRTimes=3; //广告刷新资源次数  --重置为0
+	int32 itemResRCost=4; //道具刷新资源消耗  --重置为25
+	int32 roughFreeTimes=5; //原石免费刷新次数  --重置为1
+	int32 roughNormalTimes=6; //原石普通进货次数  --重置为50
+	int32 roughSpecialTimes=7; //原石特殊进货次数  --重置为100
+	map<int32,int32> shopBuyTimes=8; //坊市商品购买次数 --直接清空
+	int32 devilBuyTimes=9; //剩余伐魔购买次数 --重置为5
+	repeated int32 eggReward=10; //仙盟孵蛋每日奖励 --直接清空
+	int32 immortalSceneOpTimes=11; //仙界扫荡次数 --重置为6
+	int32 launchAllyHelp=12; //发起仙盟求助次数 --重置为0
+	//map<int32,ShopPayPb> shopPay=13; //商品付费信息 --直接清空 *********************************废弃********************
+	int32 surpriseBoxTimes=14; //惊喜宝箱出现次数 --重置为0
+	int32 eggByDay=15; //本日孵蛋数 --重置为0
+	int32 poolItemRate=16; //孵化池产出道具概率百分比 --重置为50,每次递减5
+	int32 tsRefreshTimes=17; //通天塔商店刷新次数 --重置为0
+	map<int32,int32> adRewardTimes=18; //广告获取奖励次数 <广告id,当日领取次数> --直接清空
+	map<int32,int32> xyGitBagFreeTimes=19; //仙玉礼包免费领取次数 --直接清空
+	map<int32,int32> everyDayGiftTimes=20; //每日礼包购买次数 --直接清空
+	int32 dayRecharge=21; //每日累充金额 --重置为0
+	repeated int32 dayRechargeReward=22; //每日累充奖励 --清空
+	int32 offerBuyTimes=23; //悬赏购买次数 --重置为0,最大5
+	map<int32,int32> limitTimeGiftCd=24; //限时礼包倒计时cd k:礼包id v:倒计时结束时刻(=0说明当日未触发 =-1说明当日已购买) --直接清空
+	map<int32,int32> cloudGiftTimes=25; //云游礼包购买次数 --直接清空 k:礼包id v:购买次数
+	int32 cloudPrivilegeGiftTestTime=26; //云游特权礼包体验结束时间 
+	int32 cloudPrivilegeGiftTestNum=27; //云游特权礼包体验次数  --重置为6 
+	int32 humanSceneOpTimes=28; //人界扫荡次数 --重置为6
+}
+
+//每周刷新 
+message WeekRefreshPb{
+	int32 week=1;
+	int32 egg=2; //每周孵蛋数 --重置为0
+	map<int32,int32> weekGiftBuy=3; //周礼包购买次数
+	map<int32,int32> devilRankMailDay=4; 
+}
+
+//法宝
+message TreasurePb{
+	int32 srl=1; //序号
+	int32 id=2; 
+	int32 step=3; //阶
+	int32 level=4; //当前等级 
+	int32 grid=5; //当前经验格
+	map<int32,int32> added=6; //加成 属性id,属性值
+}
+
+
+//原石
+message RoughPb{
+	int32 srl=1; //序号
+	int32 id=2; 
+	int32 layer=3; //当前所需剥离层数 (默认最大层)
+	int32 treasureId = 4;
+}
+
+
+//装备
+message EquipPb{
+	int32 srl=1; //序号，唯一
+	int32 id=2; //配置id
+	map<int32,int32> attr=3; //属性
+	int32 grade=4; //品质
+	int32 level=5; //装备等级
+}
+
+//矿脉
+message MinePb{
+	map<int32,int32> putTreasure = 1; //放置的法宝 pos,srl pos[1,2,3,4]
+	map<int32,int32> putTime=2; //挂机时间 秒 pos,time
+	repeated RoughPb rough=3; //矿脉原石
+	ItemPb reward=4; //当前累计的奖励
+}
+
+message MainTaskPb
+{
+	int32 id = 1; //当前任务id   -- -1代表主线全部完成
+	int32 param1 = 2;
+	int32 param2 = 3;
+	int32 state=4; //0-未完成 1-已完成, 2-已领取
+	repeated int32 ex1=5;
+}
+
+//玩家任务
+message PTaskPb
+{
+	int32 mainId = 1; //当前主线任务id
+	map<int32,MainTaskPb> traceTask=2; //所有需要追踪的任务,包含了主线
+	repeated int32 finishTasks = 3; // 所有完成的任务ID
+}
+
+
+//关卡
+message ScenePb
+{
+	int32 immortalScene=13; //仙界关卡,已通关id
+	int32 scene=14; //当前主线关卡,已通关id
+	int32 humanScene=15; //人界关卡,已通关id
+	int32 rewardChapter=6; //可领取奖励的章节,根据scene 主线关卡计算
+	int32 hasReward=7;
+}
+
+
+//仙盟求助
+message AllyHelpPb{
+	int32 pid=1; //发起者id
+	string name=2; //发起者name
+	repeated int32 helper=3; //援助者id
+	int32 type=4;
+}
+
+
+//仙盟详细信息  pb
+message AllyPb{
+	int32 id=1;
+	string name=2;  
+	int32 joinLv=3; //入盟等级
+	int32 num=4; //人数
+	int32 lv=5; //仙盟等级
+	int32 limit=6; //仙盟限制人数  
+	string notice=7; //仙盟公告
+	int32 egg=8; //总孵蛋数 经验值
+	repeated int32 members=9;
+	int32 eggByDay=10; //本日孵蛋数 --每日清零
+	int32 eggTime=11; //重置孵蛋的时间
+}
+
+//仙盟成员信息
+message AllyMemberInfoPb{
+	map<int32,AllyMemberPb> member=1; //成员 key成员pid
+}
+
+
+//仙盟成员  pb
+message AllyMemberPb{
+	int32 pid=1; //成员id
+	int32 pos=2; //成员职位 0-盟主 1-护法 2-成员 
+	int32 level=3;
+	string head=4;
+	string name=5;
+	int32 eggByWeek=6; //本周孵蛋数
+}
+
+
+//仙盟成员  -- server pb
+message AllyMemberServerPb{
+	int32 pos=1; 
+	int32 integral=2;
+}
+
+
+//伐魔  pb
+message DevilPb{
+	int32 canChallengeCd=1; //可挑战cd
+	int32 challengeTimes=2; //剩余挑战次数
+	int32 challengeTimesRecoverCd=3; //挑战次数恢复cd ,cd到的那一刻 ,单位秒
+	
+}
+
+
+//仙盟排行  pb
+message AllyRankPb{
+	int32 sid=1; //服务器id  --废弃
+	string name=2; //仙盟名
+	int32 integral=3; //积分
+	int32 allyId=4;
+}
+
+//邮件 --系统
+message SysMailPb{
+	int32 id=1;
+	int64 sendTime=2; 	
+	int32 templateId=3; 	//邮件模版ID
+	int64 expireTime=4;		//过期时间
+	string title=5;
+	string content=6;
+	map<int32,int32> reward=7; //奖励
+	int32 type=8; //邮件类型 0-全局
+}
+
+
+//邮件 --个人邮件，客户端用
+message MailPb{
+	int32 id=1;
+	int32 templateId = 2;	//邮件模版ID
+	int64 sendTime=3;
+	int64 expireTime=4; 	//过期时间
+	string title=5;			//自定义模版的标题
+	string content=6;		//自定义模版的内容
+	map<int32,int32> reward=7; 
+	int32 state=8; 			//0-新邮件 1-已读 2-已领 3-已删
+	string from=9; 			//邮件来源
+	int32 type=10; 			//邮件类型 0-系统邮件 1-个人邮件
+
+}
+
+message SignPb{
+	int32 day=1; //当前签到天数，取值1-7
+	int32 signTime=2; //最后签到时间 s
+}
+
+
+// 登录、跨天，后端执行重置逻辑： bossId = 0; dailyRefresh = 0;
+//通天塔
+message TowerPb{
+	int32 bossId = 1;  						// 当天打通的关卡
+	int32 quickPassRewardId = 2; 			// 速通奖励id, value=1领取，0未领取
+	map<int32,TowerBuffPb> towerBuff = 3; 	// key:pos, 1,2,3,4,5, value:TowerBuffPb
+	int32 maxId = 5; 						// 历史最大bossId；
+	int32 randomBuffMax = 6; 				// 随机技能最大次数
+	repeated int32 buffIds = 7;				// buffId, 3个
+	int32 isFirstDay = 8; 					// 0 不是，1是
+	int32 seed = 9;
+}
+
+message TowerBuffPb {
+	int32 buffId = 1;
+	int32 level = 2; 
+}
+
+
+
+//活动
+message ActivityPb{
+	repeated int32 xyBuyIds=1; //仙玉礼包购买id
+	int32 xyCd=2; //仙玉礼包免费领取cd
+	int32 welfareId=3; //新人福利礼包购买过的最新id
+	int32 cloudPrivilegeGiftEndTime=4; //云游特权礼包结束时间 ,==0代表无礼包 >=当前时间代表无效 
+	
+}
+
+
+//账号玩家
+message AccountPlayerPb{
+	string account=1;
+	string name=2;
+	int32 level=3;
+	int32 sid=4; //服务器id
+}
+
+//投资计划，基金
+message FundPb{
+	repeated int32 fundUnlockId = 1; //基金解锁id
+	map<int32,int32> fund=2; //只有已领取过的数据  key: id value: 1/2  --1代表领取了免费 2代表免费跟解锁都领取
+}
+
+//法阵
+message ArreyPb{
+	 int32 id=1; //法阵id
+	 map<int32,int32> funes=2; //上阵符文 key是格子序号 value是符文序号(srl)
+	 map<int32,int32> added=3; //总加成 key是属性id value是属性数值
+}
+
+
+//玩家法阵
+message PArreyPb{
+	 int32 curArrey=1; 
+	 map<int32,ArreyPb> allArrey=2; //所有的法阵，key是法阵id
+}
+
+//符文
+message FunePb{
+	 int32 srl=1; //序号
+	 int32 id=2; //符文配置id
+	 map<int32,int32> attr=3; //属性
+	 int32 level=4; //符文等级 
+	  
+	 int32 bindArrey=5;
+	 //int32 bindGrid=7;
+}
+
+
+//玩家符文
+message PFunePb{
+	 map<int32,FunePb> fune=1; //key为符文序号
+}
+
+
+//云游工具
+message CloudToolPb{
+	int32 upId=1;  //Alchemytoolup 表id 
+	map<int32,int32> succinctAttr=2; //洗练属性 （洗练出来的)
+	map<int32,int32> attr=3; //属性 (左边的现有属性)
+	map<int32,int32> stepTask=4; //升阶任务 k:taskId v:progress
+	int32 toolId=5;
+}
+
+//云游材料
+message MaterialPb{
+	int32 id=1;
+	map<int32,int32> attr=2; 
+	int32 looks=3; //品相值 万分比
+}
+
+
+//云游每日任务
+message CloudDailyTaskPb{
+	int32 id=1;
+	int32 level=2;
+	int32 progress=3; //进度
+	int32 isreward=4; //0-未领取 1-已领取
+	int32 srl=5;
+}
+
+
+
+//云游开图任务
+message CloudMapTaskPb{
+	map<int32,int32> progress=1; //进度 k:taskid 
+}
+
+//云游基础数据 --server用
+message CloudBasePb{
+	int32 mapid=1;
+	int32 maxMapId=2;
+	int32 pavLevel=3;
+	int32 cloudCd=4;
+	int32 pavGrid=5; //藏宝阁格子
+	int32 pavLevelCd=6; //藏宝阁升级cd
+	int32 pavAdCd=7; //藏宝阁广告cd
+	map<int32, int32> matLooksMax = 8;
+	int32 battleId = 9;
+	int32 battleState = 10;
+
+}
+
+//玩家云游每日任务 --server用
+message PCloudDailyTaskPb{
+	map<int32,CloudDailyTaskPb> tasks=1;
+}
+
+//玩家云游材料 --server用
+message PMaterialPb{
+	map<int32,MaterialPb> mat=1; // k: type*1000+pos
+}
+
+//玩家云游工具 --server用
+message PCloudToolPb{
+	map<int32,CloudToolPb> tools=1;
+}
+
+
+// 伙伴对象
+message PlayerPartnerPb
+{
+	map<int32,PartnerPb> partners=1; // key : partner configId
+	map<int32,int32> partnerChips=2; // key : partner configId
+	int64 freeDrawTime = 4 ; // 使用免费抽卡时间戳，毫秒
+	map<int32, PartnerTrammelsPb> trammels = 5; // 羁绊组，key: configId
+	repeated PartnerPosInfoPb posList = 6; // 上阵数组
+	int32 drawTotalNum= 7; // 抽卡次数
+	int32 integralNum = 8; // 积分数量；
+
+}
+
+// 伙伴对象
+message PartnerPb
+{
+	int32 configId = 1;
+	int32 level=2;	
+	AttrPb attr=3; 
+	int32 skillLeve= 4;
+}
+
+message PartnerPosInfoPb
+{
+	int32 posId = 1;
+	int32 configId=2;
+	int32 isOpen=3; // 1:open. 0:close;
+}
+
+message PartnerTrammelsPb
+{
+	int32 configId = 1;
+	int32 level = 2;
+	AttrPb attr=3; 
+}
+
+
+
+// 圣器
+message PlayerSacredVesselsPb
+{
+	map<int32,SacredVesselsPb> sacredVessels = 1; // key : sacredVessels configId
+	map<int32,int32> chips = 2; // key : sacredVessels configId
+	map<int32, SacredVesselsBookPb> books = 3; // 圣器组，key: configId
+	int32 putOnConfigId = 4; // 上阵圣器configId
+	int32 eliteNum = 5; // 精华数量
+	int32 freeNum = 6; // 免费次数
+	int64 freeTime = 7; // 使用免费次数时间,服务器用
+	repeated SacredVesselsRecordPb records = 8; // 记录
+}
+
+// 圣器对象
+message SacredVesselsPb
+{
+	int32 configId = 1;
+	int32 level = 2;	
+	AttrPb attr = 3; 
+}
+
+// 圣器组
+message SacredVesselsBookPb
+{
+	int32 configId = 1;
+	AttrPb attr = 2; 
+}
+
+// 圣器记录
+message SacredVesselsRecordPb
+{
+	int32 configId = 1;
+	int32 eliteNum = 2; 
+	int64 time = 3;
+}
+
+
+//玩家宠物数据
+message PlayerPetPb
+{
+	int32 freeGridNum = 1; // 免费开的格子数量
+	int32 diamondGridNum = 2; //花钱开的格子数量
+	map<int32, PetPb> petMap = 3; // 唯一id,pb
+	int32 onBattlePetId = 4;// 上阵宠物id;
+	ShopPetPb shopPets = 5; // 商店显示宠物
+	int32 refreshShopNum = 6; // 刷新商店次数
+	int32 openCheerNum = 7; // 助战开启的数量
+	int32 tmpPetId = 8; // 洗炼宠物id.. 服务器逻辑
+	map<int32, int32> tmpPassiveSkills = 9;// 洗炼出的被动技能map，key=0,1,2.. 服务器逻辑
+	repeated int32 ownPetList = 10;// 获取到的宠物id
+	repeated int32 trammelsId = 11; // 激活的羁绊id
+}
+
+// 商店中宠物
+message ShopPetPb
+{
+	repeated PetPb petList = 1;
+	repeated int32 buyPetIds = 2; // 已经购买的宠物id;
+}
+
+//宠物
+message PetPb
+{
+	int32 id=1; //唯一id
+	int32 configId=2; //配置id
+	int32 level=3; //装备等级
+	int32 grade=4; //品质
+	int32 star = 5; // 星
+	PetSkillPb skill = 6; // 主动技能
+	map<int32, PetSkillPb> passiveSkills = 7;// 被动技能map，key=0,1,2..
+	int32 isLock = 8; // 1锁。0未锁
+	map<int32, int32> cheers = 9; // 助战：key 1、2、3
+	int32 booleLevel = 10;
+	int32 bloodPassiveSkillNum = 11; // 血脉增加的被动属性数量
+}
+
+
+// 宠物技能
+message PetSkillPb 
+{
+	int32 skillId = 1;
+	int32 level = 2;
+	int32 key = 3; //PetPb passiveSkills map 的key
+}
+
+message SysUnlockPb
+{
+	map<int32, int32> unlocks = 1; // 已经解锁的系统 key: configId, value:1
+}
+
+
+// 密友
+message PlayerFriendPb
+{
+	map<int32, FriendPb> friends = 1; // key:configId
+	int32 power = 2; // 体力
+	int64 lastCalTime = 3; // 上次计算体力时间
+}
+
+message FriendPb {
+	int32 configId = 1;
+	int32 level = 2;
+	int32 isUnlock = 3; //0：未解锁，1可解锁，2解锁
+	map<int32,int32> passBoses = 4; // key : bossId, value = 1;
+	int32 exp = 5; // 好感度
+}
+
+message PlayerStageTaskInfo {
+	map<int32, MainTaskPb> taskStatuss = 1; // key taskId, v: MainTaskPb //0-未完成 1-已完成
+}
+
+//服务器结构
+message ServerPb
+{
+	int32 id = 1;			//服务器Id
+	int32 isNew = 2;		//是否新服
+	string url = 3;			//游服地址
+	int64 startTime = 4;	//开服时间
+	int32 status = 5;		//服务器状态  101:流畅  102:维护中  201：预备服 
+	int32 importWeight = 6; //导流权重
+	repeated int32 crossId = 7;		//跨服Id   
+	int32 isHot = 8;		//是否爆满
+
+}
+
+message ServersPb
+{
+	repeated ServerPb serverList = 1;	//服务器列表
+	repeated ServerPb myList = 2;		//我的服务器列表
+}
+
+message PlayerOverInfoPb			//外显用户信息
+{
+	int32 pid = 1;			//用户ID
+	string name = 2;		//用户名
+	string avatar = 3;				//用户头像
+	int32 stage = 4;		//用户境界
+
+}
+
+message ChatPb
+{
+	int32 id = 1;				//消息ID
+	int32 channel = 2;			//消息频道
+	string msg = 3;				//消息内容
+	int64 dateline = 4;			//发送时间 毫秒
+	PlayerOverInfoPb playerOverInfo = 5; //用户外显信息
+	
+}
+
+message ChatPbs
+{
+	repeated ChatPb chatPbList = 1;
+}
+
+message ChatRecordPb
+{
+	map<int32,ChatPbs> recordList = 1;		//消息列表
+}
+
+// 挑战boss
+message ChallengeInfoPb
+{
+	int32 fieldBossId = 1; // 野外boss
+	int32 seed = 2; // seed
+}
+
+//SDK
+
+message PlatformUserPb
+{
+	string userId = 1;
+	string country = 3;
+	string lang = 4;
+	string currency = 5;
+	int32 isCreateRole = 6;
+	repeated int32 servers = 7;
+	int32 lastLoginServer = 8;
+	int32 loginNum=9;		//是否新注册用户
+}
+
+message PlayerMiniInfoPb
+{
+
+	int32 pid = 1;
+	int32 level = 2;
+	string head = 3;
+	string name = 4;
+	map<int32,int64> attr = 5;
+
+	int32 curMount = 6; //当前坐骑
+	int32 battlePet = 7; //出站宠物 
+	repeated PartnerPvpPb partners = 8; // 伙伴
+	repeated EquipV2Pb equips = 9;
+	repeated CommonObjInfoPb objs = 10;// 
+}
+
+message CommonObjInfoPb 
+{
+	int32 type = 1; // 自定义类型. 1坐骑；2宠物
+	int32 confId = 2;
+	int32 level = 3;	
+}
+
+// ------------------------- pvp -------------------------
+
+// 后端存储对象
+message PvpPlayerInfoPb {
+	repeated int32 rankIdList = 1; // 对手排名
+	int32 integral = 2; // 积分
+}
+
+//个人排行  pb
+message PlayerRankInfoPb{
+	int32 pId=1; // 
+	int32 level=2;
+	string head=3;
+	string name=4;
+	int32 integral=5; // 排行榜分
+	int32 pos=6; //成员职位 0-盟主 1-护法 2-成员 
+	string allyName=7; //仙盟名
+	int32 sId = 8;
+	int64 combat = 9;//战力
+	int32 rank = 10; // 排名
+	int32 isRobot = 11;// 1机器人
+}
+
+//个人信息
+message PlayerInformationPb{
+	int32 pId=1; //玩家id
+	string name=2;
+	string head=3;
+	int32 realm = 4; // 境界
+	int32 level=5;
+	int32 sd= 6;
+	int32 integral=7; 
+	int32 pos=8; //成员职位 0-盟主 1-护法 2-成员 
+	string allyName=9; //仙盟名
+}
+
+
+// 战斗
+message PartnerPvpPb {
+	int32 configId = 1;
+	int32 level = 2;
+	int32 skillLevel = 3;
+	int32 pos = 4;
+}
+
+
+//Pvp消息对象
+message PvpPlayerPb
+{
+	int32 pid = 1;
+	int32 level=2;
+	string head=3;
+	string allyName=4; //仙盟名
+	int32 integral=5; //积分
+	string pName=6;
+	map<int32,int64> attr=7;
+	int32 isRobot = 8; // 0是玩家，1是配表
+	
+	int32 curMount=9; //当前坐骑id
+	int32 battlePet=10; //出站宠物id
+	repeated PartnerPvpPb partners = 11; // 伙伴
+
+}
+
+//pvp日志
+message PvpLogPb{
+	int32 pid = 1; //敌人pid
+	int32 level=2; //敌人等级
+	string head=3; //敌人头像
+	string pName=6;//敌人名字
+	int32 time=7; //log时间，秒
+	int32 result=8; //0-失败 1-胜利
+	int32 integral=9; //积分 
+	int32 isRevenge=10; //是否复仇 0-未复仇 1-已复仇
+	int32 combat = 11;
+}
+
+//公会Boss讨伐奖励以及伤害记录
+message GuildRecordsPb{
+	string name = 1;//讨伐者名字
+	int32 bossId = 2;//被讨伐的boss
+	int64 bossDamage = 3;//对boss造成的伤害值
+	map<int32,int32> changeItem = 4;// 带回的奖励ID以及数量
+}
+
+
+//公会pb
+message GuildPb{
+	int32 id = 1;//id
+	string name = 2;//名字
+	int32 level = 3;//等级
+	int32 exp = 4; //经验
+	string notice = 5;//公告
+	int32 badgeId = 6;//徽章id
+	int64 creatTime = 7; // 创建时间
+
+	int32 allowAutoJoin = 8;//1允许自动加入
+	int32 joinMinLevel = 9;//入会最低等级
+	int32 order = 10;//
+
+	repeated int32 memberIds = 11;// 公会成员id
+
+	int64 combat = 12;//战力
+	int32 rank = 13;
+	GuildApplyPlayerPb applies = 14;
+	map<int32, GuildAssistPb> assisMap = 15;
+
+	GuildBossPb boss = 16;
+	
+	int32 todayJoinNumber = 17;//今日加入公会人数
+	string presidentName = 18;//会长名字
+	
+}
+//公会成员pb
+message GuildMemberPb{
+	int32 id = 1;//id
+	string name = 2;//名字  --
+	int32 level = 3;//等级 --
+	int32 dutiesId = 4;//职务id（1会长，2副会长，3精英，4成员）
+	string head = 5;//头像 --
+	int32 exp = 6 ;//活跃度 
+	int32 guildId = 7; 
+	int64 combat = 8; 
+	int32 isOnline = 9 ; // 1在线
+	int64 loginTime = 10;
+	int64 todayContribution = 11; // 今日贡献
+	int64 hisContribution = 12;// 历史贡献
+
+
+	map<int32, int32> bossHurtReward = 13; // count 活跃奖励
+	map<int32, int32> crusadeReward = 14; // crusadeBoss
+	map<int32, int32> numReward = 15; // count 次数奖励
+}
+message GuildApplyPb {
+	int64 id = 1;
+	int32 pId = 2;
+	int32 guildId = 3;
+	int64 applyTime = 4;
+	int64 combat = 5;
+	string name = 6;
+	string head = 7;//头像
+}
+message GuildAssistPb {
+	int32 playerId = 1;
+	int32 guildId = 2;
+	int64 crateTime = 3;
+	int32 poolLvl = 4; 
+	map<int32, int32> assistPlayers = 5;
+	string name = 6;
+}
+message GuildApplyPlayerPb {
+	map<int64, GuildApplyPb> applies = 1;
+}
+message GuildAssistPbPlayerPb {
+	map<int32, GuildAssistPb> assis = 1;
+}
+message GuildBossPb {
+	int32 id = 1;
+	int64 accumulatedDamage = 2;
+	map<int32, int64> playerDamages = 3; 
+	int32 totalBattleNum = 4; // 挑战次数
+	int64 hp = 5; 
+	GuildBossRewardPb bossReward = 6;
+	map<int32,GuildRecordsPb> records = 7;//讨伐记录
+}
+
+message GuildBossRewardPb {
+	map<int32, int32> crusadeReward = 1; // crusadeBoss 固定和随机
+	map<int32, int32> numReward = 2; // count 次数奖励-- 挑战boss总次数
+}
+
+
+// 后端对象
+message GuildPlayerPb {
+
+	GuildApplyPlayerPb applies = 1;
+	GuildAssistPbPlayerPb initiateAssists = 2; // 发起协助数据
+	
+
+}
+/**
+	module:
+	1：item							背包
+	2：partners					伙伴
+	3：mount						坐骑
+	4：pets							宠物
+	5：sv								圣器 缩写sv
+	6：friends					密友
+	7：player						玩家
+	8：mail 						邮件
+	9：dailyrefresh			免费次数
+*/
+message GmInfoPb
+{
+	int32 module = 1;			//模块  1：item
+	string errorMsg = 2;		//错误消息
+	map<int32,int32> items=3;//道具列表  对应GM
+	map<int32,PartnerPb> partners=4;//获得的伙伴  对应GM
+	map<int32,int32> partnerChips=5;	//获得伙伴碎片
+	MountsPb mounts=6; //GM获得坐骑
+	repeated int32 ownPetList = 7;		//GM 获得宠物
+	SacredVesselsPb sacredVessels = 8; //GM获得圣器
+	FriendPb friend = 9;		//GM获得密友
+}
+
+
+/****充值recharge开始****/
+
+/**
+	付费运营活动信息
+ */
+message RechargeActivityPb{
+	map<int32,int32> buyNumMap = 1;					//k:商品ID   v：成功购买的次数
+	map<int32,FirstRechargePb> firstRechargeInfo = 2;	//首充信息   k：rechargeId  v：该档首充的其他信息
+}
+
+//首充结构
+message FirstRechargePb{
+	int32 rechargeId = 1;	//商品ID
+	int64 buyTime = 2;	//购买时间
+	repeated int32 dayStatus = 3;	//每日奖励状态  0 未购买  1：可领取  2：已领取
+
+}
+
+//特权卡
+message PrivilegeCardsPb
+{
+	 map<int32,PrivilegeCardInfo> cardInfos = 1;			//k 特权卡ID		v:特权卡信息
+}
+
+message PrivilegeCardInfo
+{
+	int32 id = 1;				//特权卡ID
+	int32 cardType = 2;	//特权卡类型
+	int64 expireTime = 3;//过期时间
+	int32 todayReward = 4; //今日奖励是否领取  0：未领取  1：已领取
+	int32 status = 5;			//状态 0：未购买  1：已生效  2：已过期
+
+}
+
+/****api****/
+
+/****充值recharge结束****/
+
+
+// 商店
+message PlayerShopInfoPb
+{
+	map<int32, PlayerShopPb> shopItems = 1;
+}
+message PlayerShopPb 
+{
+	int32 goodsId = 1;
+	int32 num = 2;
+	int64 freshTime = 3;
+}

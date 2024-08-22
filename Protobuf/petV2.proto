@@ -1,0 +1,124 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBPetV2";
+
+import "bean.proto";
+
+
+//玩家宠物信息 
+message PetInfoReq{
+	
+}
+message PetInfoResp{
+	PlayerPetPb playerPetPb=1;
+}
+
+
+// 获取商店
+message GetShopPetReq{
+	int32 refreshOpt = 1; // 0免费刷新; 1道具刷新;
+}
+message GetShopResp{
+	ShopPetPb petPb = 1;// 新获得的
+	map<int32, int32> changetItem = 2; // 道具变化
+	int32 refreshShopNum = 3; // 刷新次数
+}
+
+// 购买
+message BuyShopPetReq{
+	int32 buyConfigId = 1;
+}
+message BuyShopPetResp{
+	repeated int32 buyPetIds = 1; // 已经购买的宠物id;
+	map<int32, int32> changetItem = 2; // 道具变化
+	PetPb newPet = 3; // 新获得的宠物;
+	repeated int32 ownPetList = 4;// 获取到的宠物id
+	repeated int32 trammelsId = 5; // 激活的羁绊id
+}
+
+
+// 升级
+message PetLevelUpReq{
+	int32 id=1; // 唯一id
+}
+message PetLevelUpResp{
+	PetPb petPb = 1;
+	map<int32, int32> changeItem = 2;
+}
+
+
+// 吞噬
+message PetSwallowReq{
+	int32 id = 1; // 吞噬升级的宠物
+	int32 consumeId=2; // 消耗的宠物
+}
+message PetSwallowResp{
+	PetPb petPb = 1;
+	int32 consumeId = 2;
+	map<int32, int32> changeItem = 3;
+	map<int32, PetPb> changePetMap = 4; // 唯一id,pb
+}
+
+// 锁定、重置与放生
+message PetOperatorReq{
+	int32 id = 1;
+	int32 opt = 2; // 1锁定、2重置、3放生
+}
+message PetOperatorResp{
+	int32 opt = 1;
+	int32 consumeId = 2; // 消耗的宠物
+	map<int32, int32> changeItem = 3;
+	map<int32, PetPb> changePetMap = 4; // 唯一id,pb
+}
+
+// 出战
+message PetOnBattleReq{
+	int32 id=1;
+}
+message PetOnBattleResp{
+	int32 onBattlePetId = 1; // 出战宠物ID
+}
+
+// 助战
+message PetCheerReq{
+	int32 cheerId = 1;// 助战的宠物Id
+	int32 cheerTargetId = 2; // 主宠物（携带助战宠物主体）
+	int32 posId = 3; // 上阵位置：1、2、3
+}
+message PetCheerResp{
+	PetPb taretPet = 1;// 被助战的宠物
+}
+
+
+// 洗炼-刷被动技能
+message PetRefreshPassiveSkillReq{
+	int32 id = 1;
+	repeated int32 lockIndex = 2; // 锁定的技能map的key
+	int32 opt = 3; // 1洗炼, 2替换, 3放弃
+}
+message PetRefreshPassiveSkillResp{
+	int32 id = 1;
+	PetPb changePet = 2;
+	map<int32, int32> changeItem = 3;
+	map<int32, int32> newSkill = 4; // 洗炼出的新技能
+	int32 opt = 5; // 1洗炼, 2替换
+}
+
+message PetBloodReq {
+	int32 id = 1;
+}
+message PetBloodResp {
+	PetPb pet = 1;
+	map<int32, int32> changeItem = 2;
+}
+
+
+message PetBagBuyGridReq {
+	
+}
+message PetBagBuyGridResp {
+	int32 diamondGridNum = 1;// 钻石开启格子数量
+	map<int32, int32> changeItem = 2;
+}
+
+

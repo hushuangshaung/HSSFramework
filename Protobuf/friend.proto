@@ -1,0 +1,66 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBFriend";
+
+import "bean.proto";
+
+message GetFriendsInfoReq{
+}
+message GetFriendsInfoResp{
+	PlayerFriendPb friends = 1;
+}
+
+//密友切磋开始
+message BattleFriendStartReq{
+	int32 friendId = 1;//密友唯一id
+	int32 friendDuelBossId = 2;//配置表FriendDuelBoss id
+}
+message BattleFriendStartResp{
+	int32 friendId = 1; 
+	int32 friendDuelBossId = 2;//配置表FriendDuelBoss id
+	int32 seed = 3;//种子
+}
+//挑战切磋结束
+message BattleFriendEndReq{
+	int32 friendId = 1; 
+	int32 result = 2; //0-失败 1-胜利
+	int32 friendDuelBossId = 3;//配置表FriendDuelBoss id
+	int32 seed = 4;//种子
+}
+message BattleFriendEndResp{
+	int32 friendId = 1;
+	map<int32,int32> changeItem = 3; //道具
+	int32 friendDuelBossId = 4;//配置表FriendDuelBoss id
+}
+
+// 游历
+message TravelFriendReq{
+	int32 num = 1; // 游历次数，1或者10
+}
+message TravelFriendResp{
+	map<int32,int32> changeItem = 1; //道具
+	int32 power = 2; // 体力
+	int64 lastCalTime = 3; // 上次计算体力时间
+	int32 podId = 4; // 配置表pond id
+}
+
+
+// 喂养
+message FeedFriendReq{
+	int32 itemId = 1; 
+	int32 num = 2;
+	int32 friendId = 3;
+}
+message FeedFriendResp{
+	map<int32,int32> changeItem = 1; //道具
+	FriendPb friend = 2;
+}
+
+// 解锁
+message UnlockFriendReq {
+	int32 friendId = 1;
+}
+message UnlockFriendResp {
+	FriendPb friend = 1;
+}
+

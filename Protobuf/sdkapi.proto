@@ -1,0 +1,73 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBSdkApi";
+//sdk API 请求
+import "sdkbean.proto";
+
+//支付全局token
+message PaymentTokenResp
+{
+  string access_token = 1;
+  string token_type = 2;
+  int32 expires_in = 3;
+  int64 created_at = 4;
+}
+
+message PaymentCreateOrderReq
+{
+  string version = 1;
+  repeated PaymentOrderItemPb items = 2;
+  PaymentCustomPb custom = 3;
+}
+
+message PaymentCreateOrderResp
+{
+  string orderNo = 1;
+  string token = 2;
+}
+
+message PaymentGetOrderInfoReq
+{
+  string orderNo = 1;
+}
+
+message PaymentGetOrderInfoResp
+{
+  string orderNo = 1;
+  string appCode = 2;
+  string status = 3;
+  int32 userId = 4;
+  int32 paymentCode = 5;
+  int32 retryCount = 6;
+  string custom = 7;
+  int32 error = 8;
+  string createdAt = 9;
+  string updatedAt = 10;
+  repeated PaymentOrderItemPb items = 11;
+}
+
+message PaymentDeliverReq
+{
+  string orderNo = 1;
+}
+
+/**
+	point:
+	1-主线任务改变  2-加入仙盟 3-属性改变 4-服务器字符串消息（客户端原样显示）5-孵化池晋级结束时间 6-天赋与宠物品质对应 
+	7-被剔出仙盟 
+	8-战力变化
+	9-每日刷新数据
+	10-玩家升阶任务
+	11-解锁密友
+	12-发送邮件
+	13-GM推送
+*/
+
+
+
+
+
+
+
+
+

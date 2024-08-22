@@ -1,0 +1,33 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBPush";
+
+import "bean.proto";
+
+message PushGuildBossRewardPb
+{
+	int32 guildId = 1; 
+	GuildBossPb boss = 2;
+}
+
+
+
+
+enum PushGuildTypeEnum {
+  empyt = 0; // 
+  join = 1;//申请加入
+  accept = 2;//通过
+  refuse = 3; 
+  dissolution = 4;
+  kickout = 5; // 踢人
+}
+
+message PushGuildPb
+{
+	int32 pushType = 1;
+	int32 guildId = 2; 
+}
+
+
+
+

@@ -1,0 +1,32 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBItem";
+
+import "bean.proto";
+
+//登录
+message ItemListReq{
+	
+}
+
+message ItemListResp{
+	ItemPb items = 1;
+}
+
+
+//使用道具
+message ItemUseReq{
+	int32 itemId = 1;			//使用的道具id
+	int32 useNum = 2;			//使用的道具数量
+	repeated int32 selectedItem=3; //选择的道具
+
+
+}
+
+message ItemUseResp{
+	map<int32,int32> changeItem=1; //固定改变道具，客户端直接用k,v进行道具覆盖
+	repeated int32 reward = 2;		//新获得的道具
+}
+
+
+

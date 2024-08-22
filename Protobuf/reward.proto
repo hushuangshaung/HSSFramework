@@ -1,0 +1,23 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBReward";
+
+//惊喜宝箱领奖 --req nil
+message SurpriseBoxResp{
+	map<int32,int32> changeItem=1; //改变的道具
+	int32 surpriseBoxTimes=2; 
+}
+
+
+
+
+//看广告获取奖励道具 
+message AdRewardReq{
+	int32 id=1; //广告id
+}
+
+message AdRewardResp{
+	map<int32,int32> changeItem=1; //改变的道具
+	int32 id=2;
+	int32 times=3; //当日领取次数
+}

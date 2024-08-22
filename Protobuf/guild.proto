@@ -1,0 +1,275 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBGuild";
+
+import "bean.proto";
+
+message GuildInfoReq{
+	
+}
+message GuildInfoResp{
+	int64 leaveTime = 1;//退出时间
+	GuildPb guild = 2;
+	GuildApplyPlayerPb applies = 3;
+	map<int32, MainTaskPb> tasks = 4;
+}
+
+//搜索列表--查询界面
+message GuildSearchListReq{
+}
+message GuildSearchListResp{
+	repeated GuildPb guilds = 1;
+}
+
+//名字模糊搜索
+message GuildFuzzySearchListReq{
+	string name = 1;
+}
+message GuildFuzzySearchListResp{
+	repeated GuildPb guilds = 1;
+}
+
+//创建
+message GuildCreateReq{
+	string name = 1;//名字
+	int32 badgeId = 2;//徽章id
+	string notice = 3;//公告
+	int32 allowAutoJoin = 4;//1允许自动加入
+}
+message GuildCreateResp{
+	GuildPb guild = 1;
+	map<int32,int32> changeItem=2;//道具
+}
+
+message GuildMembersReq {
+}
+message GuildMembersResp {
+	map<int32, GuildMemberPb> members = 1;
+}
+
+
+//随机加入
+message GuildRandomJoinReq{
+}
+message GuildRandomJoinResp{
+	GuildPb guild = 1;
+}
+
+
+//解散
+message GuildDissolutionReq{
+	int32 id = 1;
+}
+message GuildDissolutionResp{
+	int32 id = 1;
+	int64 leaveTime = 2;//退出时间
+}
+
+//退出
+message GuildLeaveReq{
+	int32 id = 1;
+}
+message GuildLeaveResp{
+	int64 leaveTime = 1;//退出时间
+	map<int32,int32> changeItem=2;//道具
+}
+//踢人
+message GuildKickOutReq{
+	int32 id = 1;
+	int32 memberId = 2;//成员id
+}
+message GuildKickOutResp{
+	int32 memberId = 1;//成员id
+	GuildPb guild = 2;
+}
+
+
+//申请加入
+message GuildJoinReq{
+	int32 id = 1;//公会id
+}
+message GuildJoinResp{
+	repeated GuildApplyPb applies = 1;
+}
+
+//申请加入列表
+message GuildJoinListReq{
+}
+message GuildJoinListResp{
+	repeated GuildApplyPb applies = 1;
+}
+
+//拒绝
+message GuildApplyRefuseReq{
+	int32 opt = 1;//0:拒绝单个人，1：一键决绝
+	int32 memberId = 2;
+	int64 applyId = 3;
+}
+message GuildApplyRefuseResp{
+	int32 opt = 1;//0:拒绝单个人，1：一键决绝
+	int32 memberId = 2;//拒绝的id
+	int64 applyId = 3;
+}
+
+//接受
+message GuildApplyAcceptReq{
+	int32 gid = 1;
+	int64 applyId = 2;
+}
+message GuildApplyAcceptResp{
+	repeated GuildMemberPb guildMember = 1;
+	GuildPb guild = 2;
+	int64 applyId = 3;
+}
+
+// setting
+message GuildSettingReq{
+	int32 id = 1;
+	int32 joinMinLevel = 2;//入会最低等级
+	int32 order = 3;// 排序
+	int32 allowAutoJoin = 4;//1允许自动加入 
+}
+message GuildSettingResp{
+	GuildPb guild = 1;
+}
+
+
+//职务更改
+message GuildChangeDutiesReq{
+	int32 memberId = 1;//成员id
+	int32 dutiesId = 2;//职务id （1会长，2副会长，3精英，4成员）
+	int32 id = 3;
+}
+message GuildChangeDutiesResp{
+	repeated GuildMemberPb guildMembers = 1;
+}
+
+//排行
+message GuildRankReq{
+}
+message GuildRankResp{
+	repeated GuildPb guilds = 1;
+}
+
+//发起协助
+message GuildAssistanceStartReq{
+	
+}
+message GuildAssistanceStartResp{
+	map<int32, GuildAssistPb> assisMap = 1;
+}
+
+message GuildAssistListReq{
+	
+}
+message GuildAssistListResp{
+	map<int32, GuildAssistPb> assisMap = 1;
+}
+
+//协助
+message GuildAssistReq{
+	int32 pId = 1;//成员id 
+}
+message GuildAssistResp{
+	map<int32, GuildAssistPb> assisMap = 1;
+}
+
+//Boss挑战初始化
+message GuildBossInitializeReq{
+
+}
+message GuildBossInitializeResp{
+	int64 bossHp = 1;//boss血量
+	int32 bossBattleNumber = 2;//公会全体挑战Boss的总数
+	map<int32,int32> changeItem=3;// 可以领取的讨伐奖励
+	int64 bossDamage = 4;//自己的对boss造成值
+	int32 IsReceivePrizes = 5;//是否有可以领取的伤害奖励
+	int32 guildCrusadeBossId = 6;//配置表GuildCrusadeBoss id
+}
+
+//boss挑战开始
+message GuildBossBattleStartReq{
+	int32 guildCrusadeBossId = 1;//配置表GuildCrusadeBoss id
+}
+message GuildBossBattleStartResp{
+	int32 guildCrusadeBossId = 1;//配置表GuildCrusadeBoss id
+	int32 seed = 2;//种子
+}
+
+//boss挑战结束
+message GuildBossBattleEndReq{
+	int32 result = 1; //0-失败 1-胜利
+	int32 guildCrusadeBossId = 2;//配置表GuildCrusadeBoss id
+	int32 seed = 3;//种子
+	int64 bossDamage = 4;//个人对boss造成值（单次）
+}
+message GuildBossBattleEndResp{
+	map<int32,int32> changeItem = 1; //道具
+	int32 guildCrusadeBossId = 2;//配置表GuildCrusadeBoss id
+	GuildMemberPb self = 3;
+	GuildBossPb boss = 4;
+}
+
+//boss累伤奖励列表
+message GuildBossAccumulatedDamageRewardListReq{
+	
+}
+message GuildBossAccumulatedDamageRewardListResp{
+	map<int32,int32> task = 1;//Key完成阶段 = ID，void = 完成状态0未完成，1可领取，2已领取;
+}
+
+//boss累伤奖励领取  count
+message GuildBossAccumulatedDamageRewardReceiveReq{
+	int32 task = 1;//领取ID
+	
+}
+message GuildBossAccumulatedDamageRewardReceiveResp{
+	map<int32,int32> changeItem = 1; //道具
+	GuildMemberPb self = 2;
+}
+
+//boss讨伐奖励列表
+message GuildBossCrusadeRewardListReq{
+	
+}
+message GuildBossCrusadeRewardListResp{
+	map<int32,GuildRecordsPb> Records = 1;//讨伐记录
+	map<int32,int32> changeItem = 2; //可领取的全部道具
+}
+
+//boss讨伐奖励领取（全部领取）
+message GuildBossCrusadeRewardReceiveReq{
+	
+}
+message GuildBossCrusadeRewardReceiveResp{
+	map<int32,int32> changeItem = 1; //道具
+	GuildMemberPb self = 2;
+}
+
+//公会改名
+
+message GuildRenameReq{
+		string guildName = 1;
+}
+message GuildRenameResp{
+		string guildName = 1;
+		map<int32,int32> changeItem=2;
+}
+//公会改公告
+
+message GuildNoticeReq{
+		string guildNotice = 1;
+}
+
+message GuildNoticeResp{
+		string guildNotice = 1;
+}
+
+//公会修改徽章
+message GuildBadgeReq{
+		int32 badgeId = 1;
+}
+
+message GuildBadgeResp{
+		int32 badgeId = 1;
+}

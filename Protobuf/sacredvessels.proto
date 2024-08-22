@@ -1,0 +1,53 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBSacredVessels";
+
+import "bean.proto";
+
+
+// 圣器信息
+message GetSacredVesselsInfoReq{
+	
+}
+message GetSacredVesselsInfoResp{
+	PlayerSacredVesselsPb sacredVessels = 1;
+}
+
+
+// 抽圣器
+message DrawSacredVesselsReq{
+	int32 isFree=1; // 1免费， 0使用抽奖券
+	int32 drawNum=2; // 抽卡数量，验证：1或者10
+}
+message DrawSacredVesselsResp{
+	map<int32,int32> chips = 1;
+	map<int32,int32> changeItem = 2; //改变的道具,客户端直接k,v覆盖掉道具原有的k,v
+}
+
+
+// level up
+message SacredVesselsLevelUpReq{
+	int32 configId=1;
+	int32 opt = 2; // 1激活，2升级
+}
+message SacredVesselsLevelUpResp{
+	SacredVesselsPb sacredVessels = 1;
+	map<int32, int32> changeChips = 2;
+}
+
+// 装备
+message SacredVesselsPutOnReq{
+	 int32 configId = 1; // 伙伴id
+}
+message SacredVesselsPutOnResp{
+	int32 isSucc = 1;
+	int32 putOnConfigId = 2; // 上阵圣器Id
+}
+
+// record
+message SacredVesselsRecordsReq{
+	 
+}
+message SacredVesselsRecordsResp{
+	repeated SacredVesselsRecordPb records = 1;
+}

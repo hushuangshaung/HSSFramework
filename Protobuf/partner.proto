@@ -1,0 +1,76 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBPartner";
+
+import "bean.proto";
+
+
+// 伙伴信息
+message GetPartnerInfoReq{
+	
+}
+message GetPartnerInfoResp{
+	PlayerPartnerPb partner=1;
+}
+
+
+// 抽伙伴
+message DrawPartnerReq{
+	int32 isFree=1; // 1免费， 0使用抽奖券
+	int32 drawNum=2; // 抽卡数量，验证：1或者10
+}
+message DrawPartnerResp{
+	map<int32,PartnerPb> partners=1;
+	map<int32,int32> partnerChips=2;
+	int32 drawTotalNum= 4; // 抽卡次数
+	int64 freeDrawTime = 5 ; // 使用免费抽卡时间戳，毫秒
+	map<int32,int32> changeItem=6; //改变的道具,客户端直接k,v覆盖掉道具原有的k,v
+	int32 integralNum = 7; // 获得的积分;
+}
+
+
+// level up
+message PartnerLevelUpReq{
+	int32 configId=1;
+}
+message PartnerLevelUpResp{
+	PartnerPb partner = 1;
+	map<int32,int32> chips =2;
+	int32 toIntegral = 3; // 最终积分
+	map<int32, int32> changeItem = 4; // 获得卡时，有数据
+	int32 delChips =5; // 升级后，删除掉的碎片
+}
+
+
+// 伙伴羁绊操作
+message PartnerTrammelsOptReq{
+	int32 optId = 1; // 1：激活；2：升级；
+	int32 configId=2; //羁绊表id
+}
+
+
+message PartnerTrammelsOptResp{
+	int32 optId = 1; // 1：激活；2：升级；
+	PartnerTrammelsPb partnerTrammels= 2; //羁绊
+}
+
+
+// 上阵
+message PartnerOnPosReq{
+	 int32 pos = 1; // 目前需求： 1、
+	 int32 configId = 2; // 伙伴id
+	 int32 opt=3; // 1上阵、2下阵
+}
+message PartnerOnPosResp{
+	repeated PartnerPosInfoPb posList = 1;
+}
+
+// 上阵batch
+message PartnerOnPosBatchReq{
+	 int32 opt=1; // 1上阵、2下阵
+	 repeated int32 configIdList = 2; // 伙伴id
+	 
+}
+message PartnerOnPosBatchResp{
+	repeated PartnerPosInfoPb posList = 1;
+}

@@ -1,0 +1,11 @@
+<linker>
+<!--    <assembly fullname="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">-->
+<!--        <type fullname="UnityEngine.ParticleSystem" preserve="all"/>-->
+<!--    </assembly>-->
+    <assembly fullname="Assembly-CSharp"/>
+    <assembly fullname="YooAsset"/>
+    <assembly fullname="Luban.Runtime"/>
+    <assembly fullname="UniTask"/>
+    <assembly fullname="YIUIFramework"/>
+    <assembly fullname="UnityWebSocket.Runtime"/>
+</linker>

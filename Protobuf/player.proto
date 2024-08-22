@@ -1,0 +1,110 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBPlayer";
+
+import "bean.proto";
+
+//登录
+message LoginReq{
+	string account=1;
+	int32 sid=2; //区服id
+	int32 version=3; //服务器版本号 默认0,客户端处理为配置数据(跟apk包绑定的配置)，有重大升级的情况下，需要重新使用新apk进入游戏
+}
+
+message LoginResp{
+	PlayerPb player=1;
+	PlayerTalents playerTalent=2; //玩家所有天赋
+	PlayerExtraPb extra=3;
+	AttrPb attr=4; //玩家所有属性
+	PlayerEquipsV2 equips=5;
+	HatchPool hatchPool=6;
+	repeated EquipV2Pb noHandleEquip=7;
+	CurTalent curTalent=8; //玩家当前天赋
+	int32 curMount=9; //当前坐骑 id
+	HolePb hole=10; //洞天
+	ChildDetailPb childDetail=11; //仙童详情
+	ItemPb item=12; 
+	DailyRefreshPb dailyRefresh=13;
+	TreasurePb treasure=14; //当前法宝
+	MainTaskPb mainTask = 15;//主线任务
+	ActivityPb activity=16;//活动
+	repeated int32 guide=17; //已完成的新手引导
+	EquipPb curDress=18; //当前上衣
+	int32 curArrey=19; 
+	map<int32,int32> ttg=20; //天赋到宠物品质的映射  TalentToGradePb
+	ScenePb scene=21;
+	int64 time=22; // 时间戳，毫秒
+	int32 timeZone=23;
+	PlayerStageTaskInfo stageTaskInfo = 24;
+}
+
+
+//同步
+message SyncReq{
+	int32 log=1; //必须传值  2-新手引导 3-限时礼包开启(param=id)  4-云游地图切换(param=mapid)
+	int32 param=2; //具体参数
+}
+
+message SyncResp{
+	int32 log=1; 
+	repeated int32 param=2;  //3-限时礼包开启(id,cd)  
+}
+
+
+
+//心跳 --req nil
+message PingResp
+{
+	int64 time=1;
+}
+
+message UpStageRes
+{
+	
+}
+message UpStageResp
+{
+	int32 level=1;
+	int32 exp=2;
+	int32 stage=3;
+	map<int32,int32> addItem=4; //增加的道具,客户端自己维护增
+}
+
+//获取账号玩家数据
+message AccountPlayerDataReq{
+	repeated string account=1; //游戏账号
+}
+
+message AccountPlayerDataResp{
+	repeated AccountPlayerPb acPlayer=1; 
+}
+
+
+//账号转移  --s3传输方式
+message AccountTransferReq{
+	string oldAccount=1; //旧游戏账号
+	string newAccount=2; //新的游戏账号
+}
+
+message AccountTransferResp{
+	string newAccount=2; //新的游戏账号
+}
+
+
+//改名
+message UpdateNameReq{
+	string name=1; 
+}
+message UpdateNameResp{
+	string name=1; 
+	map<int32,int32> changeItem=2; 
+}
+
+
+// 玩家查看
+message MiniPlayerInfoReq {
+	int32 playerId = 1;
+}
+message MiniPlayerInfoResp {
+	PlayerMiniInfoPb miniPlayer = 1;
+}

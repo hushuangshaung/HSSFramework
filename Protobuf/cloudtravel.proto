@@ -1,0 +1,209 @@
+syntax = "proto3";
+option java_package="com.cb.msg";
+option java_outer_classname="PBCloudtravel";
+
+import "bean.proto";
+
+
+//云游入口 --req nil
+message CloudTravelDataResp{
+	map<int32,CloudToolPb> tool=1; //云游工具
+	int32 cloudCd=3; //云游灵器恢复cd
+	int32 mapid=4;
+	int32 maxMapId=5; //最大地图id
+	map<int32,CloudDailyTaskPb> task=6;
+	repeated int32 activedBookMat=7; //激活的图鉴材料
+	MaterialPb mat=8; //待处理材料
+	map<int32,int32> changeItem=9;
+	int32 battleId = 10;
+}
+
+//开始云游 
+message BeginReq{
+	int32 funeId=1;
+}
+
+message BeginResp{
+	MaterialPb mat=1;
+	map<int32,int32> changeBookAttr=2; //可能改变的图鉴属性(只是改变的那几条属性)
+	map<int32,int32> funeNum=3; //id->num
+	map<int32,int32> changeItem=4;
+	int32 cloudCd=5; 
+	int32 result=6;
+	int32 battleId=7;
+}
+
+//产出材料出售 --req nil 
+message MaterialSaleResp{
+	map<int32,int32> changeItem=1;
+}
+
+//产出材料收藏 --req nil 
+message MaterialCollectResp{
+	map<int32,MaterialPb> mat=1; //pos,MaterialPb  pos从1开始
+	int32 type=2;
+	map<int32,int32> treasurePavilionAttr=3; //藏宝阁属性
+}
+
+
+//材料列表
+message MaterialListReq{
+	int32 type=1; //1-4
+}
+
+message MaterialListResp{
+	int32 type=1;
+	map<int32,MaterialPb> mat=2; //pos,MaterialPb  pos从1开始
+}
+
+
+
+//藏宝阁属性 --req nil
+message TreasurePavilionResp{
+	map<int32,int32> pavAttr=1; //藏宝阁属性
+	map<int32,int32> bookAttr=2; //图鉴属性
+	int32 Level=3; //藏宝阁等级
+}
+
+
+//背包材料出售 
+message BagMaterialSaleReq{
+	int32 type=1;
+	int32 pos=2;
+}
+
+message BagMaterialSaleResp{
+	int32 type=1;
+	int32 pos=2;
+	map<int32,int32> changeItem=3;
+	map<int32,int32> pavAttr=4; //藏宝阁属性
+}
+
+//云游灵器恢复 --req nil
+message CloudRecoverResp{
+	int32 cloudCd=1;
+	map<int32,int32> changeItem=2; //改变的道具
+}
+
+
+//工具洗练or替换
+message SuccinctOrReplaceReq{
+	int32 op=1; //0-洗练 1-替换
+	int32 toolId=2;
+	map<int32,int32> cost=3; //道具id,道具数量 (洗练的时候传入)
+}
+message SuccinctOrReplaceResp{
+	int32 toolId=1; 
+	map<int32,int32> succinctAttr=2; //洗练属性
+	map<int32,int32> attr=3; //现有属性
+	map<int32,int32> changeItem=4; //改变的道具 (洗练的时候传入)
+}
+
+//工具升级
+message ToolUpReq{
+	int32 toolId=1;
+}
+message ToolUpResp{
+	int32 toolId=1;
+	int32 levelid=2; 
+	map<int32,int32> changeItem=3; //改变的道具 
+}
+
+
+//提交每日任务材料 --req nil
+message SubmitTaskMaterialResp{
+	map<int32,int32> progress=1; //改变的任务  k:srl  v:progress
+}
+
+
+//刷新每日任务
+message RefreshTaskReq{
+	int32 srl=1;
+}
+message RefreshTaskResp{
+	int32 srl=1;
+	CloudDailyTaskPb task=2;
+	map<int32,int32> changeItem=3; //改变的道具 
+}
+
+//重置每日任务 --req nil
+message ResetTaskResp{
+	map<int32,CloudDailyTaskPb> task=1;
+	map<int32,int32> changeItem=2; //改变的道具 
+}
+
+
+//领取每日任务
+message RewardTaskReq{
+	int32 srl=1;
+}
+message RewardTaskResp{
+	int32 srl=1;
+	map<int32,int32> changeItem=2; //改变的道具 
+}
+
+
+//查看工具
+message LookToolReq{
+	int32 toolId=1;
+}
+message LookToolResp{
+	CloudToolPb tool=1;
+}
+
+//查看地图信息 --req nil
+message LookMapResp{
+	int32 maxMapId=1;
+	map<int32,int32> openMapTask=2; //云游开图任务
+}
+
+
+
+//购买云游符文
+message BuyCtFuneReq{
+	int32 num=1;
+	int32 id=2; 
+}
+message BuyCtFuneResp{
+	map<int32,int32> changeItem=1;
+	map<int32,int32> funeNum=2; //id->num
+	map<int32,int32> addNum=3; //此次购买增加的数量id->num
+}
+
+//云游符文列表 --req nil
+message ListCtFuneResp{
+	map<int32,int32> funeNum=1; //id->num
+}
+
+
+//藏宝阁升级格子 --req nil
+message PavUpGridResp{
+	int32 level=1;
+	int32 grid=2;
+	map<int32,int32> changeItem=3;
+}
+
+//藏宝阁升级等级 --req nil
+message PavUpLevelResp{
+	int32 levelCd=1; 
+}
+
+//查看藏宝阁信息 --req nil
+message LookPavilionResp{
+	int32 level=1;
+	int32 grid=2;
+	int32 levelCd=3; 
+	int32 advertiseCd=4; //广告冷却 
+}
+
+//藏宝阁升级加速 
+message PavAddSpeedReq{
+	int32 op=1; //1-看广告 2-消耗道具 
+	int32 itemNum=2;
+}
+message PavAddSpeedResp{
+	int32 op=1;
+	int32 levelCd=2; //如果==0 代表加速完成，客户端直接处理等级，格子
+	map<int32,int32> changeItem=3; //可能nil
+	int32 advertiseCd=4; //广告冷却 可能为0
+}
