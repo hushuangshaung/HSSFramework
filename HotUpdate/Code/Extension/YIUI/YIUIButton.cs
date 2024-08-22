@@ -65,7 +65,7 @@ namespace YIUIFramework
 
         private void AddClickEffect()
         {
-            if (Application.isEditor)
+            if (Application.isEditor && !Application.isPlaying)
             {
                 return;
             }

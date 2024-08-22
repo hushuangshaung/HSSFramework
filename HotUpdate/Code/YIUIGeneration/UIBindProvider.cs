@@ -13,8 +13,15 @@ namespace YIUICodeGenerated
             var BasePanel     = typeof(BasePanel);
             var BaseView      = typeof(BaseView);
             var BaseComponent = typeof(BaseComponent);
-            var list          = new UIBindVo[0];
-
+            var list          = new UIBindVo[1];
+            list[0] = new UIBindVo
+            {
+                PkgName     = YIUI.Login.LoginPanelBase.PkgName,
+                ResName     = YIUI.Login.LoginPanelBase.ResName,
+                CodeType    = BasePanel,
+                BaseType    = typeof(YIUI.Login.LoginPanelBase),
+                CreatorType = typeof(YIUI.Login.LoginPanel),
+            };
 
             return list;
         }

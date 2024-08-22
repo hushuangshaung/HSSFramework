@@ -24,6 +24,7 @@ public class InitHelper
         "mscorlib.dll",
         "System.dll",
         "System.Core.dll",
+        "UniTask.dll"
     };
     /// <summary>
     /// 热更dll

@@ -15,7 +15,7 @@ MonoBehaviour:
   BuildinFiles:
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_hotupdatedll_aot.bundle
-    FileCRC32: fbdbf893
+    FileCRC32: df85129c
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_hotupdatedll_dll_google_protobuf_dll.bundle
     FileCRC32: 7628be3b
@@ -24,13 +24,16 @@ MonoBehaviour:
     FileCRC32: 116e2483
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_hotupdatedll_dll_hotupdate_dll.bundle
-    FileCRC32: 08b92df8
+    FileCRC32: bd48e191
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_hotupdateresources_config_bytes.bundle
     FileCRC32: ae42f28c
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_hotupdateresources_config_language_languagetable_zh_cn.bundle
     FileCRC32: a5a03e09
+  - PackageName: DefaultPackage
+    FileName: defaultpackage_assets_gameres_hotupdateresources_font_udtypos515std-regular.bundle
+    FileCRC32: 4244b80c
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_hotupdateresources_font_zekton_free.bundle
     FileCRC32: 0e3058ad
@@ -42,7 +45,7 @@ MonoBehaviour:
     FileCRC32: f667c026
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_yiui_login_prefabs_loginpanel.bundle
-    FileCRC32: 46ef7a10
+    FileCRC32: 16e83f81
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_yiui_login_prefabs_title.bundle
     FileCRC32: a0e4c6a5
@@ -69,7 +72,7 @@ MonoBehaviour:
     FileCRC32: 49c1929a
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_scene_scene_home.bundle
-    FileCRC32: ff13f5ff
+    FileCRC32: 073fc8cb
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_scene_scene_homesettings.bundle
     FileCRC32: cf6d5ac1

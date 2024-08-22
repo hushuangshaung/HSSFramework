@@ -8,4 +8,5 @@
     <assembly fullname="UniTask"/>
     <assembly fullname="YIUIFramework"/>
     <assembly fullname="UnityWebSocket.Runtime"/>
+    <assembly fullname="DOTween"/>
 </linker>

@@ -237,19 +237,19 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 8297a2bf97dbbba468bd2518d003a876, type: 3}
-    m_FontSize: 14
+    m_Font: {fileID: 12800000, guid: 6e84c7518b0c6e144a8b2bde3f052faf, type: 3}
+    m_FontSize: 99
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 99
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u5F00\u59CB"
+  m_Text: Start111
 --- !u!114 &6365195866007320037
 MonoBehaviour:
   m_ObjectHideFlags: 0
