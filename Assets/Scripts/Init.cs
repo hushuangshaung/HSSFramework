@@ -131,7 +131,7 @@ public class Init: MonoBehaviour
         Instantiate(hotUpdateMainHandle.AssetObject);
         hotUpdateMainHandle.Release();
         // 切换到主页面场景
-        SceneEventDefine.ChangeToHomeScene.SendEventMessage();
+        // SceneEventDefine.ChangeToHomeScene.SendEventMessage();
     }
 
     #region FPS

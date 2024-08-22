@@ -42,13 +42,13 @@ MonoBehaviour:
     FileCRC32: f667c026
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_yiui_login_prefabs_loginpanel.bundle
-    FileCRC32: f2a13227
+    FileCRC32: 46ef7a10
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_yiui_login_prefabs_title.bundle
     FileCRC32: a0e4c6a5
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_yiui_login_source_loginpanelsource.bundle
-    FileCRC32: 0f57abe0
+    FileCRC32: 5a2f7e5a
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_audio.bundle
     FileCRC32: 61a424aa

@@ -9,7 +9,7 @@ using Object = UnityEngine.Object;
 
 public class HotUpdateMain: MonoBehaviour
 {
-    private ResourcePackage package;
+    private ResourcePackage _package;
     IEnumerator Start()
     {
         GameManager.SetMonoBehaviour(this);
@@ -27,6 +27,7 @@ public class HotUpdateMain: MonoBehaviour
         // Debug.LogError(JsonMapper.ToJson(btnSortData));
         Debug.LogError(btnSortData.Quality.ToString());
         
+        _package = YooAssets.GetPackage("DefaultPackage");
         ManagerRegister.Register();
         
         InitYIUI();
@@ -90,7 +91,7 @@ public class HotUpdateMain: MonoBehaviour
     
     private bool VerifyAssetValidityFunc(string arg1, string arg2)
     {
-        return package.CheckLocationValid(arg2);
+        return _package.CheckLocationValid(arg2);
     }
     
     /// <summary>
@@ -102,7 +103,7 @@ public class HotUpdateMain: MonoBehaviour
     /// <returns>返回值(obj资源对象,唯一ID)</returns>
     private async UniTask<(Object, int)> LoadAssetAsync(string arg1, string arg2, Type arg3)
     {
-        var handle = package.LoadAssetAsync(arg2, arg3);
+        var handle = _package.LoadAssetAsync(arg2, arg3);
         await handle.ToUniTask(); //异步等待 需要实现YooAsset在UniTask中的异步扩展
         return LoadAssetHandle(handle);
     }
@@ -116,7 +117,7 @@ public class HotUpdateMain: MonoBehaviour
     /// <returns>返回值(obj资源对象,唯一ID)</returns>
     private (Object, int) LoadAsset(string arg1, string arg2, Type arg3)
     {
-        var handle = package.LoadAssetSync(arg2, arg3);
+        var handle = _package.LoadAssetSync(arg2, arg3);
         return LoadAssetHandle(handle);
     }
     
@@ -139,9 +140,9 @@ public class HotUpdateMain: MonoBehaviour
         SingletonMgr.Initialize();
         // await I2LocalizeMgr.Inst.ManagerAsyncInit();
         //以下是YIUI中已经用到的管理器 在这里初始化
-        // await MgrCenter.Inst.Register(CountDownMgr.Inst);
+        await MgrCenter.Inst.Register(CountDownMgr.Inst);
         // await MgrCenter.Inst.Register(RedDotMgr.Inst);
-        // await MgrCenter.Inst.Register(PanelMgr.Inst);
+        await MgrCenter.Inst.Register(PanelMgr.Inst);
             
         OpenPanel();
     }
@@ -150,7 +151,8 @@ public class HotUpdateMain: MonoBehaviour
     {
         //TODO 在这里打开你的第一个界面
         Debug.LogError("打开第一个ui或者场景");
-        // Two.OpenLoginPanel();
+        Two.OpenLoginPanel();
+        Destroy(GameObject.Find("PatchWindow(Clone)"));
     }
     #endregion
 }

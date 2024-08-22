@@ -6,3 +6,6 @@ Bundles
 Html
 Assets/GameRes/GUI PRO Kit - Casual Game/PSD
 HybridCLRData/StrippedAOTDllsTempProj
+obj
+.idea
+HybridCLRData
