@@ -24,7 +24,7 @@ MonoBehaviour:
     FileCRC32: 116e2483
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_hotupdatedll_dll_hotupdate_dll.bundle
-    FileCRC32: bd48e191
+    FileCRC32: 82e69689
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_gameres_hotupdateresources_config_bytes.bundle
     FileCRC32: ae42f28c
@@ -72,7 +72,7 @@ MonoBehaviour:
     FileCRC32: 49c1929a
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_scene_scene_home.bundle
-    FileCRC32: 073fc8cb
+    FileCRC32: ff13f5ff
   - PackageName: DefaultPackage
     FileName: defaultpackage_assets_thirdparty_yooasset_samples_space_shooter_gameres_scene_scene_homesettings.bundle
     FileCRC32: cf6d5ac1
