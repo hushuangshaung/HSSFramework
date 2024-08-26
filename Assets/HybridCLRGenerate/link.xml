@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <linker>
+  <assembly fullname="DOTween">
+    <type fullname="DG.Tweening.Core.TweenerCore`3" preserve="all" />
+    <type fullname="DG.Tweening.Ease" preserve="all" />
+    <type fullname="DG.Tweening.Plugins.Options.VectorOptions" preserve="all" />
+    <type fullname="DG.Tweening.ShortcutExtensions" preserve="all" />
+    <type fullname="DG.Tweening.TweenSettingsExtensions" preserve="all" />
+  </assembly>
   <assembly fullname="Google.Protobuf">
     <type fullname="Google.Protobuf.CodedInputStream" preserve="all" />
     <type fullname="Google.Protobuf.CodedOutputStream" preserve="all" />
@@ -50,9 +57,11 @@
     <type fullname="Cysharp.Threading.Tasks.UniTask/Awaiter" preserve="all" />
     <type fullname="Cysharp.Threading.Tasks.UniTaskVoid" preserve="all" />
     <type fullname="Cysharp.Threading.Tasks.UniTask`1" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.UniTask`1/Awaiter" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.CoreModule">
     <type fullname="UnityEngine.Application" preserve="all" />
+    <type fullname="UnityEngine.Behaviour" preserve="all" />
     <type fullname="UnityEngine.Component" preserve="all" />
     <type fullname="UnityEngine.Coroutine" preserve="all" />
     <type fullname="UnityEngine.Debug" preserve="all" />
@@ -60,16 +69,22 @@
     <type fullname="UnityEngine.GameObject" preserve="all" />
     <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
     <type fullname="UnityEngine.Object" preserve="all" />
+    <type fullname="UnityEngine.RectTransform" preserve="all" />
     <type fullname="UnityEngine.Serialization.FormerlySerializedAsAttribute" preserve="all" />
     <type fullname="UnityEngine.SerializeField" preserve="all" />
     <type fullname="UnityEngine.TextAsset" preserve="all" />
     <type fullname="UnityEngine.Time" preserve="all" />
+    <type fullname="UnityEngine.TooltipAttribute" preserve="all" />
+    <type fullname="UnityEngine.Transform" preserve="all" />
+    <type fullname="UnityEngine.Vector3" preserve="all" />
     <type fullname="UnityEngine.WaitForSeconds" preserve="all" />
   </assembly>
   <assembly fullname="UnityEngine.UI">
     <type fullname="UnityEngine.EventSystems.BaseEventData" preserve="all" />
     <type fullname="UnityEngine.EventSystems.IEventSystemHandler" preserve="all" />
     <type fullname="UnityEngine.EventSystems.IPointerClickHandler" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.IPointerDownHandler" preserve="all" />
+    <type fullname="UnityEngine.EventSystems.IPointerUpHandler" preserve="all" />
     <type fullname="UnityEngine.EventSystems.ISubmitHandler" preserve="all" />
     <type fullname="UnityEngine.EventSystems.PointerEventData" preserve="all" />
     <type fullname="UnityEngine.EventSystems.PointerEventData/InputButton" preserve="all" />
@@ -91,10 +106,27 @@
     <type fullname="UnityWebSocket.WebSocketState" preserve="all" />
   </assembly>
   <assembly fullname="YIUIFramework">
+    <type fullname="YIUIBind.UIBindEventTable" preserve="all" />
+    <type fullname="YIUIBind.UIEventDelegate" preserve="all" />
+    <type fullname="YIUIBind.UIEventHandleP0" preserve="all" />
+    <type fullname="YIUIBind.UIEventP0" preserve="all" />
+    <type fullname="YIUIFramework.BasePanel" preserve="all" />
+    <type fullname="YIUIFramework.BaseWindow" preserve="all" />
+    <type fullname="YIUIFramework.CountDownMgr" preserve="all" />
+    <type fullname="YIUIFramework.EPanelLayer" preserve="all" />
+    <type fullname="YIUIFramework.EPanelOption" preserve="all" />
+    <type fullname="YIUIFramework.EPanelStackOption" preserve="all" />
+    <type fullname="YIUIFramework.EWindowOption" preserve="all" />
+    <type fullname="YIUIFramework.IManager" preserve="all" />
+    <type fullname="YIUIFramework.MgrCenter" preserve="all" />
+    <type fullname="YIUIFramework.MonoSingleton`1" preserve="all" />
+    <type fullname="YIUIFramework.PanelMgr" preserve="all" />
+    <type fullname="YIUIFramework.ParamVo" preserve="all" />
     <type fullname="YIUIFramework.SingletonMgr" preserve="all" />
+    <type fullname="YIUIFramework.Singleton`1" preserve="all" />
+    <type fullname="YIUIFramework.UIBase" preserve="all" />
     <type fullname="YIUIFramework.UIBindHelper" preserve="all" />
     <type fullname="YIUIFramework.UIBindVo" preserve="all" />
-    <type fullname="YIUIFramework.YIUIClickEffect" preserve="all" />
     <type fullname="YIUIFramework.YIUILoadDI" preserve="all" />
   </assembly>
   <assembly fullname="YooAsset">
