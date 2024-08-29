@@ -71,8 +71,9 @@ namespace Editor
             var hotfixAssembliesDstDir = $"{Application.dataPath}/GameRes/HotUpdateDLL/DLL";
             foreach (var dll in InitHelper.HotUpdateDllList)
             {
-                if (dll.StartsWith("Google"))
+                if (dll.StartsWith("Google.Protobuf.dll") || dll.StartsWith("System.Runtime.CompilerServices.Unsafe"))
                 {
+                    //System.Runtime.CompilerServices.Unsafe 先忽略，不知道为什么没有在：{hotfixDllSrcDir}。所以手动复制到：{dllBytesPath}
                     //Google.Protobuf.dll 先忽略，不知道为什么没有在：{hotfixDllSrcDir}。所以手动复制到：{dllBytesPath}
                     continue;
                 }

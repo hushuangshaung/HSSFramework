@@ -31,6 +31,7 @@ public class InitHelper
     /// </summary>
     public static List<string> HotUpdateDllList = new()
     {
+        "System.Runtime.CompilerServices.Unsafe.dll",//Google.Protobuf.dll依赖项
         "Google.Protobuf.dll",
         "HotUpdate.dll",
     };
