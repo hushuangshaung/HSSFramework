@@ -31,6 +31,11 @@ namespace YIUIFramework
             return await OnOpen();
         }
 
+        internal void OnWindowClose()
+        {
+            OnClose();
+        }
+        
         /// <summary>
         /// UI被关闭
         /// 与OnDisable 不同  Disable 只是显影操作不代表被关闭
@@ -38,7 +43,7 @@ namespace YIUIFramework
         /// 这个时候你想要知道是不是被关闭了就必须通过OnClose
         /// baseView除外 因为view的关闭就是隐藏 所以 view的 OnDisable = OnClose
         /// </summary>
-        internal virtual void OnClose()
+        protected virtual void OnClose()
         {
         }
     }
