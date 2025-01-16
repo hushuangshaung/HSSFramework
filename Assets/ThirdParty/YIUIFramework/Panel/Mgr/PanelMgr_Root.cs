@@ -17,10 +17,21 @@ namespace YIUIFramework
         public       RectTransform UILayerRoot;
         public       Camera        UICamera;
         public       Canvas        UICanvas;
-        public const int           DesignScreenWidth    = 1920;
-        public const int           DesignScreenHeight   = 1080;
-        public const float         DesignScreenWidth_F  = 1920f;
-        public const float         DesignScreenHeight_F = 1080f;
+        
+        public static int          DesignScreenWidth     = 1080;
+        public static int          DesignScreenHeight    = 1920;
+        public static float        DesignScreenWidth_F   = 1080f;
+        public static float        DesignScreenHeight_F  = 1920f;
+        
+        // public static int          DesignScreenWidth     = Screen.width;
+        // public static int          DesignScreenHeight    = Screen.height;
+        // public static float        DesignScreenWidth_F   = Screen.width;
+        // public static float        DesignScreenHeight_F  = Screen.height;
+        
+        // public const int           DesignScreenWidth    = 1920;
+        // public const int           DesignScreenHeight   = 1080;
+        // public const float         DesignScreenWidth_F  = 1920f;
+        // public const float         DesignScreenHeight_F = 1080f;
 
         private const int RootPosOffset = 1000;
         private const int LayerDistance = 1000;
@@ -117,17 +128,28 @@ namespace YIUIFramework
                 rect.anchorMin     = Vector2.zero;
                 rect.sizeDelta     = Vector2.zero;
                 rect.localRotation = Quaternion.identity;
-                rect.localPosition = new Vector3(0, 0, i * LayerDistance); //这个是为了3D模型时穿插的问题
+                #region huss
+                if ((EPanelLayer)i == EPanelLayer.Cache)
+                {
+                    rect.localPosition = new Vector3(0, i * LayerDistance, i * LayerDistance); //这个是为了不在同一相机内
+                }
+                #endregion
+                else
+                {
+                    rect.localPosition = new Vector3(0, 0, i * LayerDistance); //这个是为了3D模型时穿插的问题
+                }
+
                 var rectDic = new Dictionary<RectTransform, List<PanelInfo>> { { rect, new List<PanelInfo>() } };
                 m_AllPanelLayer.Add((EPanelLayer)i, rectDic);
             }
 
             InitAddUIBlock(); //所有层级初始化后添加一个终极屏蔽层 可根据API 定时屏蔽UI操作
+            PanelMgrHelper.InitAddPopupUIGround();//添加Ground,
             
             UICamera.transform.localPosition =
                 new Vector3(UILayerRoot.localPosition.x, UILayerRoot.localPosition.y, -LayerDistance);
 
-            UICamera.clearFlags   = CameraClearFlags.Depth;
+            // UICamera.clearFlags   = CameraClearFlags.Depth;
             UICamera.orthographic = true;
             
             //根据需求可以修改摄像机的远剪裁平面大小 没必要设置的很大

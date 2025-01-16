@@ -1,7 +1,5 @@
 ﻿//------------------------------------------------------------
-// Author: 亦亦
-// Mail: 379338943@qq.com
-// Data: 2023年2月12日
+// Author: huss
 //------------------------------------------------------------
 
 #if UNITY_EDITOR
@@ -56,9 +54,10 @@ namespace YIUIFramework.Editor
                 new TreeMenuItem<UIPublishModule>(this, m_OdinMenuTree,
                     UIPublishModule.m_PublishName, EditorIcons.UnityFolderIcon));
 
-            m_AllMenuItem.Add(
-                new TreeMenuItem<UIRedDotModule>(this, m_OdinMenuTree,
-                    "红点", EditorIcons.AlertCircle));
+            //红点系统屏蔽，用自己写的红点系统
+            // m_AllMenuItem.Add(
+            //     new TreeMenuItem<UIRedDotModule>(this, m_OdinMenuTree,
+            //         "红点", EditorIcons.AlertCircle));
 
             m_AllMenuItem.Add(
                 new TreeMenuItem<UII2LocalizationModule>(this, m_OdinMenuTree,
@@ -110,7 +109,7 @@ namespace YIUIFramework.Editor
             }
         }
 
-        public static StringPrefs UserNamePrefs = new StringPrefs("YIUIAutoTool_UserName", null, "YIUI");
+        public static StringPrefs UserNamePrefs = new StringPrefs("YIUIAutoTool_UserName", null, "huss");
 
         [LabelText("用户名")]
         [Required("请填写用户名")]

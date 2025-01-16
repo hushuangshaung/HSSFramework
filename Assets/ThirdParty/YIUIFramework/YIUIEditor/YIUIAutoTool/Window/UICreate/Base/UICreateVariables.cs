@@ -132,6 +132,8 @@ namespace YIUIFramework.Editor
                     if (self.PanelOption.HasFlag(EPanelOption.TimeCache))
                         sb.AppendFormat("        protected override float CachePanelTime => {0};\r\n\r\n",
                             self.CachePanelTime);
+                    if (self.PanelLayer == EPanelLayer.Popup)
+                        sb.AppendFormat("        public override bool IsShowGround => {0};\r\n", self.IsShowGround.ToString().ToLower());
                     break;
                 case EUICodeType.View:
                     sb.AppendFormat("        public override EWindowOption WindowOption => EWindowOption.{0};\r\n",

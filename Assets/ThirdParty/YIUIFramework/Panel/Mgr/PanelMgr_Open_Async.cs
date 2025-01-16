@@ -40,9 +40,8 @@ namespace YIUIFramework
                 uiBase.SetActive(false);
                 info.Reset(uiBase);
             }
-
             AddUI(info);
-
+            PanelMgrHelper.FreshGround(GetLayerPanelInfoList(EPanelLayer.Popup));
             return info;
         }
 
@@ -58,7 +57,10 @@ namespace YIUIFramework
 
             try
             {
-                success = await info.UIBasePanel.Open();
+                if (info.UIBasePanel != null)
+                {
+                    success = await info.UIBasePanel.Open();
+                }
             }
             catch (Exception e)
             {
@@ -80,7 +82,10 @@ namespace YIUIFramework
 
             try
             {
-                success = await info.UIBasePanel.Open(p1);
+                if (info.UIBasePanel != null)
+                {
+                    success = await info.UIBasePanel.Open(p1);
+                }
             }
             catch (Exception e)
             {
@@ -102,7 +107,10 @@ namespace YIUIFramework
 
             try
             {
-                success = await info.UIBasePanel.Open(p1, p2);
+                if (info.UIBasePanel != null)
+                {
+                    success = await info.UIBasePanel.Open(p1, p2);
+                }
             }
             catch (Exception e)
             {
@@ -124,13 +132,15 @@ namespace YIUIFramework
 
             try
             {
-                success = await info.UIBasePanel.Open(p1, p2, p3);
+                if (info.UIBasePanel != null)
+                {
+                    success = await info.UIBasePanel.Open(p1, p2, p3);
+                }
             }
             catch (Exception e)
             {
                 Debug.LogError($"panel={info.ResName}, err={e.Message}{e.StackTrace}");
             }
-
             return (T)await OpenPanelAfter(info, success);
         }
 
@@ -146,7 +156,10 @@ namespace YIUIFramework
 
             try
             {
-                success = await info.UIBasePanel.Open(p1, p2, p3, p4);
+                if (info.UIBasePanel != null)
+                {
+                    success = await info.UIBasePanel.Open(p1, p2, p3, p4);
+                }
             }
             catch (Exception e)
             {
@@ -168,7 +181,10 @@ namespace YIUIFramework
 
             try
             {
-                success = await info.UIBasePanel.Open(p1, p2, p3, p4, p5);
+                if (info.UIBasePanel != null)
+                {
+                    success = await info.UIBasePanel.Open(p1, p2, p3, p4, p5);
+                }
             }
             catch (Exception e)
             {

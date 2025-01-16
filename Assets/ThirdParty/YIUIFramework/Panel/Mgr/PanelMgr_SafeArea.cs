@@ -35,13 +35,13 @@ namespace YIUIFramework
 
         private void InitSafeArea()
         {
+            return;
             var safeAreaX = Math.Max(Screen.safeArea.x, Screen.width - Screen.safeArea.xMax);
             var safeAreaY = Math.Max(Screen.safeArea.y, Screen.height - Screen.safeArea.yMax);
 
             #if UNITY_EDITOR
-
-            //safeAreaX = 100;
-            //safeAreaY = 100;
+            safeAreaX = 100;
+            safeAreaY = 100;
             #endif
 
             g_SafeArea = new Rect(
@@ -50,6 +50,10 @@ namespace YIUIFramework
                 DesignScreenWidth_F - GetSafeValue(safeAreaX),
                 DesignScreenHeight_F - GetSafeValue(safeAreaY));
 
+            Debug.LogError($"Screen.safeArea.x:{Screen.safeArea.x}, Screen.safeArea.y:{Screen.safeArea.y}");
+            Debug.LogError($"Screen.safeArea.xMax:{Screen.safeArea.xMax}, Screen.safeArea.yMax:{Screen.safeArea.yMax}");
+            Debug.LogError($"Screen.width:{Screen.width}, Screen.height:{Screen.height}");
+            Debug.LogError($"safeAreaX:{safeAreaX}, safeAreaY:{safeAreaY}");
             InitUISafeArea();
         }
 

@@ -27,6 +27,10 @@
         /// </summary>
         public virtual int Priority => 0;
 
+        /// <summary>
+        /// Popup层黑底
+        /// </summary>
+        public virtual bool IsShowGround => true;
         #region 密封生命周期
 
         protected sealed override void SealedInitialize()

@@ -19,8 +19,9 @@ namespace YIUIFramework
 
             uiBase.SetActive(true);
             obj.transform.localScale = m_AnimScale;
-
-            await obj.transform.DOScale(Vector3.one, time);
+            var tweener = obj.transform.DOScale(Vector3.one, time);
+            tweener.SetUpdate(true);
+            await tweener;
         }
 
         //淡出
@@ -29,9 +30,10 @@ namespace YIUIFramework
             var obj = uiBase?.OwnerGameObject;
             if (obj == null) return;
 
-            obj.transform.localScale = Vector3.one;
-
-            await obj.transform.DOScale(m_AnimScale, time);
+            obj.transform.localScale = Vector3.one; 
+            var tweener = obj.transform.DOScale(m_AnimScale, time);
+            tweener.SetUpdate(true);
+            await tweener;
 
             uiBase.SetActive(false);
             obj.transform.localScale = Vector3.one;

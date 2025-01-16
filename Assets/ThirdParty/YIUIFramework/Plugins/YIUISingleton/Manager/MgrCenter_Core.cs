@@ -45,7 +45,7 @@ namespace YIUIFramework
                     
                     #if YIUIMACRO_SINGLETON_LOG
                     sw.Stop();
-                    Debug.Log($"<color=green>MgrCenter: 管理器[<color=Brown>{manager.GetType().Name}</color>]初始化耗时 {sw.ElapsedMilliseconds} 毫秒</color>");
+                    //Debug.Log($"<color=green>MgrCenter: 管理器[<color=Brown>{manager.GetType().Name}</color>]初始化耗时 {sw.ElapsedMilliseconds} 毫秒</color>");
                     #endif
                     
                     if (!result)
@@ -59,9 +59,9 @@ namespace YIUIFramework
                 
                 m_CacheInitMgr.Remove(manager);
 
-                #if YIUIMACRO_SINGLETON_LOG
-                Debug.Log($"<color=navy>MgrCenter: 管理器[<color=Brown>{manager.GetType().Name}</color>]启动完毕</color>");
-                #endif
+                // #if YIUIMACRO_SINGLETON_LOG
+                // Debug.Log($"<color=navy>MgrCenter: 管理器[<color=Brown>{manager.GetType().Name}</color>]启动完毕</color>");
+                // #endif
 
                 m_MgrList.Add(manager);
 

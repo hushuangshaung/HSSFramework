@@ -1,7 +1,5 @@
 ﻿//------------------------------------------------------------
-// Author: 亦亦
-// Mail: 379338943@qq.com
-// Data: 2023年2月12日
+// Author: huss
 //------------------------------------------------------------
 
 using UnityEngine;
@@ -108,6 +106,18 @@ namespace YIUIFramework
         [LabelText("拖拽速度")]
         [ShowIf("m_CanDrag")]
         private float m_DragSpeed = 10.0f;
+        
+        [OdinSerialize]
+        [ShowInInspector]
+        [LabelText("自动旋转")]
+        // [ShowIf("!m_CanDrag")]
+        private bool m_CanRotation ;
+        
+        [OdinSerialize]
+        [ShowInInspector]
+        [LabelText("自动旋转速度")]
+        [ShowIf("m_CanRotation")]
+        private float m_CanRotationSpeed = 5f;
 
         [OdinSerialize]
         [ShowInInspector]

@@ -9,30 +9,48 @@ namespace YIUIFramework
     /// </summary>
     public partial class YIUILoopScroll<TData, TItemRenderer>
     {
+        private bool _isInit;
         //设置数据 然后刷新
         //不管是要修改数据长度 还是数据变更了 都用此方法刷新
-        public void SetDataRefresh(IList<TData> data)
+        public void SetDataRefresh(IList<TData> data, bool force = false)
         {
+            if (data.Count == 0 && !_isInit)
+            {
+                return;
+            }
+            
             m_Data             = data;
             m_Owner.totalCount = data.Count;
-            RefillCells();
+            
+            if (!_isInit || force)
+            {
+                //在开始时用startItem填充单元格，同时清除现有的单元格
+                RefillCells();
+            }
+            else
+            {
+                //刷新单元
+                RefreshCells();
+            }
+
+            _isInit = true;
         }
 
         //刷新时默认选中某个索引数据
         //注意这里相当于+=操作 如果你会频繁调用这个方法
         //又想每次刷新选中不同的索引
         //那么你应该先自行调用一次 ClearSelect
-        public void SetDataRefresh(IList<TData> data, int index)
+        public void SetDataRefresh(IList<TData> data, int index, bool force = false)
         {
             SetDefaultSelect(index);
-            SetDataRefresh(data);
+            SetDataRefresh(data, force);
         }
         
         //同上 请看注释 注意使用方式
-        public void SetDataRefresh(IList<TData> data, List<int> index)
+        public void SetDataRefresh(IList<TData> data, List<int> index, bool force = true)
         {
             SetDefaultSelect(index);
-            SetDataRefresh(data);
+            SetDataRefresh(data, force);
         }
         
         //如果 < 0 则表示这个对象在对象池里

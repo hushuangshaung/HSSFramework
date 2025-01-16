@@ -240,11 +240,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605169982}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 12ffd114f03bd8241bd95ec5d832ffe9, type: 3}
+  m_Script: {fileID: 11500000, guid: d18fc270a6060bf408dff96adaeb0190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PlayMode: 0
   DLL: 0
+  DefaultHostServer: http://test.res:8083
+  FallbackHostServer: http://test.res:8083
 --- !u!4 &1605169984
 Transform:
   m_ObjectHideFlags: 0

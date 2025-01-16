@@ -2,7 +2,9 @@
 //#define NGUI
 
 using System;
+#if TextMeshPro
 using TMPro;
+#endif
 using UnityEditor;
 using UnityEngine;
 using Object = UnityEngine.Object;

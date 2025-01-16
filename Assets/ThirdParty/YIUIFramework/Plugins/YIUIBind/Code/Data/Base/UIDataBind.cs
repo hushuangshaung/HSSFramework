@@ -1,7 +1,5 @@
 ﻿//------------------------------------------------------------
-// Author: 亦亦
-// Mail: 379338943@qq.com
-// Data: 2023年2月12日
+// Author: huss
 //------------------------------------------------------------
 
 using Sirenix.OdinInspector;
@@ -50,6 +48,7 @@ namespace YIUIBind
 
                 Logger.LogErrorContext(this, $"{name} 没有找到这个变量 {dataName} 请检查配置");
                 return null;
+                
             }
 
             return data;

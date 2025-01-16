@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿#if TextMeshPro
+using Sirenix.OdinInspector;
 using TMPro;
 using UnityEngine;
 using Logger = YIUIFramework.Logger;
@@ -53,3 +54,4 @@ namespace YIUIBind
         }
     }
 }
+#endif

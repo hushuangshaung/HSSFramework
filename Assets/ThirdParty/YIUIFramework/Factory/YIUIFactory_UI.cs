@@ -1,7 +1,5 @@
 ﻿//------------------------------------------------------------
-// Author: 亦亦
-// Mail: 379338943@qq.com
-// Data: 2023年2月12日
+// Author: huss
 //------------------------------------------------------------
 
 using System;
@@ -58,7 +56,7 @@ namespace YIUIFramework
             return CreateByObjVo(vo, obj);
         }
 
-        private static UIBase CreateByObjVo(UIBindVo vo, GameObject obj)
+        public static UIBase CreateByObjVo(UIBindVo vo, GameObject obj)
         {
             var cdeTable = obj.GetComponent<UIBindCDETable>();
             if (cdeTable == null)

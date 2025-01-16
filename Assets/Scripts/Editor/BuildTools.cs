@@ -85,7 +85,7 @@ public class BuildTools
         buildParameters.BuildinFileRoot = streamingAssetsRoot;
         buildParameters.BuildPipeline = EBuildPipeline.BuiltinBuildPipeline.ToString();
         buildParameters.BuildTarget = buildTarget;
-        buildParameters.BuildMode = EBuildMode.IncrementalBuild;
+        // buildParameters.BuildMode = EBuildMode.IncrementalBuild;
         buildParameters.PackageName = "DefaultPackage";
         buildParameters.PackageVersion = GetBuildPackageVersion();
         buildParameters.VerifyBuildingResult = true;

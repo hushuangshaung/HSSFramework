@@ -1,9 +1,10 @@
-﻿using System;
+﻿#if TextMeshPro
+using System;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
 
-#if TextMeshPro
+
 namespace I2.Loc
 {
     #if UNITY_EDITOR

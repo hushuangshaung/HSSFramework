@@ -328,6 +328,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   u_CacheRect: {fileID: 4883066074865906977}
+  u_ItemRect: {fileID: 0}
+  u_ItemPrefabs: []
   u_MaxClickCount: 0
   u_AutoCancelLast: 1
   u_RepetitionCancel: 0

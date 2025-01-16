@@ -85,6 +85,8 @@ namespace UnityEngine.UI
             GameObject root = CreateUIElementRoot("Loop Horizontal Scroll Rect", new Vector2(400, 200));
             GameObject cache = CreateUIObject("Cache", root);
             cache.SetActive(false);
+            GameObject item = CreateUIObject("Item", root);
+            item.SetActive(false);
             GameObject content = CreateUIObject("Content", root);
 
             RectTransform contentRT = content.GetComponent<RectTransform>();
@@ -126,6 +128,8 @@ namespace UnityEngine.UI
             GameObject root = CreateUIElementRoot("Loop Vertical Scroll Rect", new Vector2(200, 400));
             GameObject cache = CreateUIObject("Cache", root);
             cache.SetActive(false);
+            GameObject item = CreateUIObject("Item", root);
+            item.SetActive(false);
             GameObject content = CreateUIObject("Content", root);
             
             RectTransform contentRT = content.GetComponent<RectTransform>();
@@ -148,7 +152,6 @@ namespace UnityEngine.UI
             scrollRect.horizontalScrollbarSpacing = 0;
             scrollRect.verticalScrollbarSpacing = 0;
             scrollRect.u_CacheRect = cache.transform as RectTransform;
-
             root.AddComponent<RectMask2D>();
 
             VerticalLayoutGroup layoutGroup = content.AddComponent<VerticalLayoutGroup>();

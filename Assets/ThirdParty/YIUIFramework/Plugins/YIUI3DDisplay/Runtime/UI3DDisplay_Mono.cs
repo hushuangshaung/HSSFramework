@@ -122,6 +122,11 @@ namespace YIUIFramework
                 var tsf = m_LookCamera.transform;
                 m_ShowCamera.transform.SetPositionAndRotation(tsf.position, tsf.rotation);
             }
+
+            if (m_CanRotation && m_ShowObject)
+            {
+                m_ShowObject.transform.Rotate(Vector3.up, m_CanRotationSpeed);
+            }
         }
     }
 }

@@ -14,6 +14,32 @@
       "dependencies": {},
       "hash": "57e577126c4bac9abef927babb848a457ad5d563"
     },
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "8042b29ff87dd5506d7aad72bd6d8d7405985f27"
+    },
+    "com.psygames.unitywebsocket": {
+      "version": "https://github.com/psygames/UnityWebSocket.git#upm",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "369f2a56f68e7a133d3d1acfdc26d4693cd74497"
+    },
+    "com.tuyoogame.yooasset": {
+      "version": "2.2.9",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.scriptablebuildpipeline": "1.21.25",
+        "com.unity.modules.assetbundle": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.modules.unitywebrequestassetbundle": "1.0.0"
+      },
+      "url": "https://package.openupm.com"
+    },
     "com.unity.collab-proxy": {
       "version": "2.4.4",
       "depth": 0,
@@ -88,6 +114,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.scriptablebuildpipeline": {
+      "version": "1.21.25",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.settings-manager": {
       "version": "2.0.1",
       "depth": 2,
@@ -117,7 +150,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
-      "version": "3.0.6",
+      "version": "3.0.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {

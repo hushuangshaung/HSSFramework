@@ -169,6 +169,11 @@ namespace YIUIFramework
 
         private void OnClickItem(int index, TItemRenderer item, bool select)
         {
+            if (index >= m_Data.Count || index < 0)
+            {
+                return;
+            }
+            
             m_OnClickItemEvent?.Invoke(index, m_Data[index], item, select);
         }
 

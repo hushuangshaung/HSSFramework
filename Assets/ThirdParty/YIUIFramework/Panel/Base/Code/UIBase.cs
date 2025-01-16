@@ -238,6 +238,13 @@ namespace YIUIFramework
 
         #endregion
 
+        #region 多数据源循环列表 判断使用虚函数
+        public virtual bool OnUser<TData>(TData data, int index)
+        {
+            return true;
+        }
+        #endregion
+
         #endregion
     }
 }

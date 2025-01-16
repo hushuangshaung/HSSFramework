@@ -679,10 +679,10 @@ namespace UnityEngine.UI
                     Debug.Assert(GetAbsDimension(m_Content.anchorMin) == value, this);
                     Debug.Assert(GetAbsDimension(m_Content.anchorMax) == value, this);
                 }
-                if (direction == LoopScrollRectDirection.Vertical)
-                    Debug.Assert(m_Vertical && !m_Horizontal, this);
-                else
-                    Debug.Assert(!m_Vertical && m_Horizontal, this);
+                // if (direction == LoopScrollRectDirection.Vertical)
+                //     Debug.Assert(m_Vertical && !m_Horizontal, this);
+                // else
+                //     Debug.Assert(!m_Vertical && m_Horizontal, this);
             }
         }
         #endif

@@ -24,5 +24,10 @@
         /// 同层级，优先级高的在前面
         /// </summary>
         int Priority { get; }
+
+        /// <summary>
+        /// 黑底操作
+        /// </summary>
+        bool IsShowGround { get; }
     }
 }

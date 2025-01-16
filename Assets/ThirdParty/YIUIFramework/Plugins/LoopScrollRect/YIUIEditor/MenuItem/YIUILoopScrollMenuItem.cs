@@ -23,24 +23,60 @@ namespace YIUIFramework.Editor
         {
             CreateLoopScroll("LoopScrollHorizontalGroup");
         }
+        
+        [MenuItem("GameObject/YIUI/LoopScroll/Horizontal Multi", false, 10004)]
+        private static void CreateLoopScrollHorizontalMulti()
+        {
+            CreateLoopScroll("LoopScrollHorizontalMulti");
+        }
 
-        [MenuItem("GameObject/YIUI/LoopScroll/Vertical", false, 10011)]
+        [MenuItem("GameObject/YIUI/LoopScroll/Horizontal Reverse Multi", false, 10005)]
+        private static void CreateLoopScrollHorizontalReverseMulti()
+        {
+            CreateLoopScroll("LoopScrollHorizontalReverseMulti");
+        }
+
+        // [MenuItem("GameObject/YIUI/LoopScroll/Horizontal Group Multi", false, 10006)]
+        // private static void CreateLoopScrollHorizontalGroupMulti()
+        // {
+        //     CreateLoopScroll("LoopScrollHorizontalGroupMulti");
+        // }
+
+        [MenuItem("GameObject/YIUI/LoopScroll/Vertical", false, 10007)]
         private static void CreateLoopScrollVertical()
         {
             CreateLoopScroll("LoopScrollVertical");
         }
 
-        [MenuItem("GameObject/YIUI/LoopScroll/Vertical Reverse", false, 10012)]
+        [MenuItem("GameObject/YIUI/LoopScroll/Vertical Reverse", false, 10008)]
         private static void CreateLoopScrollVerticalReverse()
         {
             CreateLoopScroll("LoopScrollVerticalReverse");
         }
 
-        [MenuItem("GameObject/YIUI/LoopScroll/Vertical Group", false, 10013)]
+        [MenuItem("GameObject/YIUI/LoopScroll/Vertical Group", false, 10009)]
         private static void CreateLoopScrollVerticalGroup()
         {
             CreateLoopScroll("LoopScrollVerticalGroup");
         }
+        
+        [MenuItem("GameObject/YIUI/LoopScroll/Vertical Multi", false, 10010)]
+        private static void CreateLoopScrollVerticalMulti()
+        {
+            CreateLoopScroll("LoopScrollVerticalMulti");
+        }
+
+        [MenuItem("GameObject/YIUI/LoopScroll/Vertical Reverse Multi", false, 10011)]
+        private static void CreateLoopScrollVerticalReverseMulti()
+        {
+            CreateLoopScroll("LoopScrollVerticalReverseMulti");
+        }
+
+        // [MenuItem("GameObject/YIUI/LoopScroll/Vertical Group Multi", false, 10012)]
+        // private static void CreateLoopScrollVerticalGroupMulti()
+        // {
+        //     CreateLoopScroll("LoopScrollVerticalGroupMulti");
+        // }
 
         private static void CreateLoopScroll(string name)
         {

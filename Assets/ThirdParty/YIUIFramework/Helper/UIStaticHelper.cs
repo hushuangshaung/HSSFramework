@@ -1,7 +1,5 @@
 ﻿//------------------------------------------------------------
-// Author: 亦亦
-// Mail: 379338943@qq.com
-// Data: 2023年2月12日
+// Author: huss
 //------------------------------------------------------------
 
 using Sirenix.OdinInspector;
@@ -24,7 +22,7 @@ namespace YIUIFramework
         public const string UIProjectEditorPath = "Assets/Editor/" + UIProjectName; //编辑器才会用到的资源
 
         [LabelText("YIUI项目资源路径")]
-        public const string UIProjectResPath = "Assets/GameRes/" + UIProjectName; //玩家的预设/图片等资源存放的地方
+        public const string UIProjectResPath = "Assets/GameRes/HotUpdateResources/" + UIProjectName; //玩家的预设/图片等资源存放的地方
 
         [LabelText("YIUI项目脚本路径")]
         public const string UIGenerationPath = "Assets/Scripts/HotUpdate/Code/YIUIGeneration"; //自动生成的代码

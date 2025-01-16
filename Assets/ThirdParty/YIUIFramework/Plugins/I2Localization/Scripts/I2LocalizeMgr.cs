@@ -160,7 +160,7 @@ namespace I2.Loc
                 return;
             }
 
-            Debug.Log($"加载语言成功 {language}");
+            // Debug.Log($"加载语言成功 {language}");
             
             UseLocalizationCSV(assetTextAsset.text, !setCurrent);
             if (setCurrent)
@@ -223,7 +223,7 @@ namespace I2.Loc
                 return true;
             }
 
-            Debug.Log($"设置当前语言 = {language}");
+            // Debug.Log($"设置当前语言 = {language}");
             LocalizationManager.CurrentLanguage = language;
             m_CurrentLanguage                   = language;
             return true;

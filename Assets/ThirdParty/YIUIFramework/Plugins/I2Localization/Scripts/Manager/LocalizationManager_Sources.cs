@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
+using YIUIFramework;
 using Object = UnityEngine.Object;
 
 namespace I2.Loc
@@ -117,6 +119,26 @@ namespace I2.Loc
             }
 		}
 
+		public static async UniTask<bool> RegisterSource(string location)
+		{
+			if (Sources.Count == 0)
+			{
+				return false;
+			}
+
+			var (obj, hashCode) = await YIUILoadDI.LoadAssetAsyncFunc("", location, typeof(TextAsset));
+			if (obj == null)
+			{
+				return false;
+			}
+
+			var textAsset = obj as TextAsset;
+			YIUILoadDI.ReleaseAction(hashCode);
+			// Debug.LogError("text:" + textAsset.text);
+			Sources[0].Import_CSV(String.Empty, textAsset.text, eSpreadsheetUpdateMode.None);
+			return true;
+		}
+
 		public static Func<LanguageSourceData, bool> Callback_AllowSyncFromGoogle = null;
 		static bool AllowSyncFromGoogle(LanguageSourceData Source)
 		{
@@ -140,7 +162,6 @@ namespace I2.Loc
 			Debug.Log($">>----------添加多语言数据----------<<");
 			
 			#endif
-			
             Sources.Add( Source );
 
 			if (Source.HasGoogleSpreadsheet() && Source.GoogleUpdateFrequency != LanguageSourceData.eGoogleUpdateFrequency.Never && AllowSyncFromGoogle(Source))

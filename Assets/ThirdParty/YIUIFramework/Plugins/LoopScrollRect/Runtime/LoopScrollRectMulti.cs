@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace UnityEngine.UI
 {
-    public abstract class LoopScrollRectMulti : LoopScrollRectBase
+    public abstract partial class LoopScrollRectMulti : LoopScrollRectBase
     {
         [HideInInspector]
         [NonSerialized]

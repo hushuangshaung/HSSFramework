@@ -32,7 +32,10 @@ namespace YIUIFramework
         private Selectable m_Selectable;
 
         [NonSerialized]
-        private List<EUIEventParamType> m_FilterParamType = new List<EUIEventParamType> { };
+        private List<EUIEventParamType> m_FilterParamType = new List<EUIEventParamType>
+        {
+            EUIEventParamType.Bool,
+        };
 
         protected override List<EUIEventParamType> GetFilterParamType()
         {
@@ -44,9 +47,9 @@ namespace YIUIFramework
             m_Selectable ??= GetComponent<Selectable>();
         }
 
-        protected virtual void OnUIEvent()
+        protected virtual void OnUIEvent(bool isDown = true)
         {
-            m_UIEvent?.Invoke();
+            m_UIEvent?.Invoke(isDown);
         }
 
         private bool    m_PointerExit;
@@ -67,6 +70,7 @@ namespace YIUIFramework
 
         public void OnPointerUp(PointerEventData eventData)
         {
+            OnUIEvent(false);
             CountDownMgr.Inst?.Remove(PressEnd);
         }
 

@@ -1,4 +1,5 @@
-﻿using Sirenix.OdinInspector;
+﻿using System.Collections.Generic;
+using Sirenix.OdinInspector;
 
 namespace UnityEngine.UI
 {
@@ -7,7 +8,11 @@ namespace UnityEngine.UI
         [SerializeField]
         [LabelText("缓存父级对象")]
         internal RectTransform u_CacheRect;
-
+        
+        [SerializeField]
+        [LabelText("ItemPrefab")]
+        internal GameObject u_ItemPrefab;
+        
         [SerializeField]
         [LabelText("最大可点击数")]
         [MinValue(1)]

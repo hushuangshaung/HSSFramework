@@ -110,6 +110,8 @@ namespace YIUIFramework
             Debug.Log($"<color=yellow> 关闭UI: {panelName} </color>");
             #endif
 
+            using var asyncLock = await AsyncLockMgr.Inst.Wait(panelName.GetHashCode());
+            
             m_PanelCfgMap.TryGetValue(panelName, out var info);
 
             if (info?.UIBasePanel == null) return;
@@ -147,6 +149,7 @@ namespace YIUIFramework
             }
 
             RemoveUI(info);
+            PanelMgrHelper.FreshGround(GetLayerPanelInfoList(EPanelLayer.Popup));
         }
 
         public void ClosePanel(string panelName, bool tween = true, bool ignoreElse = false)
