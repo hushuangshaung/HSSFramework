@@ -5,14 +5,14 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "59bc259cc88898425620535d282192503ba99399"
+      "hash": "b176d63d93a6b8fd1a873769af7f7fa4c43a4288"
     },
     "com.code-philosophy.luban": {
       "version": "https://github.com/focus-creative-games/luban_unity.git",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "7dcd33fd67c7ffe73e88c741bf9ef89ee04aa521"
+      "hash": "57e577126c4bac9abef927babb848a457ad5d563"
     },
     "com.unity.collab-proxy": {
       "version": "2.4.4",
