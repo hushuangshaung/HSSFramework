@@ -64,7 +64,6 @@
     <type fullname="UnityEngine.Behaviour" preserve="all" />
     <type fullname="UnityEngine.Component" preserve="all" />
     <type fullname="UnityEngine.Coroutine" preserve="all" />
-    <type fullname="UnityEngine.Debug" preserve="all" />
     <type fullname="UnityEngine.Events.UnityEvent" preserve="all" />
     <type fullname="UnityEngine.GameObject" preserve="all" />
     <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
@@ -131,6 +130,7 @@
   </assembly>
   <assembly fullname="YooAsset">
     <type fullname="YooAsset.AssetHandle" preserve="all" />
+    <type fullname="YooAsset.HandleBase" preserve="all" />
     <type fullname="YooAsset.ResourcePackage" preserve="all" />
     <type fullname="YooAsset.YooAssets" preserve="all" />
   </assembly>

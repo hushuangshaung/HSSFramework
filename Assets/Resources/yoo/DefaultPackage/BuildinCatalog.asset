@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b05c83971e3dca94f9fa460d396385e5, type: 3}
+  m_Name: BuildinCatalog
+  m_EditorClassIdentifier: 
+  PackageName: DefaultPackage
+  PackageVersion: 2025-01-16-1049
+  Wrappers:
+  - BundleGUID: e2e25a4139b9bd56db5c8b3c099daf7c
+    FileName: defaultpackage_assets_gameres_hotupdatedll_aot_e2e25a4139b9bd56db5c8b3c099daf7c.bundle
+  - BundleGUID: 725807197e899bff9c5ca188c9fda188
+    FileName: defaultpackage_assets_gameres_hotupdatedll_dll_hotupdatemain_725807197e899bff9c5ca188c9fda188.bundle
+  - BundleGUID: bfb54dfc77e75e4bdad6f26f2c6a57c2
+    FileName: defaultpackage_assets_gameres_hotupdatedll_dll_hotupdate_dll_bfb54dfc77e75e4bdad6f26f2c6a57c2.bundle
+  - BundleGUID: e611a78a321a24d2207ba6cfada7f1c4
+    FileName: defaultpackage_assets_gameres_hotupdateresources_config_bytes_e611a78a321a24d2207ba6cfada7f1c4.bundle
+  - BundleGUID: 2d2341590e7ec619490c594c2b1cb425
+    FileName: defaultpackage_assets_gameres_hotupdateresources_config_language_languagetable_zh_cn_2d2341590e7ec619490c594c2b1cb425.bundle
+  - BundleGUID: bbda4dcad49b4826b30fa9ae18e7fd78
+    FileName: defaultpackage_assets_gameres_hotupdateresources_font_udtypos515std-regular_bbda4dcad49b4826b30fa9ae18e7fd78.bundle
+  - BundleGUID: 20dd0470f119ad6b47296124dfaf2b06
+    FileName: defaultpackage_assets_gameres_hotupdateresources_font_zekton_free_20dd0470f119ad6b47296124dfaf2b06.bundle
+  - BundleGUID: f7b1a0fdf28236b1dbc0a66faf8915a3
+    FileName: defaultpackage_assets_gameres_yiui_common_prefabs_yiuiroot_f7b1a0fdf28236b1dbc0a66faf8915a3.bundle
+  - BundleGUID: eff1ef5b9b68b2a168505f3a3ed8c3fd
+    FileName: defaultpackage_assets_gameres_yiui_common_source_commonpanelsource_eff1ef5b9b68b2a168505f3a3ed8c3fd.bundle
+  - BundleGUID: 46304d6c2a4595456775c0d2bf0784a8
+    FileName: defaultpackage_assets_gameres_yiui_login_prefabs_loginpanel_46304d6c2a4595456775c0d2bf0784a8.bundle
+  - BundleGUID: fb7a3061c5f32abe01d71c9d6aeb5569
+    FileName: defaultpackage_assets_gameres_yiui_login_prefabs_title_fb7a3061c5f32abe01d71c9d6aeb5569.bundle
+  - BundleGUID: 9b0a7073b94a626a02e9264e71d4f19e
+    FileName: defaultpackage_assets_gameres_yiui_login_source_loginpanelsource_9b0a7073b94a626a02e9264e71d4f19e.bundle
+  - BundleGUID: 26d1c2f57f52cf9f07f15b765d0052d0
+    FileName: defaultpackage_share_assets_gameres_gui_pro_kit_-_casual_game_resourcesdata_fonts_26d1c2f57f52cf9f07f15b765d0052d0.bundle
+  - BundleGUID: 3024b89caa083ef612912a723958f5df
+    FileName: defaultpackage_share_assets_gameres_gui_pro_kit_-_casual_game_resourcesdata_sprite_component_button_3024b89caa083ef612912a723958f5df.bundle
+  - BundleGUID: c73fdc7aa164a98370f93705fd210000
+    FileName: defaultpackage_share_assets_gameres_gui_pro_kit_-_casual_game_resourcesdata_sprite_demo_demo_background_c73fdc7aa164a98370f93705fd210000.bundle
+  - BundleGUID: 87de04e6d43643e28a5c3e4e53ca066b
+    FileName: defaultpackage_share_assets_gameres_gui_pro_kit_-_casual_game_resourcesdata_sprite_demo_demo_icon_87de04e6d43643e28a5c3e4e53ca066b.bundle
+  - BundleGUID: eebf4015bcc276af6b4427de844f467b
+    FileName: defaultpackage_share_assets_gameres_gui_pro_kit_-_casual_game_resourcesdata_sprite_demo_demo_image_eebf4015bcc276af6b4427de844f467b.bundle
