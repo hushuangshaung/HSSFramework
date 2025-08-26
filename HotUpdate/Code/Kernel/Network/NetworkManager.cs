@@ -44,6 +44,8 @@ namespace HotUpdate.Code.Kernel.Network
             WebClient = new WebClient();
             
             GameManager.RegisterTick(Tick);
+            
+            base.OnInitialize();
         }
         
         protected override void OnSignIn()

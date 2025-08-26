@@ -10,7 +10,7 @@ namespace HotUpdate.Code.Kernel.RedDot
         
         protected override void OnInitialize()
         {
-            
+            base.OnInitialize();
         }
 
         protected override void OnSignIn()

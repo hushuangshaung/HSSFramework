@@ -8,9 +8,9 @@ using YIUI.Login;
 
 public static partial class Two
 {
-    public static void OpenLoginPanel()
+    public static async UniTask OpenLoginPanel()
     {
-        PanelMgr.Inst.OpenPanel<LoginPanel>();
+        await PanelMgr.Inst.OpenPanelAsync<LoginPanel>();
     }
 }
 

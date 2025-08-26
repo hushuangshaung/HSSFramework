@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using HotUpdate.Code.Kernel.Camera;
 using UnityEngine;
 using YIUIFramework;
 using YooAsset;
@@ -14,7 +15,6 @@ public class HotUpdateMain: MonoBehaviour
     {
         GameManager.SetMonoBehaviour(this);
         DontDestroyOnLoad(this);
-        Debug.Log("hello, HybridCLR");
 
         //初始化配置表
         ConfigManager.Instance.InitConfig();
@@ -24,11 +24,14 @@ public class HotUpdateMain: MonoBehaviour
         }
         
         var btnSortData = ConfigManager.Instance.CfgTables.BtnSort.GetOrDefault(1);
-        // Debug.LogError(JsonMapper.ToJson(btnSortData));
         Debug.LogError(btnSortData.Quality.ToString());
         
         _package = YooAssets.GetPackage("DefaultPackage");
-        ManagerRegister.Register();
+        
+        //初始化注册Manager
+        var managerRegister = new ManagerRegister();
+        YooAssets.StartOperation(managerRegister);
+        yield return managerRegister;
         
         InitYIUI();
     }
@@ -147,12 +150,15 @@ public class HotUpdateMain: MonoBehaviour
         OpenPanel();
     }
     
-    public void OpenPanel()
+    public async void OpenPanel()
     {
         //TODO 在这里打开你的第一个界面
         Debug.LogError("打开第一个ui或者场景");
-        Two.OpenLoginPanel();
+        await Two.OpenLoginPanel();
         Destroy(GameObject.Find("PatchWindow(Clone)"));
+        
+        //关闭黑色面板
+        CameraManager.Instance.FullBackGroundSetActive(false);
     }
     #endregion
 }

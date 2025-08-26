@@ -111,7 +111,6 @@ public class Init: MonoBehaviour
                 // Debug.Log($"LoadMetadataForAOTAssembly:{aotDllName}. mode:{mode} ret:{err}");
             }
         }
-        // Debug.Log($"加载热更dll");
         //加载热更dll
         if (DLL == DllLoadMode.LocalScript)
         {
@@ -121,7 +120,6 @@ public class Init: MonoBehaviour
         {
             foreach (var hotUpdateDllName in InitHelper.HotUpdateDllList)
             {
-                // Debug.Log($"热更dll：{hotUpdateDllName}");
                 var handle = YooAssets.LoadAssetAsync<TextAsset>(hotUpdateDllName);
                 yield return handle;
                 var textAsset = handle.AssetObject as TextAsset;
@@ -148,7 +146,6 @@ public class Init: MonoBehaviour
                 }
             }
         }
-        // Debug.Log($"加载热更主入口");
         {
             //加载挂载热更主入口的Prefab
             var hotUpdateMainHandle = YooAssets.LoadAssetAsync<GameObject>("HotUpdateMain");

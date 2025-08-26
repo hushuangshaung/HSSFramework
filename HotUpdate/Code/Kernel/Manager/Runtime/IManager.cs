@@ -1,6 +1,10 @@
-﻿public interface IManager
+﻿using UnityEngine;
+
+public interface IManager
 {
+    bool IsInitialized();
     void Initialize();
+    void Initialized();
     void SignIn();
     void SignOut();
     void Destroy();
@@ -21,9 +25,27 @@ public class Singleton<T> where T : Singleton<T>, new()
 
 public class Manager<T> : Singleton<T>, IManager where T : Manager<T>, new()
 {
+    private bool _isInitialized;
+    
+    public bool IsInitialized()
+    {
+        return _isInitialized;
+    }
+    
     void IManager.Initialize()
     {
+        if (_isInitialized)
+        {
+            Debug.LogError($"{typeof(T)} Initialized");
+            return;
+        }
+        
         OnInitialize();
+    }
+    
+    void IManager.Initialized()
+    {
+        OnInitialized();
     }
 
     void IManager.SignIn()
@@ -46,6 +68,15 @@ public class Manager<T> : Singleton<T>, IManager where T : Manager<T>, new()
     /// </summary>
     protected virtual void OnInitialize()
     {
+        _isInitialized = true;
+    }
+    
+    /// <summary>
+    /// 所有OnInitialize()执行完之后执行，游戏只执行一次
+    /// </summary>
+    protected virtual void OnInitialized()
+    {
+            
     }
     
     /// <summary>

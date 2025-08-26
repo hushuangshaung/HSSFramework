@@ -12,6 +12,14 @@ public static class Manager
         }
     }
     
+    public static void Initialized()
+    {
+        foreach (var manager in Managers)
+        {
+            manager.Initialized();
+        }
+    }
+    
     public static void SignIn()
     {
         foreach (var manager in Managers)
